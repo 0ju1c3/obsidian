@@ -1,4 +1,204 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>obsidian</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 25 Aug 2024 05:14:05 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 25 Aug 2024 05:14:02 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[Decomposition]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>obsidian</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 25 Aug 2024 07:33:38 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 25 Aug 2024 07:33:37 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[Mod 2 - Relational Data Model]]></title><description><![CDATA[ 
+ <br>Previous : <a data-href="Module 2 - Keys" href="database-systems/module-2-keys.html" class="internal-link" target="_self" rel="noopener">Module 2 - Keys</a><br>Database - represents a collections of relations<br>
+Relational model - represents how data is stored in relational databases<br>
+Relation - table is called relation<br>
+Tuple - row is called tuple<br>
+Attribute - A column header is called as attribute<br>
+Degree - Total number of attributes which in the relation is called the degree of the relation<br>
+Cardinality - Total number of rows present in the table<br>
+Domain - Set of atomic value<br>
+Cartesian product - specifies all possible combinations of values from the underlying domains<br><img alt="Pasted image 20240825010229.png" src="lib/media/pasted-image-20240825010229.png"><br>T - cartesian product<br>
+R and S - cardinality of relation R and S<br><br> An irregularity or something which deviates from the expected or normal state<br>
+Insertion anomalies: It may not be possible to store some information unless some other information is stored as well<br>
+Redundant storage: some info is stored repeatedly<br>
+Update anomalies: if one copy of redundant data is updated, inconsistency is created if the rest of the redundant copies are not updated as well<br>
+Deletion anomalies: It may not be possible to delete some information without losing some other information as well<br>
+Insertion anomaly and deletion anomaly - exist only due to redundancy, otherwise dont exist<br><br>
+<br>Simplicity : Simpler than hierarchial and network model
+<br>Structural Independence : Relational Model is only concerned with data and not with a structure. This can improve the performance of the model
+<br>Easy to use : It is easy as tables consisting of rows and columns is quite natural and simple to understand
+<br>Query Capability : It makes possible for a high-level query language such as SQL to avoid complex database navigation
+<br>Data Independence : The structure of the database can be changed without having to change any application
+<br><br>
+<br>Few relational databases have limits on field lengths which can't exceed
+<br>Relational databases can sometimes become complex as the amount of data grows, and the relations between pieces of data becomes more complicated
+<br>Complex relational database systems may lead to isolated databases where the information cannot be shared from one system to another
+]]></description><link>database-systems/mod-2-relational-data-model.html</link><guid isPermaLink="false">Database Systems/Mod 2 - Relational Data Model.md</guid><pubDate>Sun, 25 Aug 2024 05:58:00 GMT</pubDate><enclosure url="lib/media/pasted-image-20240825010229.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib/media/pasted-image-20240825010229.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Module 1]]></title><description><![CDATA[ 
+ <br>Database - Collection of related data<br>
+Database Management System or DBMS - Software system that facilitate user to design and maintain database<br><br>
+<br>Data Independence
+<br>Efficient data access
+<br>Data integrity and security
+<br>Data administration
+<br>Concurrent access and crash recovery
+<br>Reduced application development time
+<br>Data model - collection of high level description constructs that hide many low-level storage details<br>
+<br>Pictoral representation of tables
+<br>Represents relationship between tables
+<br>Also helps to define relational tables, primary and foreign keys
+<br>Schema - description of data in terms of data model<br><br>
+<br>Refers to the ability to modify the schema at one level without affecting the schema at the next higher level
+<br>As long as we maintain the external schema, we can modify the other 2 schemas of an application:
+
+<br>
+
+
+<br>Definition: Logical data independence refers to the ability to change the logical schema (the structure of the data as seen by the users) without altering the external schema or application programs. The logical schema involves tables, relationships, and constraints.
+<br>Example: Suppose a database has a table Employees with fields like EmployeeID, Name, and Department. If we decide to split this table into two tables, say Employees (with EmployeeID and Name) and Departments (with DepartmentID and DepartmentName), users accessing the Employees table through views or queries should still be able to retrieve the same information as before, without needing to know that the underlying structure has changed.
+
+
+<br>Physical Data Independence: As long as the conceptual schema remains the same, the storage details of the application can be changed without affecting the user
+
+
+<br><br>
+<br>When multiple users access the database at the same time, DBMS should be able to order the requests
+<br>Should also protect users from system failures:<br>
+- Should make sure data is not lost<br>
+- Should deal with crashes in the middle of a transaction<br>
+Transaction - Conceptually indivisible group of operations that a user wants to perform
+<br><img alt="Pasted image 20240823225050.png" src="database-systems/pasted-image-20240823225050.png"><br><img alt="Pasted image 20240823232542.png" src="database-systems/pasted-image-20240823232542.png"><br><br>
+<br>Data redundancy and inconsistency
+
+<br>Multiple file formats, duplication of information in different files
+
+
+<br>Difficulty in accessing data
+
+<br>Need to write a new program to carry out each task
+
+
+<br>Data isolation
+
+<br>Integrity problems
+<br>Integrity constraints become part of program code
+<br>Hard to add new constraints or change existing ones
+
+
+<br>Atomicity of update
+
+<br>Failures may leave database in an inconsistent state with partial updates carried out
+
+
+<br>Concurrent access by multiple users
+
+<br>Concurrent accessed needed for performance
+<br>Uncontrolled concurrent accesses can lead to inconsistencies
+
+
+<br>Security Problems
+<br><br>
+<br>Controlling Redundancy
+<br>Restricting unauthorized access
+<br>Persistent storage
+<br>Backup and recovery
+<br>Provide multiple user interface
+<br>Represent complex relationship among data
+<br>Enforcing integrity constraints
+<br>Implications of using database: enforcing standards, flexibility, reduced application development time, availability of up-to-date information
+<br><br>
+<br>Cost of hardware and software is quite high which increases the budget of your organization
+<br>Most database management systems are often complex systems, so the training is required for users to use the DBMS
+<br>In some organizations, all data is integrated into a single database which can be damaged because of electric failure or database is corrupted on the storage media
+<br>User of the same program at a time by many users sometimes lead to the loss of some data
+<br>DBMS cant perform sophisticated calculations
+<br><img alt="Pasted image 20240824011936.png" src="database-systems/pasted-image-20240824011936.png"><br><img alt="Pasted image 20240824012011.png" src="database-systems/pasted-image-20240824012011.png"><br><img alt="Pasted image 20240824012106.png" src="database-systems/pasted-image-20240824012106.png"><br><img alt="Pasted image 20240824012306.png" src="database-systems/pasted-image-20240824012306.png"><br><br><br>
+<br>Responsible for:
+
+<br>Authorizing access to the database
+<br>Coordinating and monitoring its use
+<br>Acquiring software and hardware resources
+
+
+<br><br>
+<br>Responsible for:
+
+<br>Identifying the data to be stored
+<br>Choosing appropriate structures to represent and store the data
+
+
+<br><img alt="Pasted image 20240825102030.png" src="lib/media/pasted-image-20240825102030.png"><br>next: <a data-href="Module 1 - Categories" href="database-systems/module-1-categories.html" class="internal-link" target="_self" rel="noopener">Module 1 - Categories</a>]]></description><link>database-systems/module-1.html</link><guid isPermaLink="false">Database Systems/Module 1.md</guid><pubDate>Sun, 25 Aug 2024 05:28:13 GMT</pubDate><enclosure url="database-systems/pasted-image-20240823225050.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="database-systems/pasted-image-20240823225050.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Module 1 - Categories]]></title><description><![CDATA[ 
+ <br>prev: <a data-href="Database Systems/Module 1" href="database-systems/module-1.html" class="internal-link" target="_self" rel="noopener">Database Systems/Module 1</a><br><br><br>
+<br>What the system contains
+<br>Also called entity-based or object-based data models
+<br><br>
+<br>How the system should be implemented
+<br><br>
+<br>How the system will be implemented on DBMS
+<br><br>
+<br>Eg: Relational data models used in many commercial systems
+<br><br>
+<br>Purpose: The conceptual data model is a high-level representation of the organizational data. It focuses on the core entities, their relationships, and the key business rules, without getting into the specifics of how the data will be implemented.
+<br>Audience: It is primarily used by business stakeholders, data architects, and analysts to ensure that the model accurately reflects the business requirements.
+<br>Components:
+
+<br>Entities: Major objects or concepts in the system, such as Customer, Order, or Product.
+<br>Relationships: How entities are related to one another, like a Customer places an Order.
+<br>Attributes: Key data points for each entity, like CustomerName or OrderDate, but usually without specific data types.
+
+
+<br>Example: In a retail business, a conceptual data model might include entities like Customer, Product, and Order, with relationships indicating that Customers place Orders for Products.
+<br>Importance: The conceptual model provides a clear, easy-to-understand overview of the data structure, focusing on what data is important, not how it will be stored or processed.<br>
+<br><img alt="Pasted image 20240824173029.png" src="database-systems/pasted-image-20240824173029.png">
+<br><br>
+<br>Purpose: The logical data model refines the conceptual model by defining the structure of the data in more detail. It specifies the data types, keys, and relationships between entities, but it remains independent of any physical considerations like storage or performance optimization.
+<br>Audience: It is used by database designers and developers who need to understand the detailed structure of the data but are not yet concerned with how it will be physically implemented.
+<br>Components:
+
+<br>Entities and Relationships: Similar to the conceptual model but more detailed, with attributes fully defined.
+<br>Primary and Foreign Keys: Identification of unique keys for each entity and how they are related through foreign keys.
+<br>Normalization: The process of organizing the attributes and relationships to reduce redundancy and improve data integrity.
+
+
+<br>Example: For a Customer entity, the logical model would define attributes like CustomerID (primary key), CustomerName, CustomerAddress, and would establish relationships like CustomerID in Order as a foreign key.
+<br>Importance: The logical model serves as a blueprint for the physical implementation of the database. It ensures that all entities and relationships are clearly defined, and that the data structure adheres to normalization rules, which helps prevent data anomalies<br>
+- Includes all entities and the relationships between them<br>
+- All attributes for each entity are specified<br>
+- Primary key for each entity is specified<br>
+-  Foreign keys are specified<br>
+- Normalization occurs at this level<br>
+<br>
+<img alt="Pasted image 20240824173252.png" src="database-systems/pasted-image-20240824173252.png">
+
+<br>
+<img alt="Pasted image 20240824173300.png" src="database-systems/pasted-image-20240824173300.png">
+
+<br><br>
+<br>Purpose: The physical data model translates the logical model into a specific implementation within a particular database management system (DBMS). It deals with how the data is stored, accessed, and optimized for performance.
+<br>Audience: It is primarily used by database administrators and system architects who are responsible for implementing and maintaining the database.
+<br>Components:
+
+<br>Tables and Columns: Actual database tables are created, with columns representing attributes.
+<br>Indexes: Structures like indexes are defined to optimize data retrieval.
+<br>Storage Details: Specifics about file storage, partitioning, and database management system (DBMS) settings.
+<br>Data Types and Constraints: Exact data types (e.g., VARCHAR, INT) are assigned, along with constraints like NOT NULL, UNIQUE, etc.
+
+
+<br>Example: The Customer table in a physical data model might be stored as a table with columns CustomerID INT PRIMARY KEY, CustomerName VARCHAR(100), and CustomerAddress TEXT. Indexes might be created on CustomerName for faster searches.
+<br>Importance: The physical model is crucial for the actual implementation of the database. It directly impacts performance, scalability, and the maintainability of the database system.<br>
+<br><img alt="Pasted image 20240824173406.png" src="database-systems/pasted-image-20240824173406.png">
+<br><br>
+<br>Conceptual Data Model: A high-level view that defines the business entities and relationships without technical details, focusing on what the system needs to store.
+<br>Logical Data Model: A more detailed structure that defines the data entities, relationships, keys, and normalization, without concern for the physical aspects of storage.
+<br>Physical Data Model: The actual implementation within a DBMS, detailing tables, columns, data types, indexes, and storage mechanisms.
+<br><br><br>
+<br>Tree like structure
+<br>One to many relationship
+<br>Child has only one parent
+<br><img alt="Pasted image 20240824173726.png" src="database-systems/pasted-image-20240824173726.png">
+<br><br>
+<br>Graph like structure
+<br>Child may have one or more parents
+<br>Many to Many relationship
+<br><img alt="Pasted image 20240824173800.png" src="database-systems/pasted-image-20240824173800.png">
+<br><br>
+<br><img alt="Pasted image 20240824173844.png" src="database-systems/pasted-image-20240824173844.png">
+<br><br>
+<br><img alt="Pasted image 20240824174014.png" src="database-systems/pasted-image-20240824174014.png">
+<br><br>
+<br><img alt="Pasted image 20240824174034.png" src="database-systems/pasted-image-20240824174034.png">
+<br><br>
+<br><img alt="Pasted image 20240824174109.png" src="database-systems/pasted-image-20240824174109.png">
+<br>Next: <a data-href="Mod 1 - Schema Architecture" href="database-systems/mod-1-schema-architecture.html" class="internal-link" target="_self" rel="noopener">Mod 1 - Schema Architecture</a>]]></description><link>database-systems/module-1-categories.html</link><guid isPermaLink="false">Database Systems/Module 1 - Categories.md</guid><pubDate>Sun, 25 Aug 2024 05:27:47 GMT</pubDate><enclosure url="database-systems/pasted-image-20240824173029.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="database-systems/pasted-image-20240824173029.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Decomposition]]></title><description><![CDATA[ 
  <br>Prev: <a data-href="Mod 3 - Functional Dependencies" href="database-systems/mod-3-functional-dependencies.html" class="internal-link" target="_self" rel="noopener">Mod 3 - Functional Dependencies</a><br>Decomposition - process of breaking down the functions of an organization into progressively greater levels of detail<br>
 <br>Helps in elimination of redundancy, inconsistencies and anomalies
 <br><br>
@@ -114,32 +314,7 @@ Primary key - uniquely identifying attrtibute of the entity set
 <br><img alt="Pasted image 20240824181946.png" src="database-systems/pasted-image-20240824181946.png">
 <br><img alt="Pasted image 20240824182012.png" src="database-systems/pasted-image-20240824182012.png">
 <br><img alt="Pasted image 20240824182050.png" src="database-systems/pasted-image-20240824182050.png">
-<br><br><img alt="Pasted image 20240824182235.png" src="database-systems/pasted-image-20240824182235.png"><br><br><img alt="Pasted image 20240824182307.png" src="database-systems/pasted-image-20240824182307.png"><br>_Next: <a data-href="Module 2 - Keys" href="database-systems/module-2-keys.html" class="internal-link" target="_self" rel="noopener">Module 2 - Keys</a> ]]></description><link>database-systems/mod-2-entities-relationship-model.html</link><guid isPermaLink="false">Database Systems/Mod 2 - Entities Relationship Model.md</guid><pubDate>Sat, 24 Aug 2024 21:24:01 GMT</pubDate><enclosure url="database-systems/pasted-image-20240824175727.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="database-systems/pasted-image-20240824175727.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Mod 2 - Relational Data Model]]></title><description><![CDATA[ 
- <br>Previous : <a data-href="Module 2 - Keys" href="database-systems/module-2-keys.html" class="internal-link" target="_self" rel="noopener">Module 2 - Keys</a><br>Database - represents a collections of relations<br>
-Relational model - represents how data is stored in relational databases<br>
-Relation - table is called relation<br>
-Tuple - row is called tuple<br>
-Attribute - A column header is called as attribute<br>
-Degree - Total number of attributes which in the relation is called the degree of the relation<br>
-Cardinality - Total number of rows present in the table<br>
-Domain - Set of atomic value<br>
-Cartesian product - specifies all possible combinations of values from the underlying domains<br><img alt="Pasted image 20240825010229.png" src="lib/media/pasted-image-20240825010229.png"><br>T - cartesian product<br>
-R and S - cardinality of relation R and S<br><br> An irregularity or something which deviates from the expected or normal state<br>
-Insertion anomalies: It may not be possible to store some information unless some other information is stored as well<br>
-Redundant storage: some info is stored repeatedly<br>
-Update anomalies: if one copy of redundant data is updated, inconsistency is created if the rest of the redundant copies are not updated as well<br>
-Deletion anomalies: It may not be possible to delete some information without losing some other information as well<br>
-Insertion anomaly and deletion anomaly - exist only due to redundancy, otherwise dont exist<br><br>
-<br>Simplicity : Simpler than hierarchial and network model
-<br>Structural Independence : Relational Model is only concerned with data and not with a structure. This can improve the performance of the model
-<br>Easy to use : It is easy as tables consisting of rows and columns is quite natural and simple to understand
-<br>Query Capability : It makes possible for a high-level query language such as SQL to avoid complex database navigation
-<br>Data Independence : The structure of the database can be changed without having to change any application
-<br><br>
-<br>Few relational databases have limits on field lengths which can't exceed
-<br>Relational databases can sometimes become complex as the amount of data grows, and the relations between pieces of data becomes more complicated
-<br>Complex relational database systems may lead to isolated databases where the information cannot be shared from one system to another
-]]></description><link>database-systems/mod-2-relational-data-model.html</link><guid isPermaLink="false">Database Systems/Mod 2 - Relational Data Model.md</guid><pubDate>Sat, 24 Aug 2024 19:39:52 GMT</pubDate><enclosure url="lib/media/pasted-image-20240825010229.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib/media/pasted-image-20240825010229.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Functional Dependency]]></title><description><![CDATA[ 
+<br><br><img alt="Pasted image 20240824182235.png" src="database-systems/pasted-image-20240824182235.png"><br><br><img alt="Pasted image 20240824182307.png" src="database-systems/pasted-image-20240824182307.png"><br>_Next: <a data-href="Module 2 - Keys" href="database-systems/module-2-keys.html" class="internal-link" target="_self" rel="noopener">Module 2 - Keys</a> ]]></description><link>database-systems/mod-2-entities-relationship-model.html</link><guid isPermaLink="false">Database Systems/Mod 2 - Entities Relationship Model.md</guid><pubDate>Sat, 24 Aug 2024 21:24:01 GMT</pubDate><enclosure url="database-systems/pasted-image-20240824175727.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="database-systems/pasted-image-20240824175727.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Functional Dependency]]></title><description><![CDATA[ 
  <br>Prev: <a data-href="Module 3" href="database-systems/module-3.html" class="internal-link" target="_self" rel="noopener">Module 3</a><br><br>Primary key determines every attributes of a relation schema<br>
 <br>Defines relationship among attributes of a relation schema
 <br>Typically between primary key and non-key attribute within a table
@@ -193,152 +368,7 @@ y - dependent<br><br>
 <br><br>
 <br>A non key attribute depends on a part of the composite key, rather than the whole key. If a relation R has attributes X, Y and Z where X and Y are composite key and Z is non key attribute. Then X -&gt; Z is a partial functional dependency in RBDMS.
 <br><img alt="Pasted image 20240824220919.png" src="database-systems/pasted-image-20240824220919.png">
-<br>Next:<a data-href="Decomposition" href="database-systems/decomposition.html" class="internal-link" target="_self" rel="noopener">Decomposition</a>]]></description><link>database-systems/mod-3-functional-dependencies.html</link><guid isPermaLink="false">Database Systems/Mod 3 - Functional Dependencies.md</guid><pubDate>Sat, 24 Aug 2024 18:08:06 GMT</pubDate><enclosure url="database-systems/pasted-image-20240824205329.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="database-systems/pasted-image-20240824205329.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Module 1]]></title><description><![CDATA[ 
- <br>Database - Collection of related data<br>
-Database Management System or DBMS - Software system that facilitate user to design and maintain database<br><br>
-<br>Data Independence
-<br>Efficient data access
-<br>Data integrity and security
-<br>Data administration
-<br>Concurrent access and crash recovery
-<br>Reduced application development time
-<br>Data model - collection of high level description constructs that hide many low-level storage details<br>
-<br>Pictoral representation of tables
-<br>Represents relationship between tables
-<br>Also helps to define relational tables, primary and foreign keys
-<br>Schema - description of data in terms of data model<br><br>
-<br>Programs are isolated from changes in the way the data is structured and stored
-<br>As long as we maintain the external schema, we can modify the other 2 schemas of an application:
-
-<br>Logical Data Independence: users are shielded from the logical structure of the data(eg: a relation is split into 2 or more)
-<br>Physical Data Independence: As long as the conceptual schema remains the same, the storage details of the application can be changed without affecting the user
-
-
-<br><br>
-<br>When multiple users access the database at the same time, DBMS should be able to order the requests
-<br>Should also protect users from system failures:<br>
-- Should make sure data is not lost<br>
-- Should deal with crashes in the middle of a transaction<br>
-Transaction - Conceptually indivisible group of operations that a user wants to perform
-<br><img alt="Pasted image 20240823225050.png" src="database-systems/pasted-image-20240823225050.png"><br><img alt="Pasted image 20240823232542.png" src="database-systems/pasted-image-20240823232542.png"><br><br>
-<br>Data redundancy and inconsistency
-
-<br>Multiple file formats, duplication of information in different files
-
-
-<br>Difficulty in accessing data
-
-<br>Need to write a new program to carry out each task
-
-
-<br>Data isolation
-
-<br>Integrity problems
-<br>Integrity constraints become part of program code
-<br>Hard to add new constraints or change existing ones
-
-
-<br>Atomicity of update
-
-<br>Failures may leave database in an inconsistent state with partial updates carried out
-
-
-<br>Concurrent access by multiple users
-
-<br>Concurrent accessed needed for performance
-<br>Uncontrolled concurrent accesses can lead to inconsistencies
-
-
-<br>Security Problems
-<br><br>
-<br>Controlling Redundancy
-<br>Restricting unauthorized access
-<br>Persistent storage
-<br>Backup and recovery
-<br>Provide multiple user interface
-<br>Represent complex relationship among data
-<br>Enforcing integrity constraints
-<br>Implications of using database: enforcing standards, flexibility, reduced application development time, availability of up-to-date information
-<br><br>
-<br>Cost of hardware and software is quite high which increases the budget of your organization
-<br>Most database management systems are often complex systems, so the training is required for users to use the DBMS
-<br>In some organizations, all data is integrated into a single database which can be damaged because of electric failure or database is corrupted on the storage media
-<br>User of the same program at a time by many users sometimes lead to the loss of some data
-<br>DBMS cant perform sophisticated calculations
-<br><img alt="Pasted image 20240824011936.png" src="database-systems/pasted-image-20240824011936.png"><br><img alt="Pasted image 20240824012011.png" src="database-systems/pasted-image-20240824012011.png"><br><img alt="Pasted image 20240824012106.png" src="database-systems/pasted-image-20240824012106.png"><br><img alt="Pasted image 20240824012306.png" src="database-systems/pasted-image-20240824012306.png"><br><br><br>
-<br>Responsible for:
-
-<br>Authorizing access to the database
-<br>Coordinating and monitoring its use
-<br>Acquiring software and hardware resources
-
-
-<br><br>
-<br>Responsible for:
-
-<br>Identifying the data to be stored
-<br>Choosing appropriate structures to represent and store the data
-
-
-<br><img alt="Pasted image 20240825102030.png" src="lib/media/pasted-image-20240825102030.png"><br>next: <a data-href="Module 1 - Categories" href="database-systems/module-1-categories.html" class="internal-link" target="_self" rel="noopener">Module 1 - Categories</a>]]></description><link>database-systems/module-1.html</link><guid isPermaLink="false">Database Systems/Module 1.md</guid><pubDate>Sun, 25 Aug 2024 04:52:36 GMT</pubDate><enclosure url="database-systems/pasted-image-20240823225050.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="database-systems/pasted-image-20240823225050.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Module 1 - Categories]]></title><description><![CDATA[ 
- <br>prev: <a data-href="Database Systems/Module 1" href="database-systems/module-1.html" class="internal-link" target="_self" rel="noopener">Database Systems/Module 1</a><br><br><br>
-<br>What the system contains
-<br>Also called entity-based or object-based data models
-<br><br>
-<br>How the system should be implemented
-<br><br>
-<br>How the system will be implemented on DBMS
-<br><br>
-<br>Eg: Relational data models used in many commercial systems
-<br><br>
-<br>Identifies the highest level relationships between the different entities
-<br><img alt="Pasted image 20240824173029.png" src="database-systems/pasted-image-20240824173029.png">
-<br><br>
-<br>
-Defines the structure of the data elements and set the relationships between them
-
-<br>
-Describes the data in as much detail as possible without regard to how they will be physically implemented in the database
-
-<br>
-Features:
-
-<br>Includes all entities and the relationships between them
-<br>All attributes for each entity are specified
-<br>Primary key for each entity is specified
-<br>Foreign keys are specified
-<br>Normalization occurs at this level
-
-
-<br>
-<img alt="Pasted image 20240824173252.png" src="database-systems/pasted-image-20240824173252.png">
-
-<br>
-<img alt="Pasted image 20240824173300.png" src="database-systems/pasted-image-20240824173300.png">
-
-<br><br>
-<br>Represents how the model will be built in the database
-<br>Shows all table structures, including column name, column data type, column constraints, primary key, foreign key and relationships between tables
-<br><img alt="Pasted image 20240824173406.png" src="database-systems/pasted-image-20240824173406.png">
-<br><br><br>
-<br>Tree like structure
-<br>One to many relationship
-<br>Child has only one parent
-<br><img alt="Pasted image 20240824173726.png" src="database-systems/pasted-image-20240824173726.png">
-<br><br>
-<br>Graph like structure
-<br>Child may have one or more parents
-<br>Many to Many relationship
-<br><img alt="Pasted image 20240824173800.png" src="database-systems/pasted-image-20240824173800.png">
-<br><br>
-<br><img alt="Pasted image 20240824173844.png" src="database-systems/pasted-image-20240824173844.png">
-<br><br>
-<br><img alt="Pasted image 20240824174014.png" src="database-systems/pasted-image-20240824174014.png">
-<br><br>
-<br><img alt="Pasted image 20240824174034.png" src="database-systems/pasted-image-20240824174034.png">
-<br><br>
-<br><img alt="Pasted image 20240824174109.png" src="database-systems/pasted-image-20240824174109.png">
-<br>Next: <a data-href="Mod 1 - Schema Architecture" href="database-systems/mod-1-schema-architecture.html" class="internal-link" target="_self" rel="noopener">Mod 1 - Schema Architecture</a>]]></description><link>database-systems/module-1-categories.html</link><guid isPermaLink="false">Database Systems/Module 1 - Categories.md</guid><pubDate>Sat, 24 Aug 2024 21:04:46 GMT</pubDate><enclosure url="database-systems/pasted-image-20240824173029.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="database-systems/pasted-image-20240824173029.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Keys]]></title><description><![CDATA[ 
+<br>Next:<a data-href="Decomposition" href="database-systems/decomposition.html" class="internal-link" target="_self" rel="noopener">Decomposition</a>]]></description><link>database-systems/mod-3-functional-dependencies.html</link><guid isPermaLink="false">Database Systems/Mod 3 - Functional Dependencies.md</guid><pubDate>Sat, 24 Aug 2024 18:08:06 GMT</pubDate><enclosure url="database-systems/pasted-image-20240824205329.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="database-systems/pasted-image-20240824205329.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Keys]]></title><description><![CDATA[ 
  <br>Previous: <a data-href="Mod 2 - Entities Relationship Model" href="database-systems/mod-2-entities-relationship-model.html" class="internal-link" target="_self" rel="noopener">Mod 2 - Entities Relationship Model</a><br><br>
 <br>Attribute or set of attributes which helps us to identify a row in a relation
 <br>Allows us to find the relation between the two tables

@@ -1,533 +1,396 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>obsidian</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 25 Aug 2024 07:33:38 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 25 Aug 2024 07:33:37 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[Mod 2 - Relational Data Model]]></title><description><![CDATA[ 
- <br>Previous : <a data-href="Module 2 - Keys" href="database-systems/module-2-keys.html" class="internal-link" target="_self" rel="noopener">Module 2 - Keys</a><br>Database - represents a collections of relations<br>
-Relational model - represents how data is stored in relational databases<br>
-Relation - table is called relation<br>
-Tuple - row is called tuple<br>
-Attribute - A column header is called as attribute<br>
-Degree - Total number of attributes which in the relation is called the degree of the relation<br>
-Cardinality - Total number of rows present in the table<br>
-Domain - Set of atomic value<br>
-Cartesian product - specifies all possible combinations of values from the underlying domains<br><img alt="Pasted image 20240825010229.png" src="lib/media/pasted-image-20240825010229.png"><br>T - cartesian product<br>
-R and S - cardinality of relation R and S<br><br> An irregularity or something which deviates from the expected or normal state<br>
-Insertion anomalies: It may not be possible to store some information unless some other information is stored as well<br>
-Redundant storage: some info is stored repeatedly<br>
-Update anomalies: if one copy of redundant data is updated, inconsistency is created if the rest of the redundant copies are not updated as well<br>
-Deletion anomalies: It may not be possible to delete some information without losing some other information as well<br>
-Insertion anomaly and deletion anomaly - exist only due to redundancy, otherwise dont exist<br><br>
-<br>Simplicity : Simpler than hierarchial and network model
-<br>Structural Independence : Relational Model is only concerned with data and not with a structure. This can improve the performance of the model
-<br>Easy to use : It is easy as tables consisting of rows and columns is quite natural and simple to understand
-<br>Query Capability : It makes possible for a high-level query language such as SQL to avoid complex database navigation
-<br>Data Independence : The structure of the database can be changed without having to change any application
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>obsidian</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 26 Aug 2024 07:38:45 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 26 Aug 2024 07:38:40 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[Implementation]]></title><description><![CDATA[ 
+ <br>Early operating systems were written in assembly language. <br>Now, most are written in higher-level languages such as C or C++ with small amounts of the system written in assembly language.<br><br>Code can be written faster, more compact, easier to understand and debug and easier to port to the hardware.<br><br>Reduced speed and increase in storage requirements.]]></description><link>os/implementation.html</link><guid isPermaLink="false">OS/Implementation.md</guid><pubDate>Tue, 20 Aug 2024 16:53:39 GMT</pubDate></item><item><title><![CDATA[Mod 1 - Understand Basics of Operating Systems]]></title><description><![CDATA[ 
+ <br><br>An operating system (OS) is software that controls hardware and coordinates its use among various application programs and users. It manages computer hardware and provides a platform for running application software.<br><br>The OS acts as a resource manager, overseeing critical resources such as CPU time, memory, storage, and I/O devices. It allocates these resources efficiently and fairly among the running applications to ensure smooth and optimized operation.<br><br><br>
+<br>The OS abstracts the complexities of hardware, transforming it into a usable interface for applications. This abstraction simplifies the interaction between software and hardware, allowing developers to create applications without needing to manage hardware details directly.
 <br><br>
-<br>Few relational databases have limits on field lengths which can't exceed
-<br>Relational databases can sometimes become complex as the amount of data grows, and the relations between pieces of data becomes more complicated
-<br>Complex relational database systems may lead to isolated databases where the information cannot be shared from one system to another
-]]></description><link>database-systems/mod-2-relational-data-model.html</link><guid isPermaLink="false">Database Systems/Mod 2 - Relational Data Model.md</guid><pubDate>Sun, 25 Aug 2024 05:58:00 GMT</pubDate><enclosure url="lib/media/pasted-image-20240825010229.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib/media/pasted-image-20240825010229.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Module 1]]></title><description><![CDATA[ 
- <br>Database - Collection of related data<br>
-Database Management System or DBMS - Software system that facilitate user to design and maintain database<br><br>
-<br>Data Independence
-<br>Efficient data access
-<br>Data integrity and security
-<br>Data administration
-<br>Concurrent access and crash recovery
-<br>Reduced application development time
-<br>Data model - collection of high level description constructs that hide many low-level storage details<br>
-<br>Pictoral representation of tables
-<br>Represents relationship between tables
-<br>Also helps to define relational tables, primary and foreign keys
-<br>Schema - description of data in terms of data model<br><br>
-<br>Refers to the ability to modify the schema at one level without affecting the schema at the next higher level
-<br>As long as we maintain the external schema, we can modify the other 2 schemas of an application:
-
-<br>
-
-
-<br>Definition: Logical data independence refers to the ability to change the logical schema (the structure of the data as seen by the users) without altering the external schema or application programs. The logical schema involves tables, relationships, and constraints.
-<br>Example: Suppose a database has a table Employees with fields like EmployeeID, Name, and Department. If we decide to split this table into two tables, say Employees (with EmployeeID and Name) and Departments (with DepartmentID and DepartmentName), users accessing the Employees table through views or queries should still be able to retrieve the same information as before, without needing to know that the underlying structure has changed.
-
-
-<br>Physical Data Independence: As long as the conceptual schema remains the same, the storage details of the application can be changed without affecting the user
-
-
+<br>The OS manages system resources, including memory, processing power, and storage, ensuring that each application gets the necessary resources without conflict. This management is crucial for maintaining system stability and performance.
+<br><br>Operating systems provide a range of services that create an environment for the execution of programs. While the specific services can vary between different OS, the core functionalities are generally consistent.<br><br>
+<br>Almost all operating systems include a user interface (UI), which could be command-line based, graphical, or a combination of both. The UI allows users to interact with the system and manage applications.
 <br><br>
-<br>When multiple users access the database at the same time, DBMS should be able to order the requests
-<br>Should also protect users from system failures:<br>
-- Should make sure data is not lost<br>
-- Should deal with crashes in the middle of a transaction<br>
-Transaction - Conceptually indivisible group of operations that a user wants to perform
-<br><img alt="Pasted image 20240823225050.png" src="database-systems/pasted-image-20240823225050.png"><br><img alt="Pasted image 20240823232542.png" src="database-systems/pasted-image-20240823232542.png"><br><br>
-<br>Data redundancy and inconsistency
-
-<br>Multiple file formats, duplication of information in different files
-
-
-<br>Difficulty in accessing data
-
-<br>Need to write a new program to carry out each task
-
-
-<br>Data isolation
-
-<br>Integrity problems
-<br>Integrity constraints become part of program code
-<br>Hard to add new constraints or change existing ones
-
-
-<br>Atomicity of update
-
-<br>Failures may leave database in an inconsistent state with partial updates carried out
-
-
-<br>Concurrent access by multiple users
-
-<br>Concurrent accessed needed for performance
-<br>Uncontrolled concurrent accesses can lead to inconsistencies
-
-
-<br>Security Problems
+<br>The OS is responsible for loading programs into memory, executing them, and managing their execution lifecycle. It must handle both normal and abnormal terminations, ensuring that resources are released appropriately.
 <br><br>
-<br>Controlling Redundancy
-<br>Restricting unauthorized access
-<br>Persistent storage
-<br>Backup and recovery
-<br>Provide multiple user interface
-<br>Represent complex relationship among data
-<br>Enforcing integrity constraints
-<br>Implications of using database: enforcing standards, flexibility, reduced application development time, availability of up-to-date information
+<br>Programs often need to perform I/O operations, such as reading from or writing to files and interacting with I/O devices like printers or network interfaces. The OS provides services to manage these operations efficiently and securely.
 <br><br>
-<br>Cost of hardware and software is quite high which increases the budget of your organization
-<br>Most database management systems are often complex systems, so the training is required for users to use the DBMS
-<br>In some organizations, all data is integrated into a single database which can be damaged because of electric failure or database is corrupted on the storage media
-<br>User of the same program at a time by many users sometimes lead to the loss of some data
-<br>DBMS cant perform sophisticated calculations
-<br><img alt="Pasted image 20240824011936.png" src="database-systems/pasted-image-20240824011936.png"><br><img alt="Pasted image 20240824012011.png" src="database-systems/pasted-image-20240824012011.png"><br><img alt="Pasted image 20240824012106.png" src="database-systems/pasted-image-20240824012106.png"><br><img alt="Pasted image 20240824012306.png" src="database-systems/pasted-image-20240824012306.png"><br><br><br>
-<br>Responsible for:
-
-<br>Authorizing access to the database
-<br>Coordinating and monitoring its use
-<br>Acquiring software and hardware resources
-
-
+<br>The OS manages file systems, enabling programs to create, read, write, delete, and organize files and directories. It also controls access to these files, ensuring data integrity and security.
 <br><br>
-<br>Responsible for:
-
-<br>Identifying the data to be stored
-<br>Choosing appropriate structures to represent and store the data
-
-
-<br><img alt="Pasted image 20240825102030.png" src="lib/media/pasted-image-20240825102030.png"><br>next: <a data-href="Module 1 - Categories" href="database-systems/module-1-categories.html" class="internal-link" target="_self" rel="noopener">Module 1 - Categories</a>]]></description><link>database-systems/module-1.html</link><guid isPermaLink="false">Database Systems/Module 1.md</guid><pubDate>Sun, 25 Aug 2024 05:28:13 GMT</pubDate><enclosure url="database-systems/pasted-image-20240823225050.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="database-systems/pasted-image-20240823225050.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Module 1 - Categories]]></title><description><![CDATA[ 
- <br>prev: <a data-href="Database Systems/Module 1" href="database-systems/module-1.html" class="internal-link" target="_self" rel="noopener">Database Systems/Module 1</a><br><br><br>
-<br>What the system contains
-<br>Also called entity-based or object-based data models
+<br>The OS facilitates communication between processes, whether they are on the same machine or different machines. This is essential for distributed systems and applications that require data exchange between multiple processes.
 <br><br>
-<br>How the system should be implemented
-<br><br>
-<br>How the system will be implemented on DBMS
-<br><br>
-<br>Eg: Relational data models used in many commercial systems
-<br><br>
-<br>Purpose: The conceptual data model is a high-level representation of the organizational data. It focuses on the core entities, their relationships, and the key business rules, without getting into the specifics of how the data will be implemented.
-<br>Audience: It is primarily used by business stakeholders, data architects, and analysts to ensure that the model accurately reflects the business requirements.
-<br>Components:
-
-<br>Entities: Major objects or concepts in the system, such as Customer, Order, or Product.
-<br>Relationships: How entities are related to one another, like a Customer places an Order.
-<br>Attributes: Key data points for each entity, like CustomerName or OrderDate, but usually without specific data types.
-
-
-<br>Example: In a retail business, a conceptual data model might include entities like Customer, Product, and Order, with relationships indicating that Customers place Orders for Products.
-<br>Importance: The conceptual model provides a clear, easy-to-understand overview of the data structure, focusing on what data is important, not how it will be stored or processed.<br>
-<br><img alt="Pasted image 20240824173029.png" src="database-systems/pasted-image-20240824173029.png">
-<br><br>
-<br>Purpose: The logical data model refines the conceptual model by defining the structure of the data in more detail. It specifies the data types, keys, and relationships between entities, but it remains independent of any physical considerations like storage or performance optimization.
-<br>Audience: It is used by database designers and developers who need to understand the detailed structure of the data but are not yet concerned with how it will be physically implemented.
-<br>Components:
-
-<br>Entities and Relationships: Similar to the conceptual model but more detailed, with attributes fully defined.
-<br>Primary and Foreign Keys: Identification of unique keys for each entity and how they are related through foreign keys.
-<br>Normalization: The process of organizing the attributes and relationships to reduce redundancy and improve data integrity.
-
-
-<br>Example: For a Customer entity, the logical model would define attributes like CustomerID (primary key), CustomerName, CustomerAddress, and would establish relationships like CustomerID in Order as a foreign key.
-<br>Importance: The logical model serves as a blueprint for the physical implementation of the database. It ensures that all entities and relationships are clearly defined, and that the data structure adheres to normalization rules, which helps prevent data anomalies<br>
-- Includes all entities and the relationships between them<br>
-- All attributes for each entity are specified<br>
-- Primary key for each entity is specified<br>
--  Foreign keys are specified<br>
-- Normalization occurs at this level<br>
-<br>
-<img alt="Pasted image 20240824173252.png" src="database-systems/pasted-image-20240824173252.png">
-
-<br>
-<img alt="Pasted image 20240824173300.png" src="database-systems/pasted-image-20240824173300.png">
-
-<br><br>
-<br>Purpose: The physical data model translates the logical model into a specific implementation within a particular database management system (DBMS). It deals with how the data is stored, accessed, and optimized for performance.
-<br>Audience: It is primarily used by database administrators and system architects who are responsible for implementing and maintaining the database.
-<br>Components:
-
-<br>Tables and Columns: Actual database tables are created, with columns representing attributes.
-<br>Indexes: Structures like indexes are defined to optimize data retrieval.
-<br>Storage Details: Specifics about file storage, partitioning, and database management system (DBMS) settings.
-<br>Data Types and Constraints: Exact data types (e.g., VARCHAR, INT) are assigned, along with constraints like NOT NULL, UNIQUE, etc.
-
-
-<br>Example: The Customer table in a physical data model might be stored as a table with columns CustomerID INT PRIMARY KEY, CustomerName VARCHAR(100), and CustomerAddress TEXT. Indexes might be created on CustomerName for faster searches.
-<br>Importance: The physical model is crucial for the actual implementation of the database. It directly impacts performance, scalability, and the maintainability of the database system.<br>
-<br><img alt="Pasted image 20240824173406.png" src="database-systems/pasted-image-20240824173406.png">
-<br><br>
-<br>Conceptual Data Model: A high-level view that defines the business entities and relationships without technical details, focusing on what the system needs to store.
-<br>Logical Data Model: A more detailed structure that defines the data entities, relationships, keys, and normalization, without concern for the physical aspects of storage.
-<br>Physical Data Model: The actual implementation within a DBMS, detailing tables, columns, data types, indexes, and storage mechanisms.
+<br>The OS is constantly aware of potential errors that may occur during operation. It must detect and respond to errors appropriately to prevent system crashes and data loss. This includes handling hardware failures, software bugs, and other unexpected issues.
 <br><br><br>
-<br>Tree like structure
-<br>One to many relationship
-<br>Child has only one parent
-<br><img alt="Pasted image 20240824173726.png" src="database-systems/pasted-image-20240824173726.png">
+<br>In systems with multiple users or processes running simultaneously, the OS must allocate resources like CPU time, memory, and I/O bandwidth effectively to each process, ensuring optimal performance and fairness.
 <br><br>
-<br>Graph like structure
-<br>Child may have one or more parents
-<br>Many to Many relationship
-<br><img alt="Pasted image 20240824173800.png" src="database-systems/pasted-image-20240824173800.png">
+<br>The OS tracks resource usage for each user or process, which is useful for billing in multi-user systems or for performance monitoring and user analytics.
 <br><br>
-<br><img alt="Pasted image 20240824173844.png" src="database-systems/pasted-image-20240824173844.png">
+<br>The OS implements mechanisms to protect the system and its data from unauthorized access. This includes controlling access to resources, protecting data from corruption, and ensuring that only authorized users can perform certain operations.
 <br><br>
-<br><img alt="Pasted image 20240824174014.png" src="database-systems/pasted-image-20240824174014.png">
+<br>The OS is responsible for starting, stopping, and managing processes. It schedules processes for execution and allocates necessary resources like CPU time and memory. Process management also includes handling multitasking, where multiple processes run concurrently.
 <br><br>
-<br><img alt="Pasted image 20240824174034.png" src="database-systems/pasted-image-20240824174034.png">
+<br>The OS manages the computer's primary memory (RAM), providing mechanisms for allocating memory to processes, swapping data in and out of memory as needed, and ensuring efficient use of available memory.
 <br><br>
-<br><img alt="Pasted image 20240824174109.png" src="database-systems/pasted-image-20240824174109.png">
-<br>Next: <a data-href="Mod 1 - Schema Architecture" href="database-systems/mod-1-schema-architecture.html" class="internal-link" target="_self" rel="noopener">Mod 1 - Schema Architecture</a>]]></description><link>database-systems/module-1-categories.html</link><guid isPermaLink="false">Database Systems/Module 1 - Categories.md</guid><pubDate>Sun, 25 Aug 2024 05:27:47 GMT</pubDate><enclosure url="database-systems/pasted-image-20240824173029.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="database-systems/pasted-image-20240824173029.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Decomposition]]></title><description><![CDATA[ 
- <br>Prev: <a data-href="Mod 3 - Functional Dependencies" href="database-systems/mod-3-functional-dependencies.html" class="internal-link" target="_self" rel="noopener">Mod 3 - Functional Dependencies</a><br>Decomposition - process of breaking down the functions of an organization into progressively greater levels of detail<br>
-<br>Helps in elimination of redundancy, inconsistencies and anomalies
+<br>The OS organizes the file system, managing the creation, deletion, and updating of files and directories. It controls access to files, ensuring that users and applications can only access data they are authorized to use.
 <br><br>
-<br><img alt="Pasted image 20240824213403.png" src="database-systems/pasted-image-20240824213403.png">
+<br>The OS manages communication between the system and peripheral devices like printers, displays, keyboards, and storage devices. It ensures that these devices are used efficiently and without conflict.
 <br><br>
-<br>Lossless join property is necessary if the decomposed relation is to be recovered from the decomposition( basically intial table before it was decomposed)
-<br>Let R be a schema and F be a set of FD's on R, and  = (R1,R2) be a decomposition of R. Then  has a lossless join with respect to F iff
+<br>The OS provides networking capabilities, allowing the computer to communicate with other systems over a network. This includes managing network connections, data transfer, and remote resource access.
+<br><br>An operating system is crucial for managing computer hardware and providing a stable environment for applications to run. It abstracts the complexities of hardware, manages system resources, and offers a wide range of services that ensure efficient, secure, and stable operation. Core functionalities include user interfaces, program execution, I/O operations, file management, and communication. Additionally, the OS handles resource allocation, accounting, protection, process management, memory management, and networking, ensuring a comprehensive and robust system.<br>Next: <a data-href="Structuring Operating Systems" href="os/structuring-operating-systems.html" class="internal-link" target="_self" rel="noopener">Structuring Operating Systems</a>]]></description><link>os/mod-1-understand-basics-of-operating-systems.html</link><guid isPermaLink="false">OS/Mod 1 - Understand Basics of Operating Systems.md</guid><pubDate>Sun, 25 Aug 2024 18:31:27 GMT</pubDate></item><item><title><![CDATA[Mod 2 - Processes]]></title><description><![CDATA[ 
+ <br><br>In an operating system, each process has its own virtual address space, which is separate from other processes. This virtual space is divided into distinct regions:<br><img alt="Pasted image 20240826120353.png" src="lib/media/pasted-image-20240826120353.png"><br>
+<br>Text Segment: Contains the executable code of the program.
+<br>Data Segment: Stores global and static variables.
+<br>Heap: Used for dynamic memory allocation during process execution.
+<br>Stack: Holds the activation records for functions, including function parameters, local variables, and return addresses.
+<br><br>
+<br>Each time a function is called, an activation record (or stack frame) is pushed onto the stack.
+<br>This record contains:
 
-<br>R1  R2 -&gt; (R1 - R2) or
-<br>R2  R1 -&gt; (R2 - R1)<br>
--where such FD exist in Closure of F<br>
-This is a sufficient condition but not a necessary condition
-<br><img alt="Pasted image 20240824214651.png" src="database-systems/pasted-image-20240824214651.png">
-<br><img alt="Pasted image 20240824214734.png" src="database-systems/pasted-image-20240824214734.png">
+<br>Function parameters
+<br>Local variables
+<br>Return address
 
 
-<br>Why do we preserve the dependency ?<br>
-<br>To check easily the updates to the database don't result in illegal relations being created
-<br>It would be nice if our design allowed us to check updates without having to compute natural joins
+<br>When the function returns, its activation record is popped from the stack.
+<br>The stack and heap sections grow toward each other, and the operating system must ensure they do not overlap.<br><br>
+<br>The MMU translates the virtual addresses used by the process into physical memory addresses.
+<br><br>As a process executes, it changes state, which is defined by the current activity of that process. A process may be in one of the following states:<br>
+<br>New: The process is being created.
+<br>Running: Instructions are being executed.
+<br>Waiting: The process is waiting for some event (like I/O completion) to occur.
+<br>Ready: The process is waiting to be assigned to a processor.
+<br>Terminated: The process has finished execution.
+<br><br>The Process Control Block (PCB), also known as a task control block, is a data structure that contains all the information about a process. The PCB acts as the handle for the OS to manage the process's memory layout, scheduling, and other resources.<br><br>
+<br>Process State: New, ready, running, waiting, or terminated.
+<br>Program Counter: The address of the next instruction to be executed.
+<br>CPU Registers: Includes accumulators, index registers, stack pointers, general-purpose registers, and condition codes.
+<br>CPU-Scheduling Information: Includes process priority, pointers to scheduling queues, and other scheduling parameters.
+<br>Memory-Management Information: Includes base and limit registers, page tables, or segment tables, depending on the memory system.
+<br>Accounting Information: Includes CPU usage, time limits, account numbers, and process IDs.
+<br>I/O Status Information: Includes the list of I/O devices allocated to the process and the list of open files.
+<br><br>The Process Table is a data structure maintained by the operating system to store information about all active processes. It is essentially an array of PCBs, with each entry representing a process and containing a pointer to its corresponding PCB.<br><br>Processes are created in an operating system using system calls. The process that creates new processes is called the parent process, and the newly created processes are called child processes.<br><br>
+<br>Each process is identified by a unique Process Identifier (PID), which is typically an integer.
+<br>The PID is used to access various attributes of a process within the kernel.
 <br><br>
-<br>If a decomposition is not dependency-preserving, some dependency is lost in the decomposition
-<br>To verify : Take joins of two or more relations in the decomposition to get a relation that contains all of the attributes in the dependency under consideration and then check that the dependency holds on the result of the joins
-<br><img alt="Pasted image 20240824215317.png" src="database-systems/pasted-image-20240824215317.png">
-<br><img alt="Pasted image 20240824215331.png" src="database-systems/pasted-image-20240824215331.png">
-<br><br>Next: <a data-href="Normalization" href="database-systems/normalization.html" class="internal-link" target="_self" rel="noopener">Normalization</a> ]]></description><link>database-systems/decomposition.html</link><guid isPermaLink="false">Database Systems/Decomposition.md</guid><pubDate>Sat, 24 Aug 2024 18:12:23 GMT</pubDate><enclosure url="database-systems/pasted-image-20240824213403.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="database-systems/pasted-image-20240824213403.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Mod 1 - Schema Architecture]]></title><description><![CDATA[ 
- <br>Prev: <a data-href="Module 1 - Categories" href="database-systems/module-1-categories.html" class="internal-link" target="_self" rel="noopener">Module 1 - Categories</a><br><br>
-<br>Defines DBMS schemas at three levels:
+<br>fork(): Creates a new process (child) that is a copy of the current process (parent). The child starts executing from the point where fork() was called.
+<br>wait(): Suspends the parent process until one of its child processes terminates. The exit status of the child process is stored in the wstatus parameter.
+<br>exec(): Replaces the child process image with a new program loaded from a specified file.
+<br>exit(): Terminates the current process and returns a status code to the parent, which can use this code to determine the reason for termination.
+<br><br>A process terminates when it finishes executing its final statement and requests the OS to delete it using the exit() system call. All the resources of the process are deallocated and reclaimed by the operating system.<br><br>
+<br>A parent process can terminate its children for reasons like:
 
-<br>Internal Schema - at the internal level to describe physical storage structures and access paths ; Typically uses a physical data model
-<br>Conceptual Schema - at the conceptual level to describe the structure and constraints for the whole data base for a community of users; Uses conceptual data model
-<br>External Schema - at the external level to describe the various user views; User same data model as the conceptual schema
+<br>Exceeding resource usage.
+<br>Task completion.
+<br>Parent process exiting.
 
 
+<br><br>
+<br>If a parent process terminates, all its child processes must also be terminated.
+<br><br>
+<br>A parent process can wait for a child process to terminate using the wait() system call. The parent can retrieve the exit status of the child and free up the process table entry.
 <br><br><br>
-<br>Database is directly available for storing and retrieving the data
+<br>A zombie process is a process that has finished execution, but its parent has not yet acknowledged its termination.
+<br>The zombie process still exists in the process table, awaiting the parent to retrieve its exit status using wait().
+<br>It remains in the process table until the parent terminates or the system reboots.
 <br><br>
-<br>End user doesn't access the database directly
-<br>Eg: Desktop applications 
-<br>Database can access through third party services
+<br>An orphan process is a process whose parent has terminated, but the child is still running.
+<br>The orphan process is adopted by the init process (PID 1), which becomes its new parent.
+<br>The init process periodically invokes wait(), allowing it to clean up and release the resources of orphaned processes.
+]]></description><link>os/mod-2-processes.html</link><guid isPermaLink="false">OS/Mod 2 - Processes.md</guid><pubDate>Mon, 26 Aug 2024 06:33:54 GMT</pubDate><enclosure url="lib/media/pasted-image-20240826120353.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib/media/pasted-image-20240826120353.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Module 2 - System Calls]]></title><description><![CDATA[ 
+ <br><br><br>System calls provide an interface for user programs to interact with the operating system (OS). These calls are essentially functions written in languages like C and C++ that act as a bridge between the OS and a running process. They allow user-level programs to request services from the OS, such as file operations, process control, and memory management.<br>When a computer program needs to access the OS's kernel services, it makes a system call, which uses an API to expose these services to user programs. System calls are the only method for accessing the kernel system directly, ensuring controlled and secure interaction with the OS.<br><br>Consider a scenario where a user program needs to read data from a file. The program issues a read system call to request the OS to retrieve the data. The system call transitions the program from user mode to kernel mode, where the OS performs the necessary file operations. Once the data is read, control returns to the user mode, along with the required data.<br><br>An API defines a set of functions that application developers can use to request services from the OS or other applications. It specifies the parameters required, the expected return values, and the correct way to request these services. The API serves as a higher-level abstraction over system calls, making it easier for developers to interact with the OS.<br><br>
+<br>Portability: Programs designed using an API can run on any system that supports the same API, ensuring cross-platform compatibility.
+<br>Simplified Interaction: APIs often abstract the complexity of system calls, providing a more user-friendly interface for developers.
+<br><br>Consider the POSIX API, which is widely used in Unix-like operating systems. A developer writing a program that needs to create a new process might use the fork() function, which is defined by the POSIX API. This function internally makes a system call to the kernel to create the process but simplifies the interaction for the developer.<br><br>System calls are implemented within the OS kernel and are accessed through a system-call interface. This interface acts as a link between user programs and the system calls, with each call associated with a unique number. The system-call interface maintains a table indexed by these numbers, allowing the correct system call to be invoked based on the user's request.<br>When a system call is made, the interface invokes the intended call in the kernel and returns the status of the operation. The user program does not need to know the details of how the system call is implemented; it only needs to follow the API and understand the expected behavior.<br><br>There are three general methods for passing parameters to the OS when making a system call:<br>
+<br>Registers: The simplest method is to pass parameters directly in registers.
+<br>Memory Block: Parameters can be stored in a block or table in memory, with the address of the block passed in a register.
+<br>Stack: Parameters can be pushed onto the stack by the program and then popped off by the OS.
+<br><br>When reading a file, the address of the buffer where the data should be stored might be passed to the OS using one of these methods. For instance, in the case of a memory block, the address of the block holding the file's metadata could be passed to the kernel, which then processes the read operation.<br><br>System calls are essential for enabling user programs to interact with the OS, providing services such as file operations, process management, and more. They are accessed through an API, which abstracts the complexity and ensures cross-platform compatibility. System calls are implemented within the kernel and accessed via a system-call interface, which manages the parameters and invokes the appropriate kernel functions. By using APIs, developers can design programs that are portable and easier to manage, without needing to understand the underlying system call details.<br>// System call types ?????<br>Next: <a data-href="Module 2 CPU Modes" href="os/module-2-cpu-modes.html" class="internal-link" target="_self" rel="noopener">Module 2 CPU Modes</a>]]></description><link>os/module-2-system-calls.html</link><guid isPermaLink="false">OS/Module 2 - System Calls.md</guid><pubDate>Sun, 25 Aug 2024 19:35:42 GMT</pubDate></item><item><title><![CDATA[Module 2 - Threads]]></title><description><![CDATA[ 
+ <br><br>A thread is a basic unit of CPU utilization within a process, representing a single sequential flow of execution. It includes a thread ID, a program counter, a register set, and a stack. Threads are considered lightweight processes because they share resources and are faster compared to traditional processes.<br><br>
+<br>Lightweight: Threads are lighter than processes, requiring fewer resources.
+<br>Shared Resources: Threads within the same process share the same code, data, and file descriptors.
+<br>Fast Context Switching: Switching between threads is quicker than switching between processes because threads share the same memory space.
+<br>Concurrent Execution: Threads can run concurrently, enhancing system performance and responsiveness by performing multiple tasks simultaneously.
+<br><br>A single-threaded process contains only one thread, which executes tasks sequentially. This type of process has its own memory space and does not support concurrent execution.<br>Characteristics of Single-Threaded Processes:<br>
+<br>Only One Thread: At any given time, only one thread runs.
+<br>No Shared Memory Space: Each process has its own memory space.
+<br>No Synchronization Needed: Since there is only one thread, synchronization mechanisms are not required.
+<br>Easier Implementation and Debugging: Single-threaded processes are simpler to implement and debug due to their straightforward execution model.
+<br>Advantages of Single-Threaded Processes:<br>
+<br>Simplicity: Easier to implement and debug, with less complexity in managing execution.
+<br>Lower Overhead: Consumes less memory and system resources compared to multithreaded processes.
+<br>Ease of Understanding: Straightforward to understand and maintain due to lack of concurrency issues.
+<br><br>Multithreading involves multiple threads running within a single process, allowing for concurrent execution and efficient resource utilization.<br><br>
+<br>Kernel Multithreading: Most operating system kernels are multithreaded, where each kernel thread manages specific tasks like device management, interrupt handling, or memory management.
+
+<br>Example: In Linux, the command ps -ef displays kernel threads, including kthreadd (PID = 2), which is the parent of all kernel threads.
+
+
 <br><br>
-<br>Client doesn't communicate directly to the server
-<br>A layer between client and server that manages the query processing and transaction management
-<br>Eg: web based application
-<br><br>
-<br>Provides client server architecture
-<br>Has separate presentation, processing and data management functions
-<br><img alt="Pasted image 20240825024419.png" src="lib/media/pasted-image-20240825024419.png"><br><br>
-<br>Combines everything into single system including - DBMS software, hardware, application programs and user interface processing software
-<br>User can still connect through a remote terminal, however, all processing is done at centralized site
-]]></description><link>database-systems/mod-1-schema-architecture.html</link><guid isPermaLink="false">Database Systems/Mod 1 - Schema Architecture.md</guid><pubDate>Sat, 24 Aug 2024 21:15:30 GMT</pubDate><enclosure url="lib/media/pasted-image-20240825024419.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib/media/pasted-image-20240825024419.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Entities Relationship Model]]></title><description><![CDATA[ 
- <br><br>
+<br>Improved Responsiveness: Multithreading allows applications to remain responsive by performing background tasks while the user interacts with the UI.
+<br>Increased Throughput: Enables multiple threads to run simultaneously, enhancing the overall throughput of the system.
+<br>Better Resource Utilization: Makes efficient use of CPU resources, especially when some threads are waiting for I/O operations.
+<br>Simplified Concurrent Programming: Facilitates the implementation of programs that need to perform multiple tasks concurrently, such as handling multiple client requests.
+<br><br>Multithreading models describe the relationship between user threads and kernel threads. They determine how user-level threads are mapped to kernel threads.<br>
 <br>
-Was developed to facilitate database design by allowing specification of an enterprise schema that represents the overall logical structures of a database
+Many-to-One Model:
 
-<br>
-Employs three basic concepts:
+<br>Description: Multiple user threads are mapped to a single kernel thread. Thread management is done in user space.
+<br>Advantages: Simplicity in implementation with minimal overhead.
+<br>Disadvantages: A blocking system call by one thread blocks the entire process. This model does not utilize multi-core processors efficiently.
+<br>Example: Early Java Green Threads used this model.
 
-<br>Entity sets
-<br>Relationship sets
-<br>Attributes
-
-
-<br>
-ER model also has a diagrammatic representation - ER Diagram - expresses the overall logical structure of a database graphically
-
-<br>
-To represent the relationship between different stakeholders
-
-<br>
-<img alt="Pasted image 20240824175727.png" src="database-systems/pasted-image-20240824175727.png">
-
-<br>
-Entity - Object that exists and is distinguishable from other objects, eg: specific person, company, event, plant
-
-<br>
-Entity set - set of entities of the same type and have the same properties, eg: set of all persons
-
-<br>
-Entity is represented by a set of attributes, eg: instructor = (id, name, salary)
-
-<br>
-Primary key - uniquely identifying attrtibute of the entity set 
-
-<br>
-<img alt="Pasted image 20240824180108.png" src="database-systems/pasted-image-20240824180108.png">
-
-<br><br>
-<br><img alt="Pasted image 20240824180250.png" src="database-systems/pasted-image-20240824180250.png">
-<br>eg:<img alt="Pasted image 20240824180351.png" src="database-systems/pasted-image-20240824180351.png"><br><br><br>
-<br>Can be divided into smaller subparts, which represent more basic attributes with independent meaning
-<br>Eg: Qualification(degree name, year, college name)
-<br><br>
-<br>Attributes are indivisible values
-<br>Eg: phone number
-<br><br>
-<br>Single value for a particular attribute
-<br>Eg: age, place of birth
-<br><br>
-<br>Multiple values for a particular attribute
-<br>Eg: degree, course_enrolled, email id
-<br><br>
-<br>LOOK INTO THIS
-<br><br>
-<br>Ex: College Degree
-<br><br>
-<br>Composite and multi valued attributes are nested
-<br>Ex: Phone Address(phone(area code, phoneno))
-<br><br>
-<br>An attribute or collection of attributes whose values uniquely identify an entity from the entity set
-<br>Super Keys - Set of attributes that collectively identifies an entity in an entity set
-<br>Candidate Key - A minimal super key. An entity set may have more than one candidate key
-<br>Primary Key - One of the candidate keys chosen by the database designer to uniquely identify the entity set
-<br><img alt="Pasted image 20240824181946.png" src="database-systems/pasted-image-20240824181946.png">
-<br><img alt="Pasted image 20240824182012.png" src="database-systems/pasted-image-20240824182012.png">
-<br><img alt="Pasted image 20240824182050.png" src="database-systems/pasted-image-20240824182050.png">
-<br><br><img alt="Pasted image 20240824182235.png" src="database-systems/pasted-image-20240824182235.png"><br><br><img alt="Pasted image 20240824182307.png" src="database-systems/pasted-image-20240824182307.png"><br>_Next: <a data-href="Module 2 - Keys" href="database-systems/module-2-keys.html" class="internal-link" target="_self" rel="noopener">Module 2 - Keys</a> ]]></description><link>database-systems/mod-2-entities-relationship-model.html</link><guid isPermaLink="false">Database Systems/Mod 2 - Entities Relationship Model.md</guid><pubDate>Sat, 24 Aug 2024 21:24:01 GMT</pubDate><enclosure url="database-systems/pasted-image-20240824175727.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="database-systems/pasted-image-20240824175727.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Functional Dependency]]></title><description><![CDATA[ 
- <br>Prev: <a data-href="Module 3" href="database-systems/module-3.html" class="internal-link" target="_self" rel="noopener">Module 3</a><br><br>Primary key determines every attributes of a relation schema<br>
-<br>Defines relationship among attributes of a relation schema
-<br>Typically between primary key and non-key attribute within a table
-<br>Denotes as X -&gt; Y, X - determinant and Y - dependent
-<br><img alt="Pasted image 20240824205329.png" src="database-systems/pasted-image-20240824205329.png">
-<br>What about this????
-
-<br><img alt="Pasted image 20240824220745.png" src="database-systems/pasted-image-20240824220745.png">
-
-
-<br><img alt="Pasted image 20240824205426.png" src="database-systems/pasted-image-20240824205426.png">
-<br>
-<br><img alt="Pasted image 20240824205628.png" src="database-systems/pasted-image-20240824205628.png">
-<br><img alt="Pasted image 20240824205636.png" src="database-systems/pasted-image-20240824205636.png">
-<br><br>
-<br>Assume that R is a relation schema and X, Y and Z are subsets of R
-<br>Reflexivity rule: If X is a super set of Y then X -&gt; Y
-<br>Augmentation rule: If X -&gt; Y then XZ -&gt; YZ
-<br>Transitivity rule: If X -&gt; Y and Y -&gt; Z then X -&gt; Z
-<br>Union rule: If X -&gt; Y and X -&gt; Z, then X -&gt; YZ
-<br>Decomposition rule: If X -&gt; YZ then X -&gt; Y and X -&gt; Z
-<br>Pseudo transitivity rule: If X -&gt; Y and YZ -&gt; V then XZ -&gt; V
-<br>Composition rule: If X -&gt; Y and V -&gt; W then XV -&gt; YW
-<br>Self Determination: A-&gt; A for any A
-<br>Extensivity: If AC -&gt; A and A -&gt; B, then AC -&gt; B. Similarly, AC -&gt; ABC and ABC -&gt; BC. This leads to AC -&gt; BC
-<br><br>x -&gt; Y<br>
-x - determinant<br>
-y - dependent<br><br>
-<br>A dependent is always a subset of the determinant, i.e, If X -&gt; Y and Y is a subset of X then it is called trivial functional dependency
-<br>Ex :
-
-<br><img alt="Pasted image 20240824210408.png" src="database-systems/pasted-image-20240824210408.png">
-<br>Here {roll_no, name} -&gt; name is a trivial functional dependency, since, the dependent name is a subset of determinant set. Similarly, roll_no -&gt; roll_no is also an example of trivial function dependency.
-
-
-<br><br>
-<br>The dependent is strictly not a subset of the determinant ,i.e, if X -&gt; Y and Y is not a subset of X, then it is called Non-trivial functional dependency
-<br>Here, roll_no -&gt; name is a non-trivial functional dependency since the dependent name is not a subset of determinant roll_no. Similarly, {roll_no, name} -&gt; age is also a non-trivial functional dependency since dependent age is not a subset of determinant set {roll_no, name}
-<br><br>
-<br>Entities of the dependent set are not dependent on each other, i.e, if a -&gt; {b,c} and there exists no functional dependency between b and c
-<br>Here, roll_no -&gt; {name, age} is multivalued functional dependency 
-<br><br>
-<br>Dependent is indirectly dependent on determinant, i.e, if a -&gt; b and b -&gt; c, then according to axiom of transitivity, a -&gt; c, is a transitive functional dependency
-<br><img alt="Pasted image 20240824212344.png" src="database-systems/pasted-image-20240824212344.png">
-<br>Here enrol_no -&gt; dept and dept -&gt; building_no, hence, enrol_no -&gt; dept -&gt; building_no is a transitive functional dependency
-<br><br>
-<br>If more than one attribute is necessary to determine another attribute in an entity
-<br><br>
-<br>An attribute or a set of attributes uniquely determines another attribute or set of attributes. If a relation R has attributes X, Y, Z with the dependencies X -&gt; Y and X -&gt; Z which states that those dependencies are fully functional.
-<br><img alt="Pasted image 20240824220628.png" src="database-systems/pasted-image-20240824220628.png">
-<br><br>
-<br>A non key attribute depends on a part of the composite key, rather than the whole key. If a relation R has attributes X, Y and Z where X and Y are composite key and Z is non key attribute. Then X -&gt; Z is a partial functional dependency in RBDMS.
-<br><img alt="Pasted image 20240824220919.png" src="database-systems/pasted-image-20240824220919.png">
-<br>Next:<a data-href="Decomposition" href="database-systems/decomposition.html" class="internal-link" target="_self" rel="noopener">Decomposition</a>]]></description><link>database-systems/mod-3-functional-dependencies.html</link><guid isPermaLink="false">Database Systems/Mod 3 - Functional Dependencies.md</guid><pubDate>Sat, 24 Aug 2024 18:08:06 GMT</pubDate><enclosure url="database-systems/pasted-image-20240824205329.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="database-systems/pasted-image-20240824205329.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Keys]]></title><description><![CDATA[ 
- <br>Previous: <a data-href="Mod 2 - Entities Relationship Model" href="database-systems/mod-2-entities-relationship-model.html" class="internal-link" target="_self" rel="noopener">Mod 2 - Entities Relationship Model</a><br><br>
-<br>Attribute or set of attributes which helps us to identify a row in a relation
-<br>Allows us to find the relation between the two tables
-<br>Keys helps us to uniquely identify a tuple in a relation by a combination of one or more attributes in that relation
-<br><br>
-<br>Group of single or multiple keys which identifies rows in a table
-<br><img alt="Pasted image 20240825004814.png" src="lib/media/pasted-image-20240825004814.png">
-<br><br>
-<br>Attribute or group of attributes in a relation which helps us to uniquely identifies every tuple in a relation
-<br>The same value can't appear more than once in that relation for that primary key attribute
-<br>Rule:
-
-<br>Rows can't have the same primary key value
-<br>Every row must have a primary key value
-<br>Cant be null
-<br>Value of the primary key can never be modified or updated if any foreign key refers to it
-
-
-<br><br>
-<br>Set of keys that is minimal and can uniquely identify any data row in the table
-<br>Primary key should be selected from the candidate keys
-<br>Every table must have one candidate key
-<br>Rules:
-
-<br>Must contain unique values
-<br>May have multiple attributes
-<br>Must not contain null values
-<br>Uniquely identify each record in a table
-<br>Should contain minimum fields to ensure uniqueness
-
-
-<br><br>
-<br>All candidate keys are super keys cause candidate keys are chosen out of the super keys
-<br>They key from which we cannot remove any fields, {Emp_SSN, Emp_Name} are candidate key but Emp_SSN only is super key cause it can identify a unique tuple hence Emp_Name is redundant
-<br><br>
-<br>Candidate keys which are not primary key are called as alternate keys
-<br>Candidate key which is currently not the primary key
-<br><br>
-<br>An attribute value in a table that acts as the primary key in another table
-<br>Useful in linking together two tables
-<br><br>
-<br>Set of key attributes that allows us to uniquely recognize a specific record
-<br>Possible that each column may be not unique by itself within the database
-<br>However, when combined with the other column or columns the combination of composite keys become unique
-<br><img alt="Pasted image 20240825005723.png" src="lib/media/pasted-image-20240825005723.png">
-<br><br>
-<br>
-An artificial key which aims to uniquely identify each record
 
 <br>
-Created when you dont have any natural primary key
+One-to-One Model:
+
+<br>Description: Each user thread is mapped to a single kernel thread. This model allows better concurrency.
+<br>Advantages: Multiple threads can run in parallel on multi-core processors. Blocking calls in one thread do not affect others.
+<br>Disadvantages: Creating user threads requires creating corresponding kernel threads, which can burden system performance.
+<br>Example: Modern Windows and Linux operating systems use this model but with restrictions to limit performance impact.
+
 
 <br>
-Dont lend any meaning to the table
+Many-to-Many Model:
+
+<br>Description: Multiple user threads are mapped to a smaller or equal number of kernel threads. This model allows better flexibility and resource utilization.
+<br>Advantages: Provides better concurrency and efficient resource usage. Allows kernel to schedule another thread if one is blocked.
+<br>Disadvantages: Complex to implement and manage, particularly in mapping user and kernel threads.
+<br>Example: Solaris uses a variation of this model.
+
 
 <br>
-Ex:
+Two-Level Model:
 
-<br><img alt="Pasted image 20240825005835.png" src="lib/media/pasted-image-20240825005835.png">
-
-Next : <a data-href="Mod 2 - Relational Data Model" href="database-systems/mod-2-relational-data-model.html" class="internal-link" target="_self" rel="noopener">Mod 2 - Relational Data Model</a>
-
-]]></description><link>database-systems/module-2-keys.html</link><guid isPermaLink="false">Database Systems/Module 2 - Keys.md</guid><pubDate>Sat, 24 Aug 2024 19:29:49 GMT</pubDate><enclosure url="lib/media/pasted-image-20240825004814.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib/media/pasted-image-20240825004814.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Schema Refinement]]></title><description><![CDATA[ 
- <br><br>
-<br>Process to improve the design of a database schema to reduce redundancy and eliminate anomalies.
-<br><img alt="Pasted image 20240824184232.png" src="database-systems/pasted-image-20240824184232.png">
-<br>Normalization : Split the tables into small tables which will contain less number of attributes in such a way that table design must not contain any problem of inserting, deleting, updating anomalies and guarantees no redundancy<br>Normalization is a systematic approach of decomposing tables to eliminate data redundancy and undesirable characteristics like Insertion, Update and Deletion Anomalies.<br>Redundancy: Refers to repetition of same data<br>
-Anomalies: Refers to the problems occurred after poorly planned and normalized databases where all the data is stored in one table which is sometimes called a flat file database<br>Insertion anomalies: It may not be possible to store some information unless some other information is stored as well<br>
-Redundant storage: some info is stored repeatedly<br>
-Update anomalies: if one copy of redundant data is updated, inconsistency is created if the rest of the redundant copies are not updated as well<br>
-Deletion anomalies: It may not be possible to delete some information without losing some other information as well<br>Insertion anomaly and deletion anomaly - exist only due to redundancy, otherwise dont exist<br>eg:<br>
-<img alt="Pasted image 20240824195642.png" src="database-systems/pasted-image-20240824195642.png"><br><img alt="Pasted image 20240824195736.png" src="database-systems/pasted-image-20240824195736.png"><br><br>
-<br>Only way to avoid the repetition-of-information problem in the relation schema is to decompose it into two or more schemas
-<br>Types of decomposition:
-
-<br>Lossy Decomposition
-<br>Lossless Decomposition
+<br>Description: Combines many-to-one and one-to-one models. It supports user-level and kernel-level threads.
+<br>Advantages: Balances concurrency and resource utilization. Effectively handles blocking system calls and utilizes multiprocessor systems.
+<br>Disadvantages: More complex than single-level models, requiring careful implementation to avoid inefficiencies.
+<br>Example: Some versions of IRIX and HP-UX use this model.
 
 
-<br><img alt="Pasted image 20240824195855.png" src="database-systems/pasted-image-20240824195855.png">
-<br><br><img alt="Pasted image 20240824195942.png" src="database-systems/pasted-image-20240824195942.png"><br><br>
-<br>
-Let R be a relation schema and let R1 and R2 form a decomposition of R. That is R = R1  R2
+<br><br>
+<br>Threads are lightweight, share resources, and provide efficient context switching compared to processes.
+<br>Single-threaded processes are simpler but do not support concurrent execution.
+<br>Multithreading improves responsiveness, throughput, and resource utilization, with various models offering different trade-offs in complexity and performance.
+<br>Understanding these concepts is crucial for designing effective and efficient applications and systems.
+]]></description><link>os/module-2-threads.html</link><guid isPermaLink="false">OS/Module 2 - Threads.md</guid><pubDate>Sun, 25 Aug 2024 18:53:09 GMT</pubDate></item><item><title><![CDATA[Module 2 CPU Modes]]></title><description><![CDATA[ 
+ <br><br>Previous : <a data-href="Module 2 - System Calls" href="os/module-2-system-calls.html" class="internal-link" target="_self" rel="noopener">Module 2 - System Calls</a><br>The CPU operates in two distinct modes, User Mode and Kernel Mode, to ensure system stability and security.<br><br>
+<br>Restricted Access: User mode is a restricted mode that limits a program's access to system resources. Programs running in this mode cannot directly interact with hardware or memory; instead, they must use system calls to request these services from the operating system (OS).
+<br>Process Isolation: When a user-mode application starts, the OS creates a process for it. This process is provided with:
 
-<br>
-A decomposition is a lossless decomposition if there is no loss of information by replacing R with the two relation schemas R1  R2
+<br>Private Virtual Address Space: Each application gets its own virtual address space, ensuring that one application cannot alter the data of another. This isolation protects the system from cascading failures—if one application crashes, it does not affect others.
+<br>Private Handle Table: Applications manage resources (like files or network connections) through a private handle table.
 
-<br>
-Ex:<br>
-<img alt="Pasted image 20240824200344.png" src="database-systems/pasted-image-20240824200344.png">
+
+<br>Instruction Restrictions: If an application in user mode attempts to execute a privileged instruction (one that can alter system behavior), the hardware treats this as illegal and does not execute it.
+<br><br>When you open a text editor on Windows, it runs in user mode. If it crashes, only the text editor is affected, and the rest of the system continues to operate normally.<br><br>
+<br>Privileged Access: Kernel mode is a privileged mode where the executing code has unrestricted access to all system resources, including hardware and memory.
+<br>Complete Control: The code running in kernel mode can execute any CPU instruction and access any memory address.
+<br>Shared Virtual Address Space: All code in kernel mode shares a single virtual address space. This lack of isolation means that if a driver or the OS itself writes to the wrong memory address, it can corrupt data across the entire system, potentially causing a system-wide crash.
+<br><br>At system startup, the OS loads in kernel mode. Any system drivers or core components of the OS that run in kernel mode have the ability to interact directly with the hardware.<br><br>
+<br>System Boot: The system begins in kernel mode when the OS is loaded. Once the OS is running, user applications start in user mode.
+<br>Mode Switching: The CPU switches from user mode to kernel mode whenever a system call, trap, or interrupt occurs. This switch allows the OS to safely handle the requested operations.
+<br>Protection: This dual-mode operation protects the OS and system resources from errant or malicious user programs, ensuring the stability and security of the system.
+<br><br>Interrupts are signals that allow the OS to temporarily halt its current operations and execute specific functions, known as Interrupt Service Routines (ISRs).<br><br>
+<br>Interrupt Request: A hardware device sends an interrupt request to the CPU.
+<br>Acknowledgment: The CPU acknowledges the request and temporarily halts its current execution.
+<br>Interrupt Vector: The CPU uses the interrupt vector, a table of pointers to ISRs, to locate the appropriate handler for the interrupt.
+<br>Interrupt Service Routine: The CPU executes the ISR to handle the interrupt, which might involve reading data from a device, processing input, or handling an error.
+<br>Resume Execution: After the ISR completes, the CPU resumes its previous activity from where it was interrupted.
+<br><br>
+<br>The CPU has a wire called the Interrupt-Request Line that it checks after executing each instruction. If an interrupt is detected, the CPU reads the interrupt number and jumps to the corresponding ISR using the interrupt vector. The ISR then saves the current state, processes the interrupt, and returns control to the CPU, allowing it to resume its previous task.
+<br><br>
+<br>Deferred Handling: Modern interrupt handlers can defer certain operations until critical processing is complete, improving system efficiency.
+<br>Efficient Dispatching: These handlers can quickly identify and dispatch the correct ISR for a device.
+<br>Multilevel Interrupt Handling: Modern systems distinguish between high and low-priority interrupts, allowing the CPU to respond with the appropriate urgency.
+<br><br>
+<br>Maskable Interrupts: These interrupts can be ignored or disabled by the CPU, giving the system flexibility in handling less critical events.
+<br>Non-Maskable Interrupts (NMI): These interrupts cannot be ignored or disabled by the CPU and are reserved for critical situations that require immediate attention.
+<br><br>The CPU operates in two modes—user mode and kernel mode—to manage and protect system resources. User mode restricts access to hardware and memory, ensuring process isolation, while kernel mode allows unrestricted access to system resources. Interrupts are critical signals that enable the OS to respond to hardware events in real time, with modern interrupt handlers designed for efficiency and prioritization. The dual-mode operation and interrupt handling mechanisms together ensure that the OS maintains control, stability, and security across all system operations.]]></description><link>os/module-2-cpu-modes.html</link><guid isPermaLink="false">OS/Module 2 CPU Modes.md</guid><pubDate>Sun, 25 Aug 2024 18:09:32 GMT</pubDate></item><item><title><![CDATA[OS Design]]></title><description><![CDATA[ 
+ <br>Previous: <a data-href="Structuring Operating Systems" href="os/structuring-operating-systems.html" class="internal-link" target="_self" rel="noopener">Structuring Operating Systems</a><br><br>
+<br>Start the design by defining goals and specifications
+<br>Choice of hardware
+<br>System types
+<br>Specify the requirements
+
+<br>user goals
+<br>System goals
+
+
+<br><a data-href="Separation of policy from mechanism" href="os/separation-of-policy-from-mechanism.html" class="internal-link" target="_self" rel="noopener">Separation of policy from mechanism</a>
+<br><a data-href="Implementation" href="os/implementation.html" class="internal-link" target="_self" rel="noopener">Implementation</a>
+]]></description><link>os/os-design.html</link><guid isPermaLink="false">OS/OS Design.md</guid><pubDate>Sun, 25 Aug 2024 12:31:05 GMT</pubDate></item><item><title><![CDATA[Separation of policy from mechanism]]></title><description><![CDATA[ 
+ <br>Mechanism determines how to do something, policies decide what will be done.<br>
+Separation of policy and mechanism is important for flexibility.<br>
+Policies change with time, with each change in policy likely requires change in the underlying mechanism.<br>
+Policy decisions are important for all resource allocation.]]></description><link>os/separation-of-policy-from-mechanism.html</link><guid isPermaLink="false">OS/Separation of policy from mechanism.md</guid><pubDate>Tue, 20 Aug 2024 16:51:10 GMT</pubDate></item><item><title><![CDATA[Structuring Operating Systems]]></title><description><![CDATA[ 
+ <br> Previous : <a data-href="Mod 1 - Understand Basics of Operating Systems" href="os/mod-1-understand-basics-of-operating-systems.html" class="internal-link" target="_self" rel="noopener">Mod 1 - Understand Basics of Operating Systems</a><br><br><br>The kernel is the core component of an operating system, responsible for managing system resources and providing low-level services to other components. It operates in a privileged mode known as kernel mode, giving it direct access to hardware and system resources.<br>
+<br>Responsibilities:
+
+<br>Memory Management: Oversees the allocation and deallocation of memory to processes, ensuring that each process operates within its allocated space and preventing unauthorized access.
+<br>CPU Time Management: Allocates CPU time to various processes, ensuring efficient process scheduling and multitasking. This involves managing process states and transitions between running, ready, and waiting states.
+<br>Disk Management: Manages data storage and retrieval from disk drives, including handling file systems and data caching to improve performance.
+<br>Task Management: Handles process creation, execution, and termination, including context switching between processes to ensure smooth multitasking.
+
+
+<br><br>
+<br>Role: Manages the allocation of CPU time among processes, ensuring that system resources are used efficiently.
+<br>Function: Determines which processes run at any given time based on scheduling algorithms. It prioritizes processes and manages their execution to optimize system performance.
+<br>Examples of Scheduling Algorithms:
+
+<br>Round Robin: Each process is assigned a fixed time slice in a cyclic order. Example: Unix-like systems.
+<br>Priority Scheduling: Processes are prioritized based on predefined criteria, and higher-priority processes are given more CPU time. Example: Windows.
+
+
+<br><br>
+<br>Role: Manages memory allocation and deallocation, ensuring efficient use of system memory and preventing conflicts between processes.
+<br>Function: Handles memory allocation for processes, implements paging and swapping techniques to manage memory resources, and ensures that processes do not interfere with each other's memory spaces.
+<br>Examples:
+
+<br>Paging: Divides memory into fixed-size pages and maps them to physical memory. Example: Linux.
+<br>Swapping: Moves processes between physical memory and disk storage to manage memory pressure. Example: Windows.
+
+
+<br><br>
+<br>Role: Organizes and manages storage on secondary devices like hard disks, ensuring data is stored and retrieved efficiently.
+<br>Function: Handles file creation, deletion, modification, and access. Manages directories, file permissions, and ensures data integrity and security.
+<br>Examples of File Systems:
+
+<br>NTFS: Used by Windows for its advanced features and security. Example: Windows.
+<br>EXT4: Commonly used by Linux for its reliability and performance. Example: Linux.
+<br>APFS: Used by macOS for its advanced features like encryption and snapshots. Example: macOS.
+
+
+<br><br>
+<br>Role: Serve as the interface between the operating system and hardware devices, providing the necessary commands and protocols to interact with devices.
+<br>Function: Translate OS-level commands into device-specific operations and manage communication between the hardware and software.
+<br>Examples of Device Drivers:
+
+<br>Printer Drivers: Manage printing operations. Example: HP LaserJet drivers for Windows.
+<br>Network Drivers: Handle network communication. Example: Intel network drivers for Linux.
+
+
+<br><br>
+<br>Role: Provides a means for users to interact with the operating system, facilitating program launches, file management, and system tasks.
+<br>Function: Offers different modes of interaction, including command-line interfaces (CLI), graphical user interfaces (GUI), or a combination of both.
+<br>Examples:
+
+<br>CLI: Allows users to interact with the OS using text commands. Example: Terminal in Linux.
+<br>GUI: Provides a visual interface with windows, icons, and menus. Example: Windows Desktop Environment.
+
+
+<br><br>
+<br>Definition: Interfaces provided by the operating system for programs to request services from the kernel.
+<br>Function: Allows user-level processes to perform operations such as file management, process control, and communication with hardware.
+<br>Examples of System Calls:
+
+<br>open(): Opens a file. Example: Unix-based systems.
+<br>read(): Reads data from a file. Example: Unix-based systems.
+<br>write(): Writes data to a file. Example: Unix-based systems.
+<br>close(): Closes an open file descriptor. Example: Unix-based systems.
+
 
 <br><br><br>
-<br>Whenever we are going to form relational schema there should be some meaning among the attributes. This meaning is called semantics
-<br>Semantics relates one attribute to another with some relation
-<br><img alt="Pasted image 20240824200516.png" src="database-systems/pasted-image-20240824200516.png">
+<br>Description: All system services run in kernel space without separation between kernel and user processes. This approach integrates various functionalities into a single large kernel.
+<br>Components: Includes file system management, memory management, process management, and device drivers.
+<br>Advantages:
+
+<br>Simplicity: Easy to implement with fewer components.
+<br>Performance: Direct system calls lead to high performance and low overhead.
+
+
+<br>Disadvantages:
+
+<br>Security: Vulnerabilities in the kernel affect the entire system, reducing security and stability.
+<br>Flexibility: Less modularity and difficulty in maintaining or extending the kernel.
+
+
+<br>Examples: Early versions of Unix, small embedded systems.
 <br><br>
-<br>
-Mixing attributes of multiple entities may cause problems 
+<br>Description: Divides the OS into layers, each responsible for specific functions. Each layer interacts only with the layer directly below it.
+<br>Components: Hardware layer at the bottom, user interface at the top, with intermediate layers handling system services.
+<br>Advantages:
 
-<br>
-Information is stored redundantly wasting storage
-
-<br>
-Problems with update anomalies
-
-<br>Insertion anomalies
-<br>Deletion anomalies
-<br>Modification anomalies<br>
-<img alt="Pasted image 20240824200648.png" src="database-systems/pasted-image-20240824200648.png">
-
--Here whenever we insert the tuples there may in N students in one department, so Deptno, Dept name values are repeated N times which leads to data redundancy
-<img alt="Pasted image 20240824200807.png" src="database-systems/pasted-image-20240824200807.png"><br>
-<img alt="Pasted image 20240824200902.png" src="database-systems/pasted-image-20240824200902.png">
-
-<br><br>![[Pasted image 20240824201119.png]]
-![[Pasted image 20240824201129.png]]
-Copy<br><br>
-<br>Boyce Code Normal Form
-<br>Multi Valued dependency and Fourth Normal Form
-<br>Join dependency and Fifth Normal Form
-<br>Next: <a data-href="Mod 3 - Functional Dependencies" href="database-systems/mod-3-functional-dependencies.html" class="internal-link" target="_self" rel="noopener">Mod 3 - Functional Dependencies</a>]]></description><link>database-systems/module-3.html</link><guid isPermaLink="false">Database Systems/Module 3.md</guid><pubDate>Sat, 24 Aug 2024 17:57:49 GMT</pubDate><enclosure url="database-systems/pasted-image-20240824184232.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="database-systems/pasted-image-20240824184232.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Normalization]]></title><description><![CDATA[ 
- <br>prev: <a data-href="Decomposition" href="database-systems/decomposition.html" class="internal-link" target="_self" rel="noopener">Decomposition</a><br>Process of minimizing redundancy from a relation or set of relations<br>
-Involves restructuring the tables to successively meeting higher forms of Normalization<br><img alt="Pasted image 20240824215847.png" src="database-systems/pasted-image-20240824215847.png"><br>Redundant data - Storing the same data more than once, and can be removed without the loss of information<br><img alt="Pasted image 20240824220030.png" src="database-systems/pasted-image-20240824220030.png"><br><br>
-<br>An attribute which can have more than one value for a primary key value
-<br>Repeating groups are not allowed in a relational design, since all attributes have to be atomic
-<br>Bad Practice:
-
-<br><img alt="Pasted image 20240824220257.png" src="database-systems/pasted-image-20240824220257.png">
+<br>Modularity: Simplifies maintenance and debugging due to well-defined layers.
+<br>Isolation: Changes in one layer do not affect others, enhancing system stability.
 
 
-<br><br>Most databasees should be  3NF or BCNF to avoid database anomalies<br><br>
-<br>If all the fields contain only scalar values( as opposed to list of values )
-<br>Ex : NOT 1NF(AuName, AuPhone)
+<br>Disadvantages:
 
-<br><img alt="Pasted image 20240824221158.png" src="database-systems/pasted-image-20240824221158.png">
-
-
-<br>Method:<br>
-<img alt="Pasted image 20240824221250.png" src="database-systems/pasted-image-20240824221250.png"><br>
-<br>Ex: 1NF
-
-<br><img alt="Pasted image 20240824221307.png" src="database-systems/pasted-image-20240824221307.png">
+<br>Performance Overhead: Layered interactions may introduce performance overhead.
+<br>Complexity: Managing and defining layer functionality can be complex.
 
 
+<br>Examples: OS/2, some modern implementations of Linux.
 <br><br>
-<br>Requirements: 
+<br>Description: Minimizes the kernel's responsibilities, moving most services to user space. The microkernel handles only essential functions such as communication and basic resource management.
+<br>Components: Includes a small microkernel for fundamental tasks and user-space services for other functionalities.
+<br>Advantages:
 
-<br>Database should be in 1NF
-<br>All non key attributes in the table should be functionally dependent on the primary key
-
-
-<br><img alt="Pasted image 20240824225808.png" src="database-systems/pasted-image-20240824225808.png">
-<br><br>
-<br>All non-key attributes must only be functionally dependent on a candidate key, i.e, there can be no interdependencies among non-key attributes
-<br>Requirements:
-
-<br>Should be in second normal form
-<br>No attribute is transitively dependent on the primary key
+<br>Extensibility: Easier to extend and port to different hardware.
+<br>Security and Stability: Improved security and stability due to most services running in user space.
 
 
-<br><img alt="Pasted image 20240824231821.png" src="database-systems/pasted-image-20240824231821.png">
-]]></description><link>database-systems/normalization.html</link><guid isPermaLink="false">Database Systems/Normalization.md</guid><pubDate>Sat, 24 Aug 2024 17:48:28 GMT</pubDate><enclosure url="database-systems/pasted-image-20240824215847.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="database-systems/pasted-image-20240824215847.png"&gt;&lt;/figure&gt;</content:encoded></item></channel></rss>
+<br>Disadvantages:
+
+<br>Performance Overhead: Increased messaging and context switching between user and kernel space can impact performance.
+<br>Complexity: Managing communication between kernel and user-space services adds complexity.
+
+
+<br>Examples: Mach microkernel used in NeXTSTEP and macOS, MINIX operating system.
+<br><br>Overview: LKMs allow the kernel to be extended dynamically without recompilation. These modules can be loaded and unloaded at runtime, providing flexibility and adaptability.<br>Key Features:<br>
+<br>Modularity: Core functionalities are maintained while additional features are added or removed dynamically.
+<br>Dynamic Loading: Supports the introduction of new services like device drivers or file systems without rebooting.
+<br>Resource Management: Unloads modules when no longer needed to free system resources.
+<br>Communication: Simplifies interaction with the kernel without message passing.
+<br>Advantages:<br>
+<br>Flexibility: Adapts to changing requirements and hardware without requiring system restarts or recompilation.
+<br>Reduced Overhead: Avoids the need for frequent kernel recompilation, saving time and resources.
+<br>Efficient Resource Utilization: Enables on-demand loading and unloading of functionalities.
+<br>Examples of Operating Systems Using LKMs:<br>
+<br>Linux: Implements a modular approach for hardware support and system services.
+<br>Solaris: Uses dynamic loading for modular extensions.
+<br>macOS and Windows: Incorporate modules to enhance kernel functionalities.
+<br><br>Overview: Hybrid operating systems blend multiple kernel architectures to leverage their combined strengths, aiming to balance performance, security, and usability.<br>Hybrid System Examples:<br>
+<br>Linux: Primarily monolithic but supports modular components for dynamic functionality.
+<br>Windows: Monolithic core with microkernel elements for subsystem functionalities.
+<br>macOS: Combines Mach microkernel with BSD UNIX kernel components.
+<br><br>Architecture: Both are built on Darwin, which integrates Mach microkernel and BSD UNIX elements. They feature layered architectures:<br>
+<br>
+User Experience Layer:
+
+<br>macOS: Aqua
+<br>iOS: Springboard
+
+
+<br>
+Application Framework Layer:
+
+<br>macOS: Cocoa
+<br>iOS: Cocoa Touch
+
+
+<br>
+Core Frameworks:
+
+<br>Support graphics and media, such as QuickTime and OpenGL.
+
+
+<br>
+Kernel:
+
+<br>Darwin: Combines Mach microkernel and BSD UNIX elements.
+
+
+<br>Distinctions:<br>
+<br>Architecture:
+
+<br>macOS: Designed for Intel architectures.
+<br>iOS: Compiled for ARM-based architectures.
+
+
+<br>Developer Restrictions:
+
+<br>macOS: Offers open access to POSIX and BSD APIs.
+<br>iOS: Enforces restrictions to ensure security and control.
+
+
+<br>System Calls:<br>
+<br>Mach System Calls: Core services for memory management and CPU scheduling.
+<br>BSD System Calls: Support networking, security, and programming languages.
+<br>Next: <a data-href="OS Design" href="os/os-design.html" class="internal-link" target="_self" rel="noopener">OS Design</a>]]></description><link>os/structuring-operating-systems.html</link><guid isPermaLink="false">OS/Structuring Operating Systems.md</guid><pubDate>Sun, 25 Aug 2024 19:04:00 GMT</pubDate></item></channel></rss>

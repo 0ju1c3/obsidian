@@ -1,13 +1,18 @@
 {
   "vaultName": "obsidian",
-  "lastExport": 1724668815813,
+  "lastExport": 1724787972455,
   "pluginVersion": "1.8.01",
-  "validBodyClasses": "publish css-settings-manager theme-dark show-inline-title show-ribbon encore-theme-dark-glass-royale encore-colors-colorful encore-translucency encore-bg-prismatic encore-blur-less",
+  "validBodyClasses": "publish css-settings-manager theme-dark show-inline-title show-ribbon encore-theme-dark-rgb encore-colors-colorful encore-translucency encore-bg-prismatic encore-blur-less",
   "useCustomHeadContent": false,
   "useCustomFavicon": false,
   "files": [
+    "Compiler Design/Lexical Analysis.md",
+    "Compiler Design/Mod 2 - Bottom Up Parser.md",
     "Compiler Design/Module 1.md",
+    "Compiler Design/Module 1 - Kalaivani.md",
     "Compiler Design/Module 2.md",
+    "Compiler Design/Module 2 - Top Down Parsing.md",
+    "Compiler Design/Module 2 LL(1) Parsing.md",
     "Compiler Design/Pasted image 20240822224301.png",
     "Compiler Design/Pasted image 20240822224709.png",
     "Compiler Design/Pasted image 20240822232221.png",
@@ -21,6 +26,40 @@
     "Compiler Design/Pasted image 20240822233413.png",
     "Compiler Design/Pasted image 20240822233431.png",
     "Compiler Design/Pasted image 20240823001558.png",
+    "Computer Networks/1-Network Topology-25-07-2024.pdf",
+    "Computer Networks/2-OSl & TCP_IP models-01-08-2024.pdf",
+    "Computer Networks/3-Transmission Impairment and Performance-09-08-2024.pdf",
+    "Computer Networks/4-Hamming code-19-08-2024.pdf",
+    "Computer Networks/Circuit and Packet Switching.md",
+    "Computer Networks/Computer Networks Syllabus.md",
+    "Computer Networks/Hamming Code.md",
+    "Computer Networks/Network Topology.md",
+    "Computer Networks/OSL and TCP-IP.md",
+    "Computer Networks/Pasted image 20240821141404.png",
+    "Computer Networks/Pasted image 20240821141843.png",
+    "Computer Networks/Pasted image 20240821142043.png",
+    "Computer Networks/Pasted image 20240821142152.png",
+    "Computer Networks/Pasted image 20240821142428.png",
+    "Computer Networks/Pasted image 20240821144917.png",
+    "Computer Networks/Pasted image 20240821145914.png",
+    "Computer Networks/Pasted image 20240821145934.png",
+    "Computer Networks/Pasted image 20240821150055.png",
+    "Computer Networks/Pasted image 20240821150131.png",
+    "Computer Networks/Pasted image 20240821215816.png",
+    "Computer Networks/Pasted image 20240821215831.png",
+    "Computer Networks/Pasted image 20240821215934.png",
+    "Computer Networks/Pasted image 20240821220101.png",
+    "Computer Networks/Pasted image 20240821221216.png",
+    "Computer Networks/Pasted image 20240821221531.png",
+    "Computer Networks/Pasted image 20240821221817.png",
+    "Computer Networks/Pasted image 20240821222059.png",
+    "Computer Networks/Pasted image 20240821222552.png",
+    "Computer Networks/Pasted image 20240821223645.png",
+    "Computer Networks/Pasted image 20240821223846.png",
+    "Computer Networks/Pasted image 20240821223913.png",
+    "Computer Networks/Pasted image 20240822001828.png",
+    "Computer Networks/Pasted image 20240822001835.png",
+    "Computer Networks/Pasted image 20240822001844.png",
     "Database Systems/Compiler Design/Module 1.md",
     "Database Systems/Compiler Design/Module 2.md",
     "Database Systems/Compiler Design/Pasted image 20240822224301.png",
@@ -162,7 +201,6 @@
     "OS/pdf7.pdf",
     "OS/Separation of policy from mechanism.md",
     "OS/Structuring Operating Systems.md",
-    "lib/media/pasted-image-20240826120353.png",
     "lib/scripts/graph-wasm.wasm",
     "lib/fonts/94f2f163d4b698242fef.otf",
     "lib/fonts/72505e6a122c6acd5471.woff2",
@@ -216,7 +254,125 @@
     "lib/styles/global-variable-styles.css",
     "lib/styles/supported-plugins.css",
     "lib/styles/main-styles.css",
+    "compiler-design/pasted-image-20240822224301.png",
+    "compiler-design/pasted-image-20240822224709.png",
+    "compiler-design/pasted-image-20240822232221.png",
+    "compiler-design/pasted-image-20240822232238.png",
+    "compiler-design/pasted-image-20240822232259.png",
+    "compiler-design/pasted-image-20240822232541.png",
+    "compiler-design/pasted-image-20240822232716.png",
+    "compiler-design/pasted-image-20240822232831.png",
+    "compiler-design/pasted-image-20240822232906.png",
+    "compiler-design/pasted-image-20240822233115.png",
+    "compiler-design/pasted-image-20240822233413.png",
+    "compiler-design/pasted-image-20240822233431.png",
+    "compiler-design/pasted-image-20240823001558.png",
+    "database-systems/compiler-design/pasted-image-20240822224301.png",
+    "database-systems/compiler-design/pasted-image-20240822224709.png",
+    "database-systems/compiler-design/pasted-image-20240822232221.png",
+    "database-systems/compiler-design/pasted-image-20240822232238.png",
+    "database-systems/compiler-design/pasted-image-20240822232259.png",
+    "database-systems/compiler-design/pasted-image-20240822232541.png",
+    "database-systems/compiler-design/pasted-image-20240822232716.png",
+    "database-systems/compiler-design/pasted-image-20240822232831.png",
+    "database-systems/compiler-design/pasted-image-20240822232906.png",
+    "database-systems/compiler-design/pasted-image-20240822233115.png",
+    "database-systems/compiler-design/pasted-image-20240822233413.png",
+    "database-systems/compiler-design/pasted-image-20240822233431.png",
+    "database-systems/compiler-design/pasted-image-20240823001558.png",
+    "database-systems/computer-networks/3-transmission-impairment-and-performance-09-08-2024.pdf",
+    "database-systems/computer-networks/pasted-image-20240822001828.png",
+    "database-systems/computer-networks/pasted-image-20240822001835.png",
+    "database-systems/computer-networks/pasted-image-20240822001844.png",
+    "database-systems/computer-networks/4-hamming-code-19-08-2024.pdf",
+    "database-systems/computer-networks/pasted-image-20240821141404.png",
+    "database-systems/computer-networks/pasted-image-20240821141843.png",
+    "database-systems/computer-networks/pasted-image-20240821142152.png",
+    "database-systems/computer-networks/pasted-image-20240821142428.png",
+    "database-systems/computer-networks/pasted-image-20240821144917.png",
+    "database-systems/computer-networks/pasted-image-20240821145914.png",
+    "database-systems/computer-networks/pasted-image-20240821145934.png",
+    "database-systems/computer-networks/pasted-image-20240821150055.png",
+    "database-systems/computer-networks/pasted-image-20240821150131.png",
+    "database-systems/computer-networks/1-network-topology-25-07-2024.pdf",
+    "database-systems/computer-networks/pasted-image-20240821215831.png",
+    "database-systems/computer-networks/pasted-image-20240821215816.png",
+    "database-systems/computer-networks/pasted-image-20240821215934.png",
+    "database-systems/computer-networks/pasted-image-20240821220101.png",
+    "database-systems/computer-networks/2-osl-&-tcp_ip-models-01-08-2024.pdf",
+    "database-systems/computer-networks/pasted-image-20240821223645.png",
+    "database-systems/computer-networks/pasted-image-20240821223846.png",
+    "database-systems/computer-networks/pasted-image-20240821223913.png",
+    "database-systems/computer-networks/pasted-image-20240821221216.png",
+    "database-systems/computer-networks/pasted-image-20240821221531.png",
+    "database-systems/computer-networks/pasted-image-20240821221817.png",
+    "database-systems/computer-networks/pasted-image-20240821222059.png",
+    "database-systems/computer-networks/pasted-image-20240821222552.png",
+    "database-systems/pasted-image-20240824213403.png",
+    "database-systems/pasted-image-20240824214651.png",
+    "database-systems/pasted-image-20240824214734.png",
+    "database-systems/pasted-image-20240824215317.png",
+    "database-systems/pasted-image-20240824215331.png",
+    "database-systems/pasted-image-20240825024419.png",
+    "database-systems/pasted-image-20240824175727.png",
+    "database-systems/pasted-image-20240824180108.png",
+    "database-systems/pasted-image-20240824180250.png",
+    "database-systems/pasted-image-20240824180351.png",
+    "database-systems/pasted-image-20240824181946.png",
+    "database-systems/pasted-image-20240824182012.png",
+    "database-systems/pasted-image-20240824182050.png",
+    "database-systems/pasted-image-20240824182235.png",
+    "database-systems/pasted-image-20240824182307.png",
+    "database-systems/pasted-image-20240825010229.png",
+    "database-systems/pasted-image-20240824205329.png",
+    "database-systems/pasted-image-20240824220745.png",
+    "database-systems/pasted-image-20240824205426.png",
+    "database-systems/pasted-image-20240824205628.png",
+    "database-systems/pasted-image-20240824205636.png",
+    "database-systems/pasted-image-20240824210408.png",
+    "database-systems/pasted-image-20240824212344.png",
+    "database-systems/pasted-image-20240824220628.png",
+    "database-systems/pasted-image-20240824220919.png",
+    "database-systems/pasted-image-20240823225050.png",
+    "database-systems/pasted-image-20240823232542.png",
+    "database-systems/pasted-image-20240824011936.png",
+    "database-systems/pasted-image-20240824012011.png",
+    "database-systems/pasted-image-20240824012106.png",
+    "database-systems/pasted-image-20240824012306.png",
+    "database-systems/pasted-image-20240825102030.png",
+    "database-systems/pasted-image-20240824173029.png",
+    "database-systems/pasted-image-20240824173252.png",
+    "database-systems/pasted-image-20240824173300.png",
+    "database-systems/pasted-image-20240824173406.png",
+    "database-systems/pasted-image-20240824173726.png",
+    "database-systems/pasted-image-20240824173800.png",
+    "database-systems/pasted-image-20240824173844.png",
+    "database-systems/pasted-image-20240824174014.png",
+    "database-systems/pasted-image-20240824174034.png",
+    "database-systems/pasted-image-20240824174109.png",
+    "database-systems/pasted-image-20240825004814.png",
+    "database-systems/pasted-image-20240825005723.png",
+    "database-systems/pasted-image-20240825005835.png",
+    "database-systems/pasted-image-20240824184232.png",
+    "database-systems/pasted-image-20240824195642.png",
+    "database-systems/pasted-image-20240824195736.png",
+    "database-systems/pasted-image-20240824195855.png",
+    "database-systems/pasted-image-20240824195942.png",
+    "database-systems/pasted-image-20240824200344.png",
+    "database-systems/pasted-image-20240824200516.png",
+    "database-systems/pasted-image-20240824200648.png",
+    "database-systems/pasted-image-20240824200807.png",
+    "database-systems/pasted-image-20240824200902.png",
+    "database-systems/pasted-image-20240824215847.png",
+    "database-systems/pasted-image-20240824220030.png",
+    "database-systems/pasted-image-20240824220257.png",
+    "database-systems/pasted-image-20240824221158.png",
+    "database-systems/pasted-image-20240824221250.png",
+    "database-systems/pasted-image-20240824221307.png",
+    "database-systems/pasted-image-20240824225808.png",
+    "database-systems/pasted-image-20240824231821.png",
     "os/pdf1.pdf",
+    "lib/media/pasted-image-20240826120353.png",
     "os/pdf4.pdf",
     "os/pdf7.pdf",
     "os/pdf5.pdf",
@@ -538,319 +694,319 @@
       "dependencies": []
     },
     "lib/scripts/graph-wasm.wasm": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 23377,
       "exportedPath": "lib/scripts/graph-wasm.wasm",
       "dependencies": []
     },
     "lib/fonts/94f2f163d4b698242fef.otf": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 66800,
       "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
       "dependencies": []
     },
     "lib/fonts/72505e6a122c6acd5471.woff2": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 104232,
       "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
       "dependencies": []
     },
     "lib/fonts/2d5198822ab091ce4305.woff2": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 104332,
       "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
       "dependencies": []
     },
     "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 98868,
       "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
       "dependencies": []
     },
     "lib/fonts/cb10ffd7684cd9836a05.woff2": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 106876,
       "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
       "dependencies": []
     },
     "lib/fonts/b5f0f109bc88052d4000.woff2": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 105804,
       "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
       "dependencies": []
     },
     "lib/fonts/cbe0ae49c52c920fd563.woff2": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 106108,
       "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
       "dependencies": []
     },
     "lib/fonts/535a6cf662596b3bd6a6.woff2": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 111708,
       "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
       "dependencies": []
     },
     "lib/fonts/70cc7ff27245e82ad414.ttf": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 192740,
       "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
       "dependencies": []
     },
     "lib/fonts/454577c22304619db035.ttf": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 161376,
       "exportedPath": "lib/fonts/454577c22304619db035.ttf",
       "dependencies": []
     },
     "lib/fonts/52ac8f3034507f1d9e53.ttf": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 191568,
       "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
       "dependencies": []
     },
     "lib/fonts/05b618077343fbbd92b7.ttf": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 155288,
       "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
       "dependencies": []
     },
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 7876,
       "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
       "dependencies": []
     },
     "lib/media/874d8b8e340f75575caa.svg": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 317,
       "exportedPath": "lib/media/874d8b8e340f75575caa.svg",
       "dependencies": []
     },
     "lib/media/3d6c1bdc4d87cde4de67.svg": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 279,
       "exportedPath": "lib/media/3d6c1bdc4d87cde4de67.svg",
       "dependencies": []
     },
     "lib/html/file-tree.html": {
-      "modifiedTime": 1724668815813,
-      "sourceSize": 64806,
+      "modifiedTime": 1724787972455,
+      "sourceSize": 80555,
       "exportedPath": "lib/html/file-tree.html",
       "dependencies": []
     },
     "lib/scripts/webpage.js": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 47290,
       "exportedPath": "lib/scripts/webpage.js",
       "dependencies": []
     },
     "lib/scripts/graph-view.js": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 15519,
       "exportedPath": "lib/scripts/graph-view.js",
       "dependencies": []
     },
     "lib/scripts/graph-wasm.js": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 14021,
       "exportedPath": "lib/scripts/graph-wasm.js",
       "dependencies": []
     },
     "lib/scripts/graph-render-worker.js": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 5179,
       "exportedPath": "lib/scripts/graph-render-worker.js",
       "dependencies": []
     },
     "lib/scripts/tinycolor.js": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 29832,
       "exportedPath": "lib/scripts/tinycolor.js",
       "dependencies": []
     },
     "lib/scripts/pixi.js": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 449509,
       "exportedPath": "lib/scripts/pixi.js",
       "dependencies": []
     },
     "lib/scripts/minisearch.js": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 29422,
       "exportedPath": "lib/scripts/minisearch.js",
       "dependencies": []
     },
     "lib/media/favicon.png": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 1105,
       "exportedPath": "lib/media/favicon.png",
       "dependencies": []
     },
     "lib/scripts/graph-data.js": {
-      "modifiedTime": 1724668815813,
-      "sourceSize": 2371,
+      "modifiedTime": 1724787972455,
+      "sourceSize": 3151,
       "exportedPath": "lib/scripts/graph-data.js",
       "dependencies": []
     },
     "lib/styles/obsidian.css": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 130471,
       "exportedPath": "lib/styles/obsidian.css",
       "dependencies": []
     },
     "lib/styles/global-variable-styles.css": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 238,
       "exportedPath": "lib/styles/global-variable-styles.css",
       "dependencies": []
     },
     "lib/styles/main-styles.css": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 23130,
       "exportedPath": "lib/styles/main-styles.css",
       "dependencies": []
     },
     "lib/fonts/mathjax_zero.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 1368,
       "exportedPath": "lib/fonts/mathjax_zero.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_main-regular.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 34160,
       "exportedPath": "lib/fonts/mathjax_main-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_main-bold.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 34464,
       "exportedPath": "lib/fonts/mathjax_main-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_math-italic.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 19360,
       "exportedPath": "lib/fonts/mathjax_math-italic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_main-italic.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 20832,
       "exportedPath": "lib/fonts/mathjax_main-italic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_math-bolditalic.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 19776,
       "exportedPath": "lib/fonts/mathjax_math-bolditalic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size1-regular.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 5792,
       "exportedPath": "lib/fonts/mathjax_size1-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size2-regular.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 5464,
       "exportedPath": "lib/fonts/mathjax_size2-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size3-regular.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 3244,
       "exportedPath": "lib/fonts/mathjax_size3-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size4-regular.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 5148,
       "exportedPath": "lib/fonts/mathjax_size4-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_ams-regular.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 40808,
       "exportedPath": "lib/fonts/mathjax_ams-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_calligraphic-regular.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 9600,
       "exportedPath": "lib/fonts/mathjax_calligraphic-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_calligraphic-bold.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 9908,
       "exportedPath": "lib/fonts/mathjax_calligraphic-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_fraktur-regular.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 21480,
       "exportedPath": "lib/fonts/mathjax_fraktur-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_fraktur-bold.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 22340,
       "exportedPath": "lib/fonts/mathjax_fraktur-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_sansserif-regular.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 12660,
       "exportedPath": "lib/fonts/mathjax_sansserif-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_sansserif-bold.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 15944,
       "exportedPath": "lib/fonts/mathjax_sansserif-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_sansserif-italic.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 14628,
       "exportedPath": "lib/fonts/mathjax_sansserif-italic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_script-regular.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 11852,
       "exportedPath": "lib/fonts/mathjax_script-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_typewriter-regular.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 17604,
       "exportedPath": "lib/fonts/mathjax_typewriter-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_vector-regular.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 1136,
       "exportedPath": "lib/fonts/mathjax_vector-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_vector-bold.woff": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 1116,
       "exportedPath": "lib/fonts/mathjax_vector-bold.woff",
       "dependencies": []
     },
     "lib/styles/theme.css": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 73510,
       "exportedPath": "lib/styles/theme.css",
       "dependencies": []
     },
     "lib/styles/supported-plugins.css": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 99,
       "exportedPath": "lib/styles/supported-plugins.css",
       "dependencies": []
@@ -1002,24 +1158,10 @@
       "dependencies": []
     },
     "Compiler Design/Module 1.md": {
-      "modifiedTime": 1724668815813,
-      "sourceSize": 5588,
+      "modifiedTime": 1724787972455,
+      "sourceSize": 5730,
       "exportedPath": "compiler-design/module-1.html",
-      "dependencies": [
-        "compiler-design/pasted-image-20240822224301.png",
-        "compiler-design/pasted-image-20240822224709.png",
-        "compiler-design/pasted-image-20240822232221.png",
-        "compiler-design/pasted-image-20240822232238.png",
-        "compiler-design/pasted-image-20240822232259.png",
-        "compiler-design/pasted-image-20240822232541.png",
-        "compiler-design/pasted-image-20240822232716.png",
-        "compiler-design/pasted-image-20240822232831.png",
-        "compiler-design/pasted-image-20240822232906.png",
-        "compiler-design/pasted-image-20240822233115.png",
-        "compiler-design/pasted-image-20240822233413.png",
-        "compiler-design/pasted-image-20240822233431.png",
-        "compiler-design/pasted-image-20240823001558.png"
-      ]
+      "dependencies": []
     },
     "Compiler Design/Module 2.md": {
       "modifiedTime": 1724668815813,
@@ -1981,79 +2123,79 @@
       "dependencies": []
     },
     "compiler-design/pasted-image-20240822224301.png": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 46984,
       "exportedPath": "compiler-design/pasted-image-20240822224301.png",
       "dependencies": []
     },
     "compiler-design/pasted-image-20240822224709.png": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 27403,
       "exportedPath": "compiler-design/pasted-image-20240822224709.png",
       "dependencies": []
     },
     "compiler-design/pasted-image-20240822232221.png": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 9594,
       "exportedPath": "compiler-design/pasted-image-20240822232221.png",
       "dependencies": []
     },
     "compiler-design/pasted-image-20240822232238.png": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 11131,
       "exportedPath": "compiler-design/pasted-image-20240822232238.png",
       "dependencies": []
     },
     "compiler-design/pasted-image-20240822232259.png": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 13733,
       "exportedPath": "compiler-design/pasted-image-20240822232259.png",
       "dependencies": []
     },
     "compiler-design/pasted-image-20240822232541.png": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 14225,
       "exportedPath": "compiler-design/pasted-image-20240822232541.png",
       "dependencies": []
     },
     "compiler-design/pasted-image-20240822232716.png": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 13910,
       "exportedPath": "compiler-design/pasted-image-20240822232716.png",
       "dependencies": []
     },
     "compiler-design/pasted-image-20240822232831.png": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 17355,
       "exportedPath": "compiler-design/pasted-image-20240822232831.png",
       "dependencies": []
     },
     "compiler-design/pasted-image-20240822232906.png": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 32636,
       "exportedPath": "compiler-design/pasted-image-20240822232906.png",
       "dependencies": []
     },
     "compiler-design/pasted-image-20240822233115.png": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 22929,
       "exportedPath": "compiler-design/pasted-image-20240822233115.png",
       "dependencies": []
     },
     "compiler-design/pasted-image-20240822233413.png": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 28563,
       "exportedPath": "compiler-design/pasted-image-20240822233413.png",
       "dependencies": []
     },
     "compiler-design/pasted-image-20240822233431.png": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 47718,
       "exportedPath": "compiler-design/pasted-image-20240822233431.png",
       "dependencies": []
     },
     "compiler-design/pasted-image-20240823001558.png": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724787972455,
       "sourceSize": 18467,
       "exportedPath": "compiler-design/pasted-image-20240823001558.png",
       "dependencies": []
@@ -2680,6 +2822,454 @@
       "modifiedTime": 1724668815813,
       "sourceSize": 19916,
       "exportedPath": "database-systems/pasted-image-20240824231821.png",
+      "dependencies": []
+    },
+    "Compiler Design/Lexical Analysis.md": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 5464,
+      "exportedPath": "compiler-design/lexical-analysis.html",
+      "dependencies": []
+    },
+    "Compiler Design/Mod 2 - Bottom Up Parser.md": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 273,
+      "exportedPath": "compiler-design/mod-2-bottom-up-parser.html",
+      "dependencies": []
+    },
+    "Compiler Design/Module 1 - Kalaivani.md": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 6989,
+      "exportedPath": "compiler-design/module-1-kalaivani.html",
+      "dependencies": [
+        "compiler-design/pasted-image-20240822224301.png",
+        "compiler-design/pasted-image-20240822224709.png",
+        "compiler-design/pasted-image-20240822232221.png",
+        "compiler-design/pasted-image-20240822232238.png",
+        "compiler-design/pasted-image-20240822232259.png",
+        "compiler-design/pasted-image-20240822232541.png",
+        "compiler-design/pasted-image-20240822232716.png",
+        "compiler-design/pasted-image-20240822232831.png",
+        "compiler-design/pasted-image-20240822232906.png",
+        "compiler-design/pasted-image-20240822233115.png",
+        "compiler-design/pasted-image-20240822233413.png",
+        "compiler-design/pasted-image-20240822233431.png",
+        "compiler-design/pasted-image-20240823001558.png"
+      ]
+    },
+    "Compiler Design/Module 2 - Top Down Parsing.md": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 3135,
+      "exportedPath": "compiler-design/module-2-top-down-parsing.html",
+      "dependencies": []
+    },
+    "Compiler Design/Module 2 LL(1) Parsing.md": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 1816,
+      "exportedPath": "compiler-design/module-2-ll(1)-parsing.html",
+      "dependencies": []
+    },
+    "Computer Networks/1-Network Topology-25-07-2024.pdf": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 1089832,
+      "exportedPath": "computer-networks/1-network-topology-25-07-2024.pdf",
+      "dependencies": []
+    },
+    "Computer Networks/2-OSl & TCP_IP models-01-08-2024.pdf": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 1299591,
+      "exportedPath": "computer-networks/2-osl-&-tcp_ip-models-01-08-2024.pdf",
+      "dependencies": []
+    },
+    "Computer Networks/3-Transmission Impairment and Performance-09-08-2024.pdf": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 1363206,
+      "exportedPath": "computer-networks/3-transmission-impairment-and-performance-09-08-2024.pdf",
+      "dependencies": []
+    },
+    "Computer Networks/4-Hamming code-19-08-2024.pdf": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 888786,
+      "exportedPath": "computer-networks/4-hamming-code-19-08-2024.pdf",
+      "dependencies": []
+    },
+    "Computer Networks/Circuit and Packet Switching.md": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 4476,
+      "exportedPath": "computer-networks/circuit-and-packet-switching.html",
+      "dependencies": [
+        "computer-networks/3-transmission-impairment-and-performance-09-08-2024.pdf",
+        "computer-networks/pasted-image-20240822001828.png",
+        "computer-networks/pasted-image-20240822001835.png",
+        "computer-networks/pasted-image-20240822001844.png"
+      ]
+    },
+    "Computer Networks/Computer Networks Syllabus.md": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 112,
+      "exportedPath": "computer-networks/computer-networks-syllabus.html",
+      "dependencies": []
+    },
+    "Computer Networks/Hamming Code.md": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 3169,
+      "exportedPath": "computer-networks/hamming-code.html",
+      "dependencies": [
+        "computer-networks/4-hamming-code-19-08-2024.pdf",
+        "computer-networks/pasted-image-20240821141404.png",
+        "computer-networks/pasted-image-20240821141843.png",
+        "computer-networks/pasted-image-20240821142152.png",
+        "computer-networks/pasted-image-20240821142428.png",
+        "computer-networks/pasted-image-20240821144917.png",
+        "computer-networks/pasted-image-20240821145914.png",
+        "computer-networks/pasted-image-20240821145934.png",
+        "computer-networks/pasted-image-20240821150055.png",
+        "computer-networks/pasted-image-20240821150131.png"
+      ]
+    },
+    "Computer Networks/Network Topology.md": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 7444,
+      "exportedPath": "computer-networks/network-topology.html",
+      "dependencies": [
+        "computer-networks/1-network-topology-25-07-2024.pdf",
+        "computer-networks/pasted-image-20240821215831.png",
+        "computer-networks/pasted-image-20240821215816.png",
+        "computer-networks/pasted-image-20240821215934.png",
+        "computer-networks/pasted-image-20240821220101.png"
+      ]
+    },
+    "Computer Networks/OSL and TCP-IP.md": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 4678,
+      "exportedPath": "computer-networks/osl-and-tcp-ip.html",
+      "dependencies": [
+        "computer-networks/2-osl-&-tcp_ip-models-01-08-2024.pdf",
+        "computer-networks/pasted-image-20240821223645.png",
+        "computer-networks/pasted-image-20240821223846.png",
+        "computer-networks/pasted-image-20240821223913.png",
+        "computer-networks/pasted-image-20240821221216.png",
+        "computer-networks/pasted-image-20240821221531.png",
+        "computer-networks/pasted-image-20240821221817.png",
+        "computer-networks/pasted-image-20240821222059.png",
+        "computer-networks/pasted-image-20240821222552.png"
+      ]
+    },
+    "Computer Networks/Pasted image 20240821141404.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 41736,
+      "exportedPath": "computer-networks/pasted-image-20240821141404.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821141843.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 53268,
+      "exportedPath": "computer-networks/pasted-image-20240821141843.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821142043.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 24872,
+      "exportedPath": "computer-networks/pasted-image-20240821142043.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821142152.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 24872,
+      "exportedPath": "computer-networks/pasted-image-20240821142152.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821142428.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 157381,
+      "exportedPath": "computer-networks/pasted-image-20240821142428.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821144917.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 91696,
+      "exportedPath": "computer-networks/pasted-image-20240821144917.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821145914.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 270967,
+      "exportedPath": "computer-networks/pasted-image-20240821145914.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821145934.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 105876,
+      "exportedPath": "computer-networks/pasted-image-20240821145934.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821150055.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 187643,
+      "exportedPath": "computer-networks/pasted-image-20240821150055.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821150131.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 133436,
+      "exportedPath": "computer-networks/pasted-image-20240821150131.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821215816.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 48113,
+      "exportedPath": "computer-networks/pasted-image-20240821215816.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821215831.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 49289,
+      "exportedPath": "computer-networks/pasted-image-20240821215831.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821215934.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 28537,
+      "exportedPath": "computer-networks/pasted-image-20240821215934.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821220101.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 41237,
+      "exportedPath": "computer-networks/pasted-image-20240821220101.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821221216.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 59621,
+      "exportedPath": "computer-networks/pasted-image-20240821221216.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821221531.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 60441,
+      "exportedPath": "computer-networks/pasted-image-20240821221531.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821221817.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 29967,
+      "exportedPath": "computer-networks/pasted-image-20240821221817.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821222059.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 19371,
+      "exportedPath": "computer-networks/pasted-image-20240821222059.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821222552.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 29058,
+      "exportedPath": "computer-networks/pasted-image-20240821222552.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821223645.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 21372,
+      "exportedPath": "computer-networks/pasted-image-20240821223645.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821223846.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 94623,
+      "exportedPath": "computer-networks/pasted-image-20240821223846.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240821223913.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 75610,
+      "exportedPath": "computer-networks/pasted-image-20240821223913.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240822001828.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 52052,
+      "exportedPath": "computer-networks/pasted-image-20240822001828.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240822001835.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 60416,
+      "exportedPath": "computer-networks/pasted-image-20240822001835.png",
+      "dependencies": []
+    },
+    "Computer Networks/Pasted image 20240822001844.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 193426,
+      "exportedPath": "computer-networks/pasted-image-20240822001844.png",
+      "dependencies": []
+    },
+    "computer-networks/3-transmission-impairment-and-performance-09-08-2024.pdf": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 1363206,
+      "exportedPath": "computer-networks/3-transmission-impairment-and-performance-09-08-2024.pdf",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240822001828.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 52052,
+      "exportedPath": "computer-networks/pasted-image-20240822001828.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240822001835.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 60416,
+      "exportedPath": "computer-networks/pasted-image-20240822001835.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240822001844.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 193426,
+      "exportedPath": "computer-networks/pasted-image-20240822001844.png",
+      "dependencies": []
+    },
+    "computer-networks/4-hamming-code-19-08-2024.pdf": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 888786,
+      "exportedPath": "computer-networks/4-hamming-code-19-08-2024.pdf",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821141404.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 41736,
+      "exportedPath": "computer-networks/pasted-image-20240821141404.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821141843.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 53268,
+      "exportedPath": "computer-networks/pasted-image-20240821141843.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821142152.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 24872,
+      "exportedPath": "computer-networks/pasted-image-20240821142152.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821142428.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 157381,
+      "exportedPath": "computer-networks/pasted-image-20240821142428.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821144917.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 91696,
+      "exportedPath": "computer-networks/pasted-image-20240821144917.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821145914.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 270967,
+      "exportedPath": "computer-networks/pasted-image-20240821145914.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821145934.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 105876,
+      "exportedPath": "computer-networks/pasted-image-20240821145934.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821150055.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 187643,
+      "exportedPath": "computer-networks/pasted-image-20240821150055.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821150131.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 133436,
+      "exportedPath": "computer-networks/pasted-image-20240821150131.png",
+      "dependencies": []
+    },
+    "computer-networks/1-network-topology-25-07-2024.pdf": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 1089832,
+      "exportedPath": "computer-networks/1-network-topology-25-07-2024.pdf",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821215831.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 49289,
+      "exportedPath": "computer-networks/pasted-image-20240821215831.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821215816.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 48113,
+      "exportedPath": "computer-networks/pasted-image-20240821215816.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821215934.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 28537,
+      "exportedPath": "computer-networks/pasted-image-20240821215934.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821220101.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 41237,
+      "exportedPath": "computer-networks/pasted-image-20240821220101.png",
+      "dependencies": []
+    },
+    "computer-networks/2-osl-&-tcp_ip-models-01-08-2024.pdf": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 1299591,
+      "exportedPath": "computer-networks/2-osl-&-tcp_ip-models-01-08-2024.pdf",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821223645.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 21372,
+      "exportedPath": "computer-networks/pasted-image-20240821223645.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821223846.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 94623,
+      "exportedPath": "computer-networks/pasted-image-20240821223846.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821223913.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 75610,
+      "exportedPath": "computer-networks/pasted-image-20240821223913.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821221216.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 59621,
+      "exportedPath": "computer-networks/pasted-image-20240821221216.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821221531.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 60441,
+      "exportedPath": "computer-networks/pasted-image-20240821221531.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821221817.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 29967,
+      "exportedPath": "computer-networks/pasted-image-20240821221817.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821222059.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 19371,
+      "exportedPath": "computer-networks/pasted-image-20240821222059.png",
+      "dependencies": []
+    },
+    "computer-networks/pasted-image-20240821222552.png": {
+      "modifiedTime": 1724787972455,
+      "sourceSize": 29058,
+      "exportedPath": "computer-networks/pasted-image-20240821222552.png",
       "dependencies": []
     }
   }

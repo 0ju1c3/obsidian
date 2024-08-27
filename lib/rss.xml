@@ -1,10 +1,190 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>obsidian</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 26 Aug 2024 10:40:30 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 26 Aug 2024 10:40:15 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[Translator]]></title><description><![CDATA[ 
- <br><br>Takes one form of program as input and converts it into another form<br>
-Types:<br>
-<br>Compiler 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>obsidian</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 27 Aug 2024 19:46:22 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 27 Aug 2024 19:46:12 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[Lexical Analysis]]></title><description><![CDATA[ 
+ <br><br>Lexical analysis is the first phase of a compiler, where the source program is read one character at a time and translated into a sequence of primitive units called tokens.<br><br>
+<br>For each lexeme, the lexical analyzer produces a token of the form &lt;token-name, attribute-value&gt;, which is passed on to the subsequent phase, syntax analysis.
+<br>Token Components:
+
+<br>token-name: An abstract symbol used during syntax analysis.
+<br>attribute-value: Points to an entry in the symbol table for this token.
+
+
+<br><br>
+<br>Token Generation: Converts lexemes into tokens.
+<br>Tracking Line Numbers: Keeps track of the current line number to assist in error reporting.
+<br>Stripping White Space: Removes unnecessary white spaces from the input.
+<br>Deleting Comments: Removes comments from the source code.
+<br><br>
+<br>Token: Consists of a token name and an optional attribute value. The token name represents a kind of lexical unit (e.g., a keyword or an identifier). These token names are processed by the parser.
+<br>Pattern: Describes the form that the lexemes of a token may take. For example, the pattern for a keyword token is the exact sequence of characters that form the keyword.
+<br>Lexeme: A sequence of characters in the source program that matches the pattern for a token and is identified by the lexical analyzer as an instance of that token.
+<br><br>Lexical analysis uses two pointers to manage the input buffer:<br>
+<br>lexemeBegin: Marks the beginning of the current lexeme, whose extent is being determined.
+<br>forward: Scans ahead until a pattern match is found.
+<br>After the next lexeme is determined, forward is set to the character at its right end. Once the lexeme is recorded, lexemeBegin is set to the character immediately after the found lexeme.<br><br><br><br>
+<br>Regular Expressions: Used to describe the possible tokens that may appear in the input stream.
+<br><br>
+<br>Transition Diagrams and Finite Automata: Used to recognize tokens in the input stream.
+<br><br><br><br><br>
+<br>A string over an alphabet is a finite sequence of symbols drawn from that alphabet.
+<br>Length: The length of a string s (denoted |s|) is the number of symbols in s.
+
+<br>Example: The string "banana" has a length of 6. The empty string is denoted by ε and has a length of 0.
+
+
+<br><br>
+<br>A language is any countable set of strings over some fixed alphabet.
+
+<br>Example: {ε}, the set containing only the empty string, is a language.
+
+
+<br><br><br>
+<br>Prefix: A prefix of string s is any string obtained by removing zero or more symbols from the end of s.
+
+<br>Example: "ban" is a prefix of "banana".
+
+
+<br>Suffix: A suffix of string s is any string obtained by removing zero or more symbols from the beginning of s.
+
+<br>Example: "nana" is a suffix of "banana".
+
+
+<br>Substring: A substring of s is obtained by deleting any prefix and any suffix from s.
+
+<br>Example: "nan" is a substring of "banana".
+
+
+<br>Proper Prefix/Suffix/Substring: A prefix, suffix, or substring of s that is not empty and not equal to s.
+<br>Subsequence: A subsequence of s is any string formed by deleting zero or more (not necessarily consecutive) positions of s.
+
+<br>Example: "baan" is a subsequence of "banana".
+
+
+<br><br><br>Regular expressions are used to denote languages and have specific rules for construction:<br><br>
+<br>ε is a regular expression denoting the language containing only the empty string.
+<br>For each a in Σ, a is a regular expression denoting {a}, the language with only one string.
+<br><br>
+<br>Union: (A) | (B) denotes the union of languages LA and LB.
+<br>Concatenation: A.B denotes the concatenation of languages LA and LB.
+<br>Kleene Star: (A)* denotes the Kleene star (zero or more occurrences) of language LA.
+<br><br><br><br>
+<br>Construct NFA: Build a Non-deterministic Finite Automaton (NFA) for each token pattern Pi in the translation rule, and link these NFAs together with a new start state.
+<br>Convert NFA to DFA: Use the subset construction method to convert the NFA to a Deterministic Finite Automaton (DFA).
+<br>State Minimization: Minimize the states in the DFA to optimize the automaton.
+<br>Lookahead Operator: Implement the lookahead operator to handle ambiguities in pattern matching.
+<br>Transition Diagram Representation: Represent the transition diagram as a data structure for efficient processing.
+<br><br>State 0 --&gt; [a-zA-Z] --&gt; State 1 --&gt; [a-zA-Z0-9]* --&gt; State 1
+Copy<br>
+<br>State 0: Initial state, ready to match an identifier.
+<br>State 1: Matches a letter followed by zero or more alphanumeric characters.
+<br><br><br>Lexical analysis is crucial as the first phase of a compiler, involving token generation, pattern recognition using regular expressions, and the implementation of a lexical analyzer using finite automata. This phase ensures that the source code is broken down into meaningful tokens, which are then passed on for further analysis and compilation.]]></description><link>compiler-design/lexical-analysis.html</link><guid isPermaLink="false">Compiler Design/Lexical Analysis.md</guid><pubDate>Mon, 26 Aug 2024 16:43:59 GMT</pubDate></item><item><title><![CDATA[Mod 2 - Bottom Up Parser]]></title><description><![CDATA[ 
+ <br>Also called Shift Reduce parsing because:<br>
+<br>Consists of shifting input symbols onto the stack until the right side of the production appears on top of the stack
+<br>The right side may then be replaced by the symbol on the left side of the production, and process repeated
+]]></description><link>compiler-design/mod-2-bottom-up-parser.html</link><guid isPermaLink="false">Compiler Design/Mod 2 - Bottom Up Parser.md</guid><pubDate>Mon, 26 Aug 2024 17:46:50 GMT</pubDate></item><item><title><![CDATA[LLVM (Low Level Virtual Machine)]]></title><description><![CDATA[ 
+ <br><br>LLVM is an open-source compiler infrastructure project that provides a set of tools and libraries for building compilers, debuggers, and other software development tools. It is widely used due to its flexibility and modularity, making it applicable for a range of programming languages and target architectures.<br><br><br>
+<br>Function: Translates high-level programming languages (like C, C++, Swift, Rust) into an Intermediate Representation (IR).
+<br>Example: The Clang compiler is an LLVM front end for C/C++.
+<br><br>
+<br>Function: Optimizes the Intermediate Representation (IR) by performing various transformations to improve efficiency without altering the program's semantics.
+<br>Example: Optimization like dead code elimination, loop unrolling.
+<br><br>
+<br>Function: Converts the optimized Intermediate Representation (IR) into machine code specific to the target architecture.
+<br>Example: Generating x86, ARM, or other architecture-specific machine code.
+<br><br><br>A compiler typically consists of several phases, grouped into two main sections: the front end and the back end.<br><br>The front end is primarily concerned with understanding the source code and is largely independent of the target machine. It includes the following phases:<br><br>
+<br>Function: Scans the source program, reads the stream of characters, and groups them into lexemes, which are then converted into tokens.
+<br>Key Terms:
+
+<br>Token: A sequence of characters that represents a lexical unit (e.g., keywords, operators).
+<br>Lexeme: An instance of a token (e.g., the characters "int" forming the keyword token).
+<br>Pattern: The structure that must be matched by strings to be recognized as lexemes.
+
+
+<br>Example:
+Input: a = b + c * d;
+Lexemes: [a], [=], [b], [+], [c], [*], [d], [;]
+Tokens: Identifier, Assignment Operator, Identifier, Operator, Identifier, Operator, Identifier, Semicolon
+Copy
+
+<br><br>
+<br>Function: Analyzes the tokens produced by lexical analysis and arranges them into a tree-like structure called a parse tree or syntax tree. This phase checks if the sequence of tokens is syntactically correct.
+<br>Example:
+Expression: a = b + c * d;
+Parse Tree: The tree represents the hierarchical structure of the expression based on operator precedence and associativity.
+Copy
+
+<br><br>
+<br>Function: Ensures the semantic consistency of the source code by checking for meaningfulness and logical correctness. It uses the parse tree and symbol table to verify that operations are valid (e.g., type checking, function calls with proper arguments).
+<br>Example:
+
+<br>Checking if variables are declared before use.
+<br>Ensuring that operands in arithmetic operations are type-compatible.
+
+
+<br><br>
+<br>Function: Converts the syntax tree or annotated syntax tree from the semantic analysis phase into an intermediate representation (IR). This IR should be easy to translate into the target machine code.
+<br>Example:
+
+<br>Three-address code (TAC): Each instruction in this code has at most three operands.
+t1 = c * d
+t2 = b + t1
+a = t2
+Copy
+
+
+
+<br><br><br>The back end focuses on generating optimized and efficient target code that can be executed on a specific machine.<br><br>
+<br>Function: Optimizes the intermediate code to improve execution speed and reduce memory usage. This phase does not change the semantics of the code.
+<br>Example:
+
+<br>Eliminating redundant calculations or variables.
+<br>Loop unrolling to reduce loop overhead.
+
+
+<br><br>
+<br>Function: Converts the optimized intermediate code into the target machine code (e.g., assembly code or binary code).
+<br>Example:
+
+<br>Generating assembly instructions for each intermediate code instruction.
+
+
+<br><br>
+<br>Function: Handles errors that occur during different phases of compilation, such as lexical, syntactic, semantic, and code generation errors.
+<br>Example:
+
+<br>Syntax error: Missing semicolon.
+<br>Semantic error: Type mismatch in an arithmetic operation.
+
+
+<br><br>
+<br>Function: A data structure that stores information about variables, functions, objects, classes, etc., within a program. It is created during the analysis phase and used throughout the compilation process.
+<br>Role:
+
+<br>Lexical Analysis: Adds new identifiers to the symbol table.
+<br>Syntax and Semantic Analysis: Updates attributes like type, scope, and memory location.
+<br>Code Generation: Uses the symbol table to generate the correct machine code based on variable addresses.
+
+
+<br>Example:
+
+<br>Variable a with attributes: type int, scope global, memory address 1001.
+
+
+<br><br><br>
+<br>Front End: Includes lexical analysis, syntax analysis, semantic analysis, intermediate code generation, and symbol table creation. It is source language-dependent.
+<br>Back End: Includes code optimization, code generation, error handling, and uses the symbol table. It is target machine-dependent.
+<br><br><br><br>
+<br>Performs tasks like macro processing and file inclusion before the actual compilation begins.
+<br><br>
+<br>Converts assembly language code into machine code.
+<br><br>
+<br>Combines multiple object files into a single executable program, resolving references between them.
+<br><br>
+<br>Loads the executable program into memory and prepares it for execution.
+]]></description><link>compiler-design/module-1.html</link><guid isPermaLink="false">Compiler Design/Module 1.md</guid><pubDate>Mon, 26 Aug 2024 14:13:15 GMT</pubDate></item><item><title><![CDATA[Translator]]></title><description><![CDATA[ 
+ <br><br>A translator is a system program that takes a program written in one form (source language) and converts it into another form (target language). There are three main types of translators:<br>
+<br>Compiler
 <br>Interpreter
 <br>Assembler
-<br><br>Program that reads a program written in source language and translates it into an equivalent program in target language<br><br>Program that reads a program written in source language and translates it into an equivalent program in target language line by line<br><img alt="Pasted image 20240822224301.png" src="compiler-design/pasted-image-20240822224301.png"><br><br>Is a translator which takes assembly code as an input and generates the machine code as an output<br><br>Analysis Phase -&gt; Intermediate Representation -&gt; Synthesis Phase<br><br>Breaks up the source program into constituent pieces and creates an intermediate representation of the source program.<br>Consists of three sub phases:<br>
+<br><br>A compiler is a program that reads the entire source code written in a high-level language and translates it into an equivalent program in a target language (typically machine code or an intermediate form). The translation happens all at once, producing an output file (e.g., an executable) that can be run independently of the source code.<br><br>Consider a C program that you want to run on your computer. The compiler translates the entire C code into machine code (executable file), which can then be run directly on the hardware.<br><br>An interpreter reads the source code and translates it into an equivalent target program, but does this line by line, rather than all at once. Unlike a compiler, it doesn't produce a separate output file. Instead, it executes the translated code immediately.<br><br>Python uses an interpreter. When you write Python code, the interpreter reads each line, translates it to machine code, and executes it immediately. This is why Python is often said to be slower than compiled languages like C, but it allows for quicker testing and debugging.<br><img alt="Pasted image 20240822224301.png" src="compiler-design/pasted-image-20240822224301.png"><br><br>An assembler is a translator that takes assembly code as input and generates the corresponding machine code as output. Assembly language is a low-level language that's closer to machine code but still readable by humans. The assembler translates these human-readable instructions into the binary code that the computer's processor can execute.<br><br>If you write a program in assembly language for a specific processor, the assembler will convert this code into machine language that can run on that processor.<br><br>Analysis Phase -&gt; Intermediate Representation -&gt; Synthesis Phase<br><br>Breaks up the source program into constituent pieces and creates an intermediate representation of the source program.<br>Consists of three sub phases:<br>
 <br>Lexical analysis
 <br>Syntax analysis
 <br>Semantic analysis
@@ -82,7 +262,351 @@ c++ 	#include&lt;stdio.h&gt;
 <br>Taking relocatable machine code
 <br>Altering the relocatable address
 <br>Placing the altered instructions and data in memory at the proper location
-]]></description><link>compiler-design/module-1.html</link><guid isPermaLink="false">Compiler Design/Module 1.md</guid><pubDate>Fri, 23 Aug 2024 19:59:56 GMT</pubDate><enclosure url="compiler-design/pasted-image-20240822224301.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="compiler-design/pasted-image-20240822224301.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Lexical Analyzer]]></title><description><![CDATA[ 
+]]></description><link>compiler-design/module-1-kalaivani.html</link><guid isPermaLink="false">Compiler Design/Module 1 - Kalaivani.md</guid><pubDate>Mon, 26 Aug 2024 14:11:22 GMT</pubDate><enclosure url="compiler-design/pasted-image-20240822224301.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="compiler-design/pasted-image-20240822224301.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Module 2 - Top Down Parsing]]></title><description><![CDATA[ 
+ <br><br>
+<br>Parse tree is constructed in top down manner
+<br>The generation of the parse tree is started from the start symbol and proceeds towards the given input string
+<br>Basically follows the leftmost derivation for the given input string
+<br><br>
+<br>Left Recursion :
+
+<br>A Grammar is said to be left recursive if it has a Non Terminal B such that there is a derivation B -&gt; B . So, this type of grammar can cause the parser to go into infinite look
+
+
+<br>Backtracking :
+
+<br>If there is the sequence of erroneous expansions and subsequently discovers a mismatch then the changes that are made to the symbol table needs to be removed
+
+
+<br>The acceptance of the language can be affected by the sequence of the order in which the alternates were tried
+<br><br>If there is a Grammar:<br>
+A -&gt; A  |                        {where  doesn't begin with 'A'}<br>
+We can eliminate the left recursion by replacing this pair of production with<br>
+A -&gt;  A'<br>
+A' -&gt;  A' |  <br><br><br>
+<br>Used to transform the grammar into the form that is suitable for recursive decent parsing
+<br>To left factored the grammar we have to follow the given rule:
+
+<br>If A -&gt;  |  Then :
+<br>A -&gt;  A'
+<br>A' -&gt;  | 
+
+
+<br><br>
+<br>Remove ambiguity if possible by rewriting the grammar
+<br>Remove left-recursion, otherwise it may lead to an infinite loop
+<br>Do left-factoring
+<br><br>
+<br>
+FIRST(X): is the set of terminals that begin strings derived from X, if X derives ϵ in some further productions then ‘ϵ’ is also in FIRST(X).<br>
+
+
+<br>
+To get the FIRST for all the grammar symbols, apply the following rules until no more ‘ϵ’ and terminals can further be added to any FIRST Set.
+
+<br>
+RULES: 
+
+<br>If the grammar symbol X is the terminal then the FIRST(X) is (X).
+<br>If ‘X’ is non terminal and there is production X-&gt;aB, then add ‘a’ to&nbsp; FIRST(X).
+<br>If there is production X -&gt; ϵ, then add ‘ϵ’ to FIRST(X).
+<br>If X -&gt; A1A2A3….Ak is a production , then for all ‘i’ such that all A1,A2,…..Ai-1 are non terminals and FIRST(Aj) contains ϵ for j=1,2,3,……..i-1(i.e. A1,A2,…..Ai-1&nbsp; -&gt; ϵ), then add every non ϵ symbol in FIRST(Ai) to FIRST(X). If ϵ is in FIRST(Aj) for all j=1,2,….k then add ϵ to FIRST(X).
+
+
+<br><br>
+<br>FOLLOW(Y): Follow of non terminal ‘Y’ is the set of terminals that appears immediately right to the ‘Y’ in some sentential form. To get the FOLLOW for all non terminals Y, apply the following rules until nothing can be added to any of the FOLLOW Set.
+<br>RULES:
+
+<br>For the start symbol ‘S’ place $ in the follow of S.
+<br>&nbsp;&nbsp; For any production rule X -&gt; αY , FOllOW(Y)=FOLLOW(X).
+<br>&nbsp;&nbsp;&nbsp; For any production rule X -&gt;&nbsp;αYβ,
+<br>&nbsp; If β is any terminal then FOllOW(Y)=β.
+<br>&nbsp; If β is non terminal then :
+
+<br>&nbsp; If ϵ ∉ FIRST(β) , then FOLLOW(Y)=FIRST(β)
+<br>&nbsp; If FIRST(β) contains the ϵ then :
+
+<br>FOLOW(Y)={ FIRST(β)- ϵ} U FOLLOW(X)
+
+
+
+
+
+
+]]></description><link>compiler-design/module-2-top-down-parsing.html</link><guid isPermaLink="false">Compiler Design/Module 2 - Top Down Parsing.md</guid><pubDate>Mon, 26 Aug 2024 17:34:24 GMT</pubDate></item><item><title><![CDATA[Module 2 LL(1) Parsing]]></title><description><![CDATA[ 
+ <br><br>It is an efficient way of implementing recursive descent parsing by handling stack activation records explicitly<br><br>
+<br>Program determines the X (symbol on the top of the stack) and a, the current input symbol. These 2 input symbol determines the action of the parser
+<br>Possibilities:
+
+<br>If X = a = $, the parser halts and announces successful completion of parsing
+<br>If X = a != $, the parser pops X off the stack and advances the input pointer to the next input symbol
+<br>If X is a non terminal, the program consults entry M[X,a] of the parsing table M, This entry can be either X-production of the grammar or an error entry
+
+<br>X -&gt; UVW then pop X from the stack and push WVU onto the stack
+
+
+
+
+<br>
+<br>For each production A -&gt;  of the grammar, do steps 2 and 3
+<br>For each terminal a in FIRST(), add a -&gt;  to M[A,a]
+<br>If  is in the FIRST(), add A -&gt;  to M[A,b] for eawch terminal b in FOLLOW(A), If  is in FIRST() and $ is in FOLLOW(A), add A -&gt;  to M[A,$]
+<br>Make each undefined entry of M error
+<br><br>
+<br>First L means the scanning takes place from Left to right
+<br>Second L means that the Left derivation is produced first
+<br>'1' means One input symbol at each step<br>
+No left recursive or ambiguous grammar can be LL(1)
+<br><br>
+<br>Grammar G is called LL(1) if and only if whenever,
+<br>If A-&gt;α|β are two distinct productions of G, the following conditions hold :-
+<br>
+
+<br>(a)&nbsp; FIRST(α) , FIRST(β) must be disjoint. This is to be able to deterministically guess the production.
+
+
+<br>&nbsp;&nbsp;&nbsp; (b)&nbsp; At most one of the strings α or β can derive ε (Since FIRST(α), FIRST(β) are disjoint.
+<br>2.&nbsp; If α -&gt; ε then FIRST(β) and FOLLOW(A)&nbsp; must be disjoint
+]]></description><link>compiler-design/module-2-ll(1)-parsing.html</link><guid isPermaLink="false">Compiler Design/Module 2 LL(1) Parsing.md</guid><pubDate>Mon, 26 Aug 2024 17:45:11 GMT</pubDate></item><item><title><![CDATA[Need for Switching]]></title><description><![CDATA[ 
+ <br><br><br>Whenever we have many devices, the interconnection between them becomes more difficult as the number of devices increases, this is where switching comes in<br><br>
+<br>Consists of a set of switches connected by physical links
+<br>Connection between two stations is a dedicated path made of one or more links
+<br>However, each connection uses only one dedicated channel on each link
+<br>Each link is normally divided into n channels by using FDM or TDM
+<br>A circuit-switched network is made of a set of switches connected by physical links, in which each link is divided into n channels<br><img alt="Pasted image 20240822001828.png" src="computer-networks/pasted-image-20240822001828.png"><br><img alt="Pasted image 20240822001835.png" src="computer-networks/pasted-image-20240822001835.png"><br><img alt="Pasted image 20240822001844.png" src="computer-networks/pasted-image-20240822001844.png"><br> the resources need to be reserved during the setup phase; the resources remain dedicated for the entire duration of the data transfer until the teardown phase<br>traditional telephone network uses circuit-switching<br><br>
+<br>In data communications, we need to send messages from one end system to another
+<br>If the message is going to pass through a different network, it needs to be divided into packets of fixed or variable sizes
+<br>There is no resource allocation for a packet but are allocated on demand
+<br>When a switch received a packet, no matter what the source or the destination is, it is to have wait if there are any other packets being processed
+<br>Two types of packet switching networks:
+
+<br>Datagram networks
+<br>Virtual Circuit Networks
+
+
+<br><br>
+<br>Each packet is treated independently of all others, even if it is a part of a multipacket transmission, the network treats it as though it existed alone.
+<br>Packets here are referred as datagrams
+<br>Datagram switching is normally done at the network layer<br>
+A switch in a datagram network uses a routing table that is based on the destination address<br>
+The destination address in the header of a packet in a datagram network remains the same during the entire journey of the packer<br>
+Switching in the Internet is done by using the datagram approach
+<br><br>
+<br>Cross between circuit switched and a datagram network
+<br>Has some characteristics of both
+<br>In Circuit Switching Network : there is setup, data transfer and teardown phase
+<br>Resource can be allocated during the setup phase, as in CSN, or on demand, as in datagram network.
+<br>As in datagram network, data is packetized with address, however, the address is local jurisdiction not End-to-End
+<br>A VCN, is implemented in DLL, while CSN is in PL and datagram network is in N/w layer
+<br>In virtual-circuit switching, all packets belonging to the same source and destination travel the same path; but the packets may arrive at the destination with different delays if resource allocation is on demand<br><br>
+<br>Signals travel through transmission media, which are not perfect, which causes signal impairment
+<br>That is the signal at the beginning of the medium is not same as the signal at the end of the medium -- what is not is what is received
+<br><br>dB = 10log(P2/P1)<br>
+P1, P2 - power of signal at different points<br>Signal to Noise Ratio:<br>
+SNR = Average signal power/Average noise power<br><br>Depends on:<br>
+- Bandwidth available<br>
+- Level of signals we use<br>
+- Quality of the channel --- level of noice<br><br>For a noiseless channel<br>
+The theoretical max bit rate<br>BitRate = 2  bandwidth  log2(L)<br>
+L - no of signal levels used to represent data<br>Increasing the level of signal may reduce the reliability of the system<br><br>To determine the theoretical highest rate for noisy channel<br>Capacity = bandwidth * log2(1 + SNR)<br>
+Capacity  - capacity of channel in BPS<br><br>Performance of the network<br>Bandwidth - capacity of the network (in Hz or BPS)<br>
+Throughput - How fast can the data be sent through a network<br>
+Latency(Delay) - How long data take for an entire message to completely arrive at the destination from the source<br>Latency = PT + TT + QT + PD<br>Bandwidth in Hz - range of frequencies that a channel can pass<br>
+Bandwidth in bits per second - speed of bit transmission in a channel<br>Propagation speed - Speed at which bit travels through the medium from the source to the destination<br>Transmission speed - Speed at which all the bits in a message arrive at the destination]]></description><link>computer-networks/circuit-and-packet-switching.html</link><guid isPermaLink="false">Computer Networks/Circuit and Packet Switching.md</guid><pubDate>Wed, 21 Aug 2024 19:14:23 GMT</pubDate><enclosure url="computer-networks/pasted-image-20240822001828.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="computer-networks/pasted-image-20240822001828.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Computer Networks Syllabus]]></title><description><![CDATA[ 
+ <br>Mod 1<br>
+<a data-href="Network Topology" href="computer-networks/network-topology.html" class="internal-link" target="_self" rel="noopener">Network Topology</a><br>
+<a data-href="OSL and TCP-IP" href="computer-networks/osl-and-tcp-ip.html" class="internal-link" target="_self" rel="noopener">OSL and TCP-IP</a><br>Mod 2<br>
+<a data-href="Circuit and Packet Switching" href="computer-networks/circuit-and-packet-switching.html" class="internal-link" target="_self" rel="noopener">Circuit and Packet Switching</a><br>Mod 3<br>
+<a data-href="Hamming Code" href="computer-networks/hamming-code.html" class="internal-link" target="_self" rel="noopener">Hamming Code</a>]]></description><link>computer-networks/computer-networks-syllabus.html</link><guid isPermaLink="false">Computer Networks/Computer Networks Syllabus.md</guid><pubDate>Wed, 21 Aug 2024 19:13:26 GMT</pubDate></item><item><title><![CDATA[Hamming Code]]></title><description><![CDATA[ 
+ <br><br>Whenever the data flow from one point to another, they are subjected to unpredictable changes because of interference.<br>Types of Errors:<br>
+- Single Bit Error<br>
+- Burst Error<br>Single Bit Error - only one bit of the data has changed<br>Burst Error - 2 or more bits in the data unit have changed<br>Corrupted bits - bits that have changed<br>To detect or correct errors, we need to send extra bits with data<br><img alt="Pasted image 20240821141404.png" src="computer-networks/pasted-image-20240821141404.png"><br><br>- Single parity check
+- Two-dimensional parity check
+- Checksum
+- Cyclic Redundancy Check (CRC)
+Copy<br><br>Redundant bit is also known as parity bit<br>
+<br>Appended at the end of the data unit so that the number of 1s become even.
+<br>If the number of 1s:
+
+<br>odd - parity bit 1 is appended 
+<br>even - parity bit 0 is appended<br>
+-at the end of the data
+
+
+<br>At the receiving end, the parity bit is calculated from the received data bits and compared with the received parity bit.
+<br><img alt="Pasted image 20240821141843.png" src="computer-networks/pasted-image-20240821141843.png"><br><br>
+<br>Can detect single-bit errors - very raye
+<br>if two bits are interchanged, can't detect the error
+<br><img alt="Pasted image 20240821142152.png" src="computer-networks/pasted-image-20240821142152.png">
+<br><br>
+<br>Performance can be improved by using Two-Dimensional Parity Check which organizes the data in the form of a table.
+<br>Parity check bits are computed for each row, which are equivalent to the single-parity checks.
+<br>A block of bits are divided into rows, and the redundant bits are added to the whole block.
+<br>At the receiving end, the parity bits are calculated and compared with the received parity bits.
+<br><img alt="Pasted image 20240821142428.png" src="computer-networks/pasted-image-20240821142428.png">
+<br><br>
+<br>If two bits in one data unit are corrupted and two bits exactly the same position in another data unit are also corrupted, then 2D parity checker will not be able to detect the error.
+<br>Cant be used to detect 4-bit errors or more in some cases.
+<br><br><br>
+<br>Message is divided into 16-bit words/8-bit words.
+<br>Value of checksum word is set to 0.
+<br>All words including the checksum are added using one's complement addition.
+<br>The sum is complemented and becomes the checksum.
+<br>The checksum is sent with the data.
+<br><br>
+<br>The message(including checksum) is divided into 16-bit words/8 bit words.
+<br>All words are added using one's complement addition.
+<br>The sum is complemented and becomes the new checksum.
+<br>If the value of checksum is:
+
+<br>0, the message is accepted
+<br>otherwise, it is rejected
+
+
+<br><br><img alt="Pasted image 20240821144917.png" src="computer-networks/pasted-image-20240821144917.png"><br><br>Most common types of error-correcting codes used in RAM<br>
+<br>k parity bits are added to an n-bit data word, forming a new word of n+k bits. The bit positions are numbered in sequence from 1 to n+k.
+<br>Positions numbered with powers of two are reserved for parity bits.(2^0, ...)
+<br>Remaining bits are the data bits
+<br><br><img alt="Pasted image 20240821145914.png" src="computer-networks/pasted-image-20240821145914.png"><br><img alt="Pasted image 20240821145934.png" src="computer-networks/pasted-image-20240821145934.png"><br><img alt="Pasted image 20240821150055.png" src="computer-networks/pasted-image-20240821150055.png"><br><img alt="Pasted image 20240821150131.png" src="computer-networks/pasted-image-20240821150131.png">]]></description><link>computer-networks/hamming-code.html</link><guid isPermaLink="false">Computer Networks/Hamming Code.md</guid><pubDate>Wed, 21 Aug 2024 09:31:33 GMT</pubDate><enclosure url="computer-networks/pasted-image-20240821141404.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="computer-networks/pasted-image-20240821141404.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Network Topology]]></title><description><![CDATA[ 
+ <br><br><br>Network topology refers to the arrangement of various components within a network. It describes how different systems, nodes, and devices are interconnected and communicate with each other. Understanding network topology is crucial for designing efficient and reliable networks.<br><br>Definition:<br>
+In a Mesh Topology, every device is connected to every other device in the network. This creates a robust and highly redundant network where each node has a direct link to every other node.<br>Connection Details:<br>
+<br>Each node is connected to ( n - 1 ) other nodes.
+<br>For a network with ( n ) nodes, there are ( n(n-1) ) physical links.
+<br>Communication occurs in a duplex mode, meaning data can be transmitted and received simultaneously.
+<br>The number of duplex mode links required is ( \frac{n(n-1)}{2} ).
+<br>Each device in the network has ( n - 1 ) input/output (I/O) ports.
+<br>Advantages:<br>
+<br>Dedicated Links: Each station has its own dedicated link, ensuring no sharing of bandwidth with other stations, which eliminates traffic congestion.
+<br>Traffic Problems: Since links are dedicated, there are no traffic problems between devices.
+<br>Privacy and Security: Data travels directly from one device to another without passing through any other device, ensuring privacy and security.
+<br>Fault Detection and Isolation: Faults can be easily detected and isolated, as each link can be tested independently.
+<br>Disadvantages:<br>
+<br>Cabling and Ports: The sheer amount of cabling and the number of I/O ports required can be substantial, especially as the network grows.
+<br>Installation Complexity: Installation and reconnection are complex due to the number of connections required.
+<br>Space Requirements: The large amount of wiring requires significant physical space.
+<br>Expensive Hardware: The hardware needed to support all the connections can be expensive.
+<br>Use Cases:<br>
+<br>Military and Government Networks: Where reliability and redundancy are paramount.
+<br>Critical Infrastructure: Such as energy grids or financial networks, where failure is not an option.
+<br><img alt="Pasted image 20240821215831.png" src="computer-networks/pasted-image-20240821215831.png"><br>
+Example:<br>
+In a network with 5 nodes, a mesh topology would require ( \frac{5(5-1)}{2} = 10 ) duplex links. Each node would have 4 ports to connect to the other 4 nodes.<br><br><br>Definition:<br>
+In a Star Topology, all devices are connected to a central hub or switch. The central hub acts as a conduit to transmit data between the devices.<br>Advantages:<br>
+<br>Cost-Effective: Less expensive than mesh topology as fewer connections are required.
+<br>Ease of Installation: Simple to install and configure, making it a popular choice for many networks.
+<br>Robustness: If one link fails, only the connected device is affected, not the entire network.
+<br>Fault Detection: Easy to detect and isolate faults since each device is connected individually to the hub.
+<br>Disadvantages:<br>
+<br>Single Point of Failure: The entire network is dependent on the central hub. If the hub fails, the whole network goes down.
+<br>Cabling: More cabling is required compared to other topologies like bus or ring.
+<br>Use Cases:<br>
+<br>Office Networks: Common in small to medium-sized office networks where ease of management is important.
+<br>Home Networks: Frequently used in home networking due to its simplicity and ease of use.
+<br>Example:<br>
+A star topology is used in many home Wi-Fi networks where all devices (like laptops, smartphones, and printers) connect to a central router.<br><img alt="Pasted image 20240821215816.png" src="computer-networks/pasted-image-20240821215816.png"><br><br><br>Definition:<br>
+Bus Topology uses a single backbone cable to which all network devices are connected via drop lines and taps. The backbone cable acts as a shared communication medium that devices use to send data.<br>Advantages:<br>
+<br>Ease of Installation: Simple to install, as it requires only a single backbone cable.
+<br>Reduced Cabling: Uses less cabling compared to mesh and star topologies.
+<br>Disadvantages:<br>
+<br>Reconnection Issues: Reconnecting devices or isolating faults can be difficult and may require the entire network to be taken offline.
+<br>Fault Isolation: Faults are harder to isolate since all devices share the same communication medium.
+<br>Limited Scalability: Adding new devices can be challenging, especially if the backbone cable becomes overloaded.
+<br>Use Cases:<br>
+<br>Small Networks: Ideal for small, temporary, or cost-sensitive networks.
+<br>LANs in Early Networks: Historically used in local area networks (LANs) in small offices or buildings.
+<br><img alt="Pasted image 20240821215934.png" src="computer-networks/pasted-image-20240821215934.png"><br>
+Example:<br>
+An early Ethernet network used a bus topology where all computers were connected to a single coaxial cable. Each computer would listen for signals on the bus and respond accordingly.<br><br><br>Definition:<br>
+In a Ring Topology, each device is connected to exactly two other devices, forming a circular data path. Data travels in one direction around the ring until it reaches its destination.<br>Advantages:<br>
+<br>Ease of Installation: Simple to install and configure as devices are connected in a circular manner.
+<br>Simplified Fault Identification: Faults are easier to identify because the failure of one device impacts the entire network.
+<br>Efficient Data Transfer: As data travels in one direction, it avoids collision issues.
+<br>Disadvantages:<br>
+<br>Unidirectional Traffic: Data can only travel in one direction, which can lead to delays.
+<br>Single Point of Failure: A break in the ring can disable the entire network.
+<br>Use Cases:<br>
+<br>Metropolitan Area Networks (MANs): Often used in MANs where large geographic areas are covered.
+<br>Token Ring Networks: Historically used in networks like IBM’s Token Ring.
+<br><img alt="Pasted image 20240821220101.png" src="computer-networks/pasted-image-20240821220101.png"><br>
+Example:<br>
+A token ring network where each computer is connected in a circular layout. A token circulates around the ring, and the computer with the token can send data, ensuring no collision.<br><br>
+<br>Local Area Networks(LANs)
+
+<br>Short distances (area &lt; 2 miles)
+<br>Designed to provide local interconnectivity
+
+
+<br>Wide Area Netowkrs(WANs)
+
+<br>Long distances (Can be worldwide)
+<br>Provide connectivity over large areas
+
+
+<br>Metropolitan Area Networks(MANs)
+
+<br>Provide connectivity over areas such as a city, campus
+<br>Span 10s of miles
+
+
+<br><br>
+<br>Usually privately owned and connects some hosts in a single office, building, or campus
+<br>Depending on the needs of an organization, a LAN can be as simple as two PCs and a printer in someone's home office, or it can extend throughout a company and include audio and video devices
+<br><br>
+<br>Serves a large geographical area between 5 to 50 kms in range
+<br>Geographical area can include several buildings, such as a college campus, refferred to as a campus network, or an area as large as a city
+<br><br>
+<br>Is also an interconnection of devices capable of communication
+
+<br>Differences between a LAN and a WAN :
+
+<br>LAN - normally limited in size , spanning an office, a building, or a campus; a WAN has a wider geographical span, spanning a town, a state, a country or even the world
+<br>LAN interconnects hosts; WAN interconnects connecting devices such as switches, routers or modems
+
+
+
+
+]]></description><link>computer-networks/network-topology.html</link><guid isPermaLink="false">Computer Networks/Network Topology.md</guid><pubDate>Tue, 27 Aug 2024 16:47:50 GMT</pubDate><enclosure url="computer-networks/pasted-image-20240821215831.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="computer-networks/pasted-image-20240821215831.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[OSL and TCP-IP]]></title><description><![CDATA[ 
+ <br><br><br><br>Network -&gt; combination of hardware and software that sends data from one location to another<br>Hardware - consists of physical equipments which are responsible for carrying signal from point to another<br>
+Software - Consists of instruction sets that make possible the services that we expect from a network<br><br><br><br>Consists of four layers: host-to-network, network, transport and application<br><img alt="Pasted image 20240821223645.png" src="computer-networks/pasted-image-20240821223645.png"><br><img alt="Pasted image 20240821223846.png" src="computer-networks/pasted-image-20240821223846.png"><br><img alt="Pasted image 20240821223913.png" src="computer-networks/pasted-image-20240821223913.png"><br><br>OSI - Open Systems Interconnection<br><img alt="Pasted image 20240821221216.png" src="computer-networks/pasted-image-20240821221216.png"><br>
+Layer 1 -&gt; Layer 7<br>
+bits -&gt; frames -&gt; packets -&gt;segments -&gt; sessions -&gt; session layer<br><br>
+<br>Includes the physical equipments involved in the data transfer, such as the cables and switches.
+<br>Also the layer where the data gets converted into a bit stream (string of 1s and 0s)
+<br>Physical layer of both devices must also agree on a signal convention to distinguish between 1st from the 0s.<br>
+Responsible for movement of individual bits from one node to the next 
+<br><img alt="Pasted image 20240821221531.png" src="computer-networks/pasted-image-20240821221531.png"><br><br>
+<br>Data link layer transforms the physical layer, a raw transmission facility to a reliable link.
+<br>Data link layer takes packets from the network layer and breaks them into smaller pieces called frames
+<br>Responsible for flow control and error control in intra-network communication
+<br>Makes the physical layer as error-free to the upper layer<br>
+Responsible for moving frames from one node to the next
+<br><img alt="Pasted image 20240821221817.png" src="computer-networks/pasted-image-20240821221817.png"><br><br>
+<br>Responsible for facilitating data transfer between two different networks.
+<br>If the two devices are on the same network, network layer is unnecessary.
+<br>Breaks up segments from the transport layer into smaller units called packets, on the sender's device, and reassembles these packets on the receiving device.
+<br>Finds the best physical path for the data to reach its destination --- known as routing
+<br><img alt="Pasted image 20240821222059.png" src="computer-networks/pasted-image-20240821222059.png"><br><br>
+<br>Responsible for end-to-end communication between the two devices. This includes taking data from the session layer and breaking it up into chunks called segments before sending it to layer 3.
+<br>On the receiving device is responsible for reassembling the segments into data the session layer can consume.
+<br>Also responsible for flow control and error control
+<br>Flow control determines an optimal speed of transmission to ensure that a sender with a fast connection doesn't overwhelm a receiver with a slower connection.
+<br>Performs  error control on the receiving end by ensuring that the data received is complete and requesting a re-transmission if it isn't.
+<br><img alt="Pasted image 20240821222552.png" src="computer-networks/pasted-image-20240821222552.png"><br><br>
+<br>Responsible for opening and closing communication between the two devices
+<br>The time between when the communication is opened and closed is known as the session
+<br>Session layer ensures that the session stays open long enough to transfer all the data being exchanged, and then promptly closes the session to avoid wasting any resources.
+<br>Also synchronizes data transfer with checkpoints
+<br><br>
+<br>Responsible for translation, encryption and compression of data
+<br>Communicating devices might be using different encoding methods, so presentation layer is responsible for translating incoming data into a syntax that the application layer of the receiving device can understand
+<br>If the devices are communicating over an encrypted connection, it is also responsible for adding the encryption (SSL or TLS) on the sender's end as well as decode the encryption on the receiver's end to present the data to the applicaton layer with unencrypted, readable data
+<br>Responsible for compressing data it receives from the session layer before delivering to application layer
+<br>This helps in improving speed and efficiency of communication by minimizing the amount of data that will be transferred.
+<br><br>
+<br>Only layer that directly interacts with data from the user
+<br>But it should be made clear that client software applications are not part of the application layer; rather the application layer is responsible for the protocols and data manipulation that the software relies on to present meaningful data to the user. 
+<br>Application layer protocols include HTTP as well as SMTP (Simple Mail Transfer Protocol is one of the protocols that enables email communications). 
+]]></description><link>computer-networks/osl-and-tcp-ip.html</link><guid isPermaLink="false">Computer Networks/OSL and TCP-IP.md</guid><pubDate>Thu, 22 Aug 2024 03:42:52 GMT</pubDate><enclosure url="computer-networks/pasted-image-20240821223645.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="computer-networks/pasted-image-20240821223645.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Lexical Analyzer]]></title><description><![CDATA[ 
  <br><br>]]></description><link>compiler-design/module-2.html</link><guid isPermaLink="false">Compiler Design/Module 2.md</guid><pubDate>Fri, 23 Aug 2024 10:52:08 GMT</pubDate></item><item><title><![CDATA[Translator]]></title><description><![CDATA[ 
  <br><br>Takes one form of program as input and converts it into another form<br>
 Types:<br>

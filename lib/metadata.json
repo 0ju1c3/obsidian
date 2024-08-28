@@ -1,8 +1,8 @@
 {
   "vaultName": "obsidian",
-  "lastExport": 1724787972455,
+  "lastExport": 1724830204233,
   "pluginVersion": "1.8.01",
-  "validBodyClasses": "publish css-settings-manager theme-dark show-inline-title show-ribbon encore-theme-dark-rgb encore-colors-colorful encore-translucency encore-bg-prismatic encore-blur-less",
+  "validBodyClasses": "publish css-settings-manager theme-dark show-inline-title show-ribbon encore-theme-dark-rgb encore-colors-colorful encore-translucency encore-bg-prismatic encore-blur-less is-focused",
   "useCustomHeadContent": false,
   "useCustomFavicon": false,
   "files": [
@@ -26,40 +26,6 @@
     "Compiler Design/Pasted image 20240822233413.png",
     "Compiler Design/Pasted image 20240822233431.png",
     "Compiler Design/Pasted image 20240823001558.png",
-    "Computer Networks/1-Network Topology-25-07-2024.pdf",
-    "Computer Networks/2-OSl & TCP_IP models-01-08-2024.pdf",
-    "Computer Networks/3-Transmission Impairment and Performance-09-08-2024.pdf",
-    "Computer Networks/4-Hamming code-19-08-2024.pdf",
-    "Computer Networks/Circuit and Packet Switching.md",
-    "Computer Networks/Computer Networks Syllabus.md",
-    "Computer Networks/Hamming Code.md",
-    "Computer Networks/Network Topology.md",
-    "Computer Networks/OSL and TCP-IP.md",
-    "Computer Networks/Pasted image 20240821141404.png",
-    "Computer Networks/Pasted image 20240821141843.png",
-    "Computer Networks/Pasted image 20240821142043.png",
-    "Computer Networks/Pasted image 20240821142152.png",
-    "Computer Networks/Pasted image 20240821142428.png",
-    "Computer Networks/Pasted image 20240821144917.png",
-    "Computer Networks/Pasted image 20240821145914.png",
-    "Computer Networks/Pasted image 20240821145934.png",
-    "Computer Networks/Pasted image 20240821150055.png",
-    "Computer Networks/Pasted image 20240821150131.png",
-    "Computer Networks/Pasted image 20240821215816.png",
-    "Computer Networks/Pasted image 20240821215831.png",
-    "Computer Networks/Pasted image 20240821215934.png",
-    "Computer Networks/Pasted image 20240821220101.png",
-    "Computer Networks/Pasted image 20240821221216.png",
-    "Computer Networks/Pasted image 20240821221531.png",
-    "Computer Networks/Pasted image 20240821221817.png",
-    "Computer Networks/Pasted image 20240821222059.png",
-    "Computer Networks/Pasted image 20240821222552.png",
-    "Computer Networks/Pasted image 20240821223645.png",
-    "Computer Networks/Pasted image 20240821223846.png",
-    "Computer Networks/Pasted image 20240821223913.png",
-    "Computer Networks/Pasted image 20240822001828.png",
-    "Computer Networks/Pasted image 20240822001835.png",
-    "Computer Networks/Pasted image 20240822001844.png",
     "Database Systems/Compiler Design/Module 1.md",
     "Database Systems/Compiler Design/Module 2.md",
     "Database Systems/Compiler Design/Pasted image 20240822224301.png",
@@ -217,28 +183,6 @@
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
     "lib/media/874d8b8e340f75575caa.svg",
     "lib/media/3d6c1bdc4d87cde4de67.svg",
-    "lib/fonts/mathjax_zero.woff",
-    "lib/fonts/mathjax_main-regular.woff",
-    "lib/fonts/mathjax_main-bold.woff",
-    "lib/fonts/mathjax_math-italic.woff",
-    "lib/fonts/mathjax_main-italic.woff",
-    "lib/fonts/mathjax_math-bolditalic.woff",
-    "lib/fonts/mathjax_size1-regular.woff",
-    "lib/fonts/mathjax_size2-regular.woff",
-    "lib/fonts/mathjax_size3-regular.woff",
-    "lib/fonts/mathjax_size4-regular.woff",
-    "lib/fonts/mathjax_ams-regular.woff",
-    "lib/fonts/mathjax_calligraphic-regular.woff",
-    "lib/fonts/mathjax_calligraphic-bold.woff",
-    "lib/fonts/mathjax_fraktur-regular.woff",
-    "lib/fonts/mathjax_fraktur-bold.woff",
-    "lib/fonts/mathjax_sansserif-regular.woff",
-    "lib/fonts/mathjax_sansserif-bold.woff",
-    "lib/fonts/mathjax_sansserif-italic.woff",
-    "lib/fonts/mathjax_script-regular.woff",
-    "lib/fonts/mathjax_typewriter-regular.woff",
-    "lib/fonts/mathjax_vector-regular.woff",
-    "lib/fonts/mathjax_vector-bold.woff",
     "lib/html/file-tree.html",
     "lib/scripts/webpage.js",
     "lib/scripts/graph-view.js",
@@ -396,28 +340,6 @@
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
     "lib/media/874d8b8e340f75575caa.svg",
     "lib/media/3d6c1bdc4d87cde4de67.svg",
-    "lib/fonts/mathjax_zero.woff",
-    "lib/fonts/mathjax_main-regular.woff",
-    "lib/fonts/mathjax_main-bold.woff",
-    "lib/fonts/mathjax_math-italic.woff",
-    "lib/fonts/mathjax_main-italic.woff",
-    "lib/fonts/mathjax_math-bolditalic.woff",
-    "lib/fonts/mathjax_size1-regular.woff",
-    "lib/fonts/mathjax_size2-regular.woff",
-    "lib/fonts/mathjax_size3-regular.woff",
-    "lib/fonts/mathjax_size4-regular.woff",
-    "lib/fonts/mathjax_ams-regular.woff",
-    "lib/fonts/mathjax_calligraphic-regular.woff",
-    "lib/fonts/mathjax_calligraphic-bold.woff",
-    "lib/fonts/mathjax_fraktur-regular.woff",
-    "lib/fonts/mathjax_fraktur-bold.woff",
-    "lib/fonts/mathjax_sansserif-regular.woff",
-    "lib/fonts/mathjax_sansserif-bold.woff",
-    "lib/fonts/mathjax_sansserif-italic.woff",
-    "lib/fonts/mathjax_script-regular.woff",
-    "lib/fonts/mathjax_typewriter-regular.woff",
-    "lib/fonts/mathjax_vector-regular.woff",
-    "lib/fonts/mathjax_vector-bold.woff",
     "lib/html/file-tree.html",
     "lib/scripts/webpage.js",
     "lib/scripts/graph-view.js",
@@ -694,175 +616,175 @@
       "dependencies": []
     },
     "lib/scripts/graph-wasm.wasm": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 23377,
       "exportedPath": "lib/scripts/graph-wasm.wasm",
       "dependencies": []
     },
     "lib/fonts/94f2f163d4b698242fef.otf": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 66800,
       "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
       "dependencies": []
     },
     "lib/fonts/72505e6a122c6acd5471.woff2": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 104232,
       "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
       "dependencies": []
     },
     "lib/fonts/2d5198822ab091ce4305.woff2": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 104332,
       "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
       "dependencies": []
     },
     "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 98868,
       "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
       "dependencies": []
     },
     "lib/fonts/cb10ffd7684cd9836a05.woff2": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 106876,
       "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
       "dependencies": []
     },
     "lib/fonts/b5f0f109bc88052d4000.woff2": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 105804,
       "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
       "dependencies": []
     },
     "lib/fonts/cbe0ae49c52c920fd563.woff2": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 106108,
       "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
       "dependencies": []
     },
     "lib/fonts/535a6cf662596b3bd6a6.woff2": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 111708,
       "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
       "dependencies": []
     },
     "lib/fonts/70cc7ff27245e82ad414.ttf": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 192740,
       "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
       "dependencies": []
     },
     "lib/fonts/454577c22304619db035.ttf": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 161376,
       "exportedPath": "lib/fonts/454577c22304619db035.ttf",
       "dependencies": []
     },
     "lib/fonts/52ac8f3034507f1d9e53.ttf": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 191568,
       "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
       "dependencies": []
     },
     "lib/fonts/05b618077343fbbd92b7.ttf": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 155288,
       "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
       "dependencies": []
     },
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 7876,
       "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
       "dependencies": []
     },
     "lib/media/874d8b8e340f75575caa.svg": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 317,
       "exportedPath": "lib/media/874d8b8e340f75575caa.svg",
       "dependencies": []
     },
     "lib/media/3d6c1bdc4d87cde4de67.svg": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 279,
       "exportedPath": "lib/media/3d6c1bdc4d87cde4de67.svg",
       "dependencies": []
     },
     "lib/html/file-tree.html": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 80555,
+      "modifiedTime": 1724830204233,
+      "sourceSize": 66558,
       "exportedPath": "lib/html/file-tree.html",
       "dependencies": []
     },
     "lib/scripts/webpage.js": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 47290,
       "exportedPath": "lib/scripts/webpage.js",
       "dependencies": []
     },
     "lib/scripts/graph-view.js": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 15519,
       "exportedPath": "lib/scripts/graph-view.js",
       "dependencies": []
     },
     "lib/scripts/graph-wasm.js": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 14021,
       "exportedPath": "lib/scripts/graph-wasm.js",
       "dependencies": []
     },
     "lib/scripts/graph-render-worker.js": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 5179,
       "exportedPath": "lib/scripts/graph-render-worker.js",
       "dependencies": []
     },
     "lib/scripts/tinycolor.js": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 29832,
       "exportedPath": "lib/scripts/tinycolor.js",
       "dependencies": []
     },
     "lib/scripts/pixi.js": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 449509,
       "exportedPath": "lib/scripts/pixi.js",
       "dependencies": []
     },
     "lib/scripts/minisearch.js": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 29422,
       "exportedPath": "lib/scripts/minisearch.js",
       "dependencies": []
     },
     "lib/media/favicon.png": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 1105,
       "exportedPath": "lib/media/favicon.png",
       "dependencies": []
     },
     "lib/scripts/graph-data.js": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 3151,
+      "modifiedTime": 1724830204233,
+      "sourceSize": 2757,
       "exportedPath": "lib/scripts/graph-data.js",
       "dependencies": []
     },
     "lib/styles/obsidian.css": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 130471,
       "exportedPath": "lib/styles/obsidian.css",
       "dependencies": []
     },
     "lib/styles/global-variable-styles.css": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 238,
       "exportedPath": "lib/styles/global-variable-styles.css",
       "dependencies": []
     },
     "lib/styles/main-styles.css": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 23130,
       "exportedPath": "lib/styles/main-styles.css",
       "dependencies": []
@@ -1000,13 +922,13 @@
       "dependencies": []
     },
     "lib/styles/theme.css": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 73510,
       "exportedPath": "lib/styles/theme.css",
       "dependencies": []
     },
     "lib/styles/supported-plugins.css": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1724830204233,
       "sourceSize": 99,
       "exportedPath": "lib/styles/supported-plugins.css",
       "dependencies": []
@@ -2866,242 +2788,6 @@
       "modifiedTime": 1724787972455,
       "sourceSize": 1816,
       "exportedPath": "compiler-design/module-2-ll(1)-parsing.html",
-      "dependencies": []
-    },
-    "Computer Networks/1-Network Topology-25-07-2024.pdf": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 1089832,
-      "exportedPath": "computer-networks/1-network-topology-25-07-2024.pdf",
-      "dependencies": []
-    },
-    "Computer Networks/2-OSl & TCP_IP models-01-08-2024.pdf": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 1299591,
-      "exportedPath": "computer-networks/2-osl-&-tcp_ip-models-01-08-2024.pdf",
-      "dependencies": []
-    },
-    "Computer Networks/3-Transmission Impairment and Performance-09-08-2024.pdf": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 1363206,
-      "exportedPath": "computer-networks/3-transmission-impairment-and-performance-09-08-2024.pdf",
-      "dependencies": []
-    },
-    "Computer Networks/4-Hamming code-19-08-2024.pdf": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 888786,
-      "exportedPath": "computer-networks/4-hamming-code-19-08-2024.pdf",
-      "dependencies": []
-    },
-    "Computer Networks/Circuit and Packet Switching.md": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 4476,
-      "exportedPath": "computer-networks/circuit-and-packet-switching.html",
-      "dependencies": [
-        "computer-networks/3-transmission-impairment-and-performance-09-08-2024.pdf",
-        "computer-networks/pasted-image-20240822001828.png",
-        "computer-networks/pasted-image-20240822001835.png",
-        "computer-networks/pasted-image-20240822001844.png"
-      ]
-    },
-    "Computer Networks/Computer Networks Syllabus.md": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 112,
-      "exportedPath": "computer-networks/computer-networks-syllabus.html",
-      "dependencies": []
-    },
-    "Computer Networks/Hamming Code.md": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 3169,
-      "exportedPath": "computer-networks/hamming-code.html",
-      "dependencies": [
-        "computer-networks/4-hamming-code-19-08-2024.pdf",
-        "computer-networks/pasted-image-20240821141404.png",
-        "computer-networks/pasted-image-20240821141843.png",
-        "computer-networks/pasted-image-20240821142152.png",
-        "computer-networks/pasted-image-20240821142428.png",
-        "computer-networks/pasted-image-20240821144917.png",
-        "computer-networks/pasted-image-20240821145914.png",
-        "computer-networks/pasted-image-20240821145934.png",
-        "computer-networks/pasted-image-20240821150055.png",
-        "computer-networks/pasted-image-20240821150131.png"
-      ]
-    },
-    "Computer Networks/Network Topology.md": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 7444,
-      "exportedPath": "computer-networks/network-topology.html",
-      "dependencies": [
-        "computer-networks/1-network-topology-25-07-2024.pdf",
-        "computer-networks/pasted-image-20240821215831.png",
-        "computer-networks/pasted-image-20240821215816.png",
-        "computer-networks/pasted-image-20240821215934.png",
-        "computer-networks/pasted-image-20240821220101.png"
-      ]
-    },
-    "Computer Networks/OSL and TCP-IP.md": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 4678,
-      "exportedPath": "computer-networks/osl-and-tcp-ip.html",
-      "dependencies": [
-        "computer-networks/2-osl-&-tcp_ip-models-01-08-2024.pdf",
-        "computer-networks/pasted-image-20240821223645.png",
-        "computer-networks/pasted-image-20240821223846.png",
-        "computer-networks/pasted-image-20240821223913.png",
-        "computer-networks/pasted-image-20240821221216.png",
-        "computer-networks/pasted-image-20240821221531.png",
-        "computer-networks/pasted-image-20240821221817.png",
-        "computer-networks/pasted-image-20240821222059.png",
-        "computer-networks/pasted-image-20240821222552.png"
-      ]
-    },
-    "Computer Networks/Pasted image 20240821141404.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 41736,
-      "exportedPath": "computer-networks/pasted-image-20240821141404.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821141843.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 53268,
-      "exportedPath": "computer-networks/pasted-image-20240821141843.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821142043.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 24872,
-      "exportedPath": "computer-networks/pasted-image-20240821142043.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821142152.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 24872,
-      "exportedPath": "computer-networks/pasted-image-20240821142152.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821142428.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 157381,
-      "exportedPath": "computer-networks/pasted-image-20240821142428.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821144917.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 91696,
-      "exportedPath": "computer-networks/pasted-image-20240821144917.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821145914.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 270967,
-      "exportedPath": "computer-networks/pasted-image-20240821145914.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821145934.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 105876,
-      "exportedPath": "computer-networks/pasted-image-20240821145934.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821150055.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 187643,
-      "exportedPath": "computer-networks/pasted-image-20240821150055.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821150131.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 133436,
-      "exportedPath": "computer-networks/pasted-image-20240821150131.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821215816.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 48113,
-      "exportedPath": "computer-networks/pasted-image-20240821215816.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821215831.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 49289,
-      "exportedPath": "computer-networks/pasted-image-20240821215831.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821215934.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 28537,
-      "exportedPath": "computer-networks/pasted-image-20240821215934.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821220101.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 41237,
-      "exportedPath": "computer-networks/pasted-image-20240821220101.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821221216.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 59621,
-      "exportedPath": "computer-networks/pasted-image-20240821221216.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821221531.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 60441,
-      "exportedPath": "computer-networks/pasted-image-20240821221531.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821221817.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 29967,
-      "exportedPath": "computer-networks/pasted-image-20240821221817.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821222059.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 19371,
-      "exportedPath": "computer-networks/pasted-image-20240821222059.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821222552.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 29058,
-      "exportedPath": "computer-networks/pasted-image-20240821222552.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821223645.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 21372,
-      "exportedPath": "computer-networks/pasted-image-20240821223645.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821223846.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 94623,
-      "exportedPath": "computer-networks/pasted-image-20240821223846.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240821223913.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 75610,
-      "exportedPath": "computer-networks/pasted-image-20240821223913.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240822001828.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 52052,
-      "exportedPath": "computer-networks/pasted-image-20240822001828.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240822001835.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 60416,
-      "exportedPath": "computer-networks/pasted-image-20240822001835.png",
-      "dependencies": []
-    },
-    "Computer Networks/Pasted image 20240822001844.png": {
-      "modifiedTime": 1724787972455,
-      "sourceSize": 193426,
-      "exportedPath": "computer-networks/pasted-image-20240822001844.png",
       "dependencies": []
     },
     "computer-networks/3-transmission-impairment-and-performance-09-08-2024.pdf": {

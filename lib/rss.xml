@@ -1,4 +1,532 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>obsidian</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 28 Aug 2024 07:30:46 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 28 Aug 2024 07:30:42 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[Need for Switching]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>obsidian</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 29 Aug 2024 07:01:57 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 29 Aug 2024 07:01:53 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[Uninformed vs. Informed Search]]></title><description><![CDATA[ 
+ <br>PREVIOUS: <a data-href="Module 1 - Problems" href="ai/module-1-problems.html" class="internal-link" target="_self" rel="noopener">Module 1 - Problems</a><br><br><br>
+<br>Breadth-First Search (BFS)
+<br>Depth-First Search (DFS)
+<br>Uniform-Cost Search (UCS)
+<br>Depth-Limited Search (DLS)
+<br>Depth-First Iterative Deepening Search (DFID)
+<br>Bidirectional Search
+<br><br>
+<br>Greedy Best-First Search
+<br>A* Search
+<br>Hill Climbing
+<br>Simulated Annealing
+<br>Beam Search
+<br>Genetic Algorithm
+<br><br><br>
+<br>Always select from the OPEN list the node with the smallest depth (shallowest node) for expansion.
+<br>Put all newly generated nodes into the OPEN list.
+<br>OPEN is organized as a FIFO (first-in, first-out) list, i.e., a queue.
+<br>Terminate if a node selected for expansion is a goal.
+<br><br>S CBA D GE 1 5 8 9 4 5 3 7<br><br>
+<br>
+Initial State:
+
+<br>OPEN list: { S }
+<br>CLOSED list: { }
+
+
+<br>
+Step-by-Step Expansion:
+
+
+<br>
+Solution Path: S -&gt; A -&gt; G (This G also has a cost of 10)
+
+<br>
+Number of Nodes Expanded: 7
+
+<br><br>
+<br>Completeness: BFS is complete if the branching factor is finite; it will find a solution if one exists.
+<br>Time Complexity: O(b^d), where b is the branching factor and d is the depth of the shallowest goal node.
+<br>Space Complexity: O(b^d), as it needs to store all generated nodes in the frontier.
+<br>Optimality: BFS is optimal if all path costs are the same, as it finds the shallowest solution first.
+<br><br>
+<br>
+For a complete search tree of depth d, where each non-leaf node has b children:
+
+<br>Total Nodes: 1 + b + b^2 + ... + b^d = (b^(d+1) - 1)/(b-1)
+<br>For a tree of depth 12 with b=10, total nodes: O(10^12)
+
+
+<br>
+BFS is suitable for problems with shallow solutions.
+
+<br><br><br>
+<br>Always select from the OPEN list the node with the greatest depth for expansion.
+<br>Put all newly generated nodes into the OPEN list.
+<br>OPEN is organized as a LIFO (last-in, first-out) list, i.e., a stack.
+<br>Terminate if a node selected for expansion is a goal.
+<br><br>S CBA D E 1 5 93 7 G G’ G” 8 54<br><br>
+<br>
+Initial State:
+
+<br>OPEN list: { S(0) }
+<br>CLOSED list: { }
+
+
+<br>
+Step-by-Step Expansion:
+
+
+<br>
+Solution Path: S -&gt; B -&gt; G (This G has a cost of 9, not 10)
+
+<br>
+Number of Nodes Expanded: 7
+
+<br><br>
+<br>Completeness: UCS is complete, as long as the cost of each step is greater than some small positive constant.
+<br>Time Complexity: O(b^d), similar to BFS in the worst case but depends on the path costs.
+<br>Space Complexity: O(b^d), since it keeps all generated nodes in memory.
+<br>Optimality: UCS is optimal if path costs are non-negative because it expands the least costly path first.
+<br><br>
+<br>UCS becomes BFS when all arcs cost the same.
+<br><br><br>
+<br>Depth-Limited Search is a modified version of DFS that imposes a limit on the depth of the search.
+<br>It explores nodes up to a certain depth, preventing excessive deep paths that are unlikely to lead to the goal.
+<br><br>
+<br>Completeness: DLS is complete if the depth limit is greater than or equal to the depth of the shallowest goal. If the limit is too low, it may miss the solution.
+<br>Time Complexity: O(b^l), where l is the depth limit.
+<br>Space Complexity: O(b^l), as it needs to store up to l nodes at the deepest level.
+<br>Optimality: DLS is not optimal, as it might not find the least-cost solution if the limit is set too low.
+<br><br><br>
+<br>Combines the advantages of BFS and DFS.
+<br>Is complete, has linear space complexity, and has a time complexity of O(b^d).
+<br><br>
+<br>Perform DFS to depth 0 (i.e., treat start node as having no successors).
+<br>If no solution is found, perform DFS to depth 1.
+<br>Continue incrementing depth and performing DFS until the solution is found.
+<br><br>
+<br>Completeness: DFID is complete as it incrementally increases the depth limit until it finds the goal.
+<br>Time Complexity: O(b^d), as it performs a DFS up to each level d.
+<br>Space Complexity: O(b^d), similar to DFS, as it only needs to store the current path from the root to the leaf node.
+<br><br><br>
+<br>Bidirectional Search performs two simultaneous searches: one forward from the start node and one backward from the goal node.
+<br>It uses two search trees that meet in the middle.
+<br><br>
+<br>Completeness: Bidirectional Search is complete if the forward and backward searches meet, and if the branching factor is finite.
+<br>Time Complexity: O(b^(d/2)), as it searches from both directions.
+<br>Space Complexity: O(b^(d/2)), because it needs to store nodes in both search trees.
+<br><br><br>
+<br>Selects nodes based on their heuristic value.
+<br>Always expands the node that appears to be closest to the goal according to the heuristic.
+<br><br>
+<br>Completeness: Not complete, as it may get stuck in loops or fail to find a solution.
+<br>Time Complexity: O(b^m), where m is the maximum depth of the search tree.
+<br>Space Complexity: O(b^m), similar to DFS.
+<br>Optimality: Not optimal, as it does not consider path costs.
+<br><br><br>
+<br>Combines the features of UCS and Greedy Best-First Search.
+<br>Uses both path cost g(n) and heuristic estimate h(n) to evaluate nodes: f(n) = g(n) + h(n).
+<br><br>
+<br>Completeness: Complete if the heuristic function is admissible (i.e., never overestimates the cost to reach the goal).
+<br>Time Complexity: O(b^d), similar to UCS in terms of worst-case complexity.
+<br>Space Complexity: O(b^d), similar to UCS.
+<br><br><br>
+<br>A local search algorithm that continuously moves towards the direction of increasing value (i.e., towards the goal).
+<br><br>
+<br>Completeness: Not complete, as it may get stuck in local maxima.
+<br>Time Complexity: O(b^m), where m is the maximum depth of the search tree.
+<br>Space Complexity: O(b^m), similar to DFS.
+<br>Optimality: Not optimal, as it may not find the global maximum.
+<br><br><br>
+<br>A probabilistic technique that explores the solution space by accepting less optimal solutions with a decreasing probability.
+<br><br>
+<br>Completeness: Complete if the cooling schedule is appropriately chosen.
+<br>Time Complexity: Depends on the cooling schedule and stopping condition.
+<br>Space Complexity: Depends on the implementation.
+<br><br><br>
+<br>A variation of BFS that only expands a limited number of nodes at each level.
+<br><br>
+<br>Completeness: Not complete if the beam width is too small.
+<br>Time Complexity: O(w^d), where w is the beam width.
+<br>Space Complexity: O(w^d), where w is the beam width.
+<br><br><br>
+<br>An optimization algorithm inspired by the process of natural selection.
+<br>Uses operations such as selection, crossover, and mutation to evolve solutions.
+<br><br>
+<br>Completeness: Not always complete; depends on population size and evolutionary process.
+<br>Time Complexity: Depends on population size and number of generations.
+<br>Space Complexity: Depends on population size and representation of solutions.
+]]></description><link>ai/mod-1-uninformed-vs-informed.html</link><guid isPermaLink="false">AI/Mod 1 - uninformed vs informed.md</guid><pubDate>Wed, 28 Aug 2024 19:37:41 GMT</pubDate></item><item><title><![CDATA[Artificial Intelligence (BCSE306L) Exam Notes]]></title><description><![CDATA[ 
+ <br><br><br><br><br>
+<br>An agent is anything that can perceive its environment through sensors and act upon that environment through actuators.
+<br><br>
+<br>
+Human Agent
+
+<br>Sensors: eyes, ears, and other sensory organs
+<br>Actuators: hands, legs, mouth, and other body parts
+
+
+<br>
+Robotic Agent
+
+<br>Sensors: cameras, infrared rangefinders, etc.
+<br>Actuators: various motors
+
+
+<br>
+Software Agent
+
+<br>Example: A thermostat
+
+<br>Sensor: temperature detector
+<br>Actuator: heating/cooling system control
+
+
+
+
+<br><br>
+<br>Agent function: maps percept histories to actions [f: P* → A]
+<br>Agent program: runs on the physical architecture to produce f
+<br>Relationship: agent = architecture + program
+<br><br><br>A rational agent selects actions that are expected to maximize its performance measure, given:<br>
+<br>The evidence provided by the percept sequence
+<br>The agent's built-in knowledge
+<br><br>
+<br>Performance measure defining the criterion of success
+<br>Agent's prior knowledge of the environment
+<br>Actions that the agent can perform
+<br>Agent's percept sequence to date
+<br><br>PEAS stands for Performance measure, Environment, Actuators, and Sensors. It's a framework for specifying task environments for intelligent agents.<br><br>
+<br>Performance measure: How we evaluate the agent's behavior
+<br>Environment: The external world in which the agent operates
+<br>Actuators: The means by which the agent can act on its environment
+<br>Sensors: The means by which the agent perceives its environment
+<br><br><br>
+<br>Performance measure: Safe driving, following traffic rules, passenger comfort, minimizing travel time
+<br>Environment: Roads, other vehicles, pedestrians, traffic signals, weather conditions
+<br>Actuators: Steering wheel, accelerator, brakes, signals
+<br>Sensors: Cameras, LIDAR, GPS, speedometer, thermometer
+<br><br>
+<br>Performance: Goals scored, goals prevented, games won
+<br>Environment: Soccer field, other players, ball, weather conditions
+<br>Actuators: Legs for running and kicking, head for heading the ball
+<br>Sensors: Eyes for visual input, ears for auditory cues, tactile sensors for feeling the ball
+<br><br>
+<br>Performance: Amount and quality of data collected, survival time
+<br>Environment: Subsurface oceans of Titan, extreme pressure and temperature
+<br>Actuators: Propulsion system, sampling tools, data transmission antenna
+<br>Sensors: Pressure sensors, temperature sensors, chemical analyzers, cameras
+<br><br>
+<br>Performance: Book quality, price, shipping time
+<br>Environment: Online marketplaces, websites, databases
+<br>Actuators: Web browser interactions (clicks, form submissions)
+<br>Sensors: Text recognition for reading listings, price comparators
+<br><br>Environments can be categorized based on various properties:<br>
+<br>
+Fully Observable vs. Partially Observable
+
+<br>Fully Observable: Agent can obtain complete information about the environment's state (e.g., chess board)
+<br>Partially Observable: Agent has limited or noisy sensors (e.g., poker game)
+
+
+<br>
+Deterministic vs. Stochastic
+
+<br>Deterministic: Next state is completely determined by current state and agent's action (e.g., puzzle-solving)
+<br>Stochastic: There's uncertainty in the outcome of actions (e.g., robot navigation in a crowded area)
+
+
+<br>
+Episodic vs. Sequential
+
+<br>Episodic: Agent's experience is divided into atomic episodes (e.g., image classification)
+<br>Sequential: Current decisions affect future decisions (e.g., chess game)
+
+
+<br>
+Static vs. Dynamic
+
+<br>Static: Environment doesn't change while agent is deliberating (e.g., crossword puzzle)
+<br>Dynamic: Environment changes over time, even while the agent is thinking (e.g., real-time strategy game)
+
+
+<br>
+Discrete vs. Continuous
+
+<br>Discrete: Limited number of distinct percepts and actions (e.g., chess)
+<br>Continuous: Percepts and actions vary in a continuous range (e.g., driving a car)
+
+
+<br>
+Single-agent vs. Multi-agent
+
+<br>Single-agent: Only one agent operates in the environment (e.g., puzzle-solving)
+<br>Multi-agent: Multiple agents interact in the environment (e.g., multiplayer games, economic markets)
+
+
+<br><br>
+<br>Fully Observable: Both players can see the entire board
+<br>Deterministic: The next state is completely determined by the current state and the player's action
+<br>Sequential: Earlier moves affect future decisions
+<br>Static: The game state doesn't change while a player is thinking
+<br>Discrete: There are a finite number of possible moves at each turn
+<br>Two-agent: Two players compete against each other
+<br><br>
+<br>
+Simple Reflex Agents
+
+<br>Select actions based only on the current percept
+<br>Example: Thermostat that turns on heating when temperature drops below a threshold
+
+
+<br>
+Model-Based Reflex Agents
+
+<br>Maintain internal state to track aspects of the world not visible in the current percept
+<br>Example: Autonomous car that keeps track of nearby vehicles even when they're not in direct view
+
+
+<br>
+Goal-Based Agents
+
+<br>Work towards predefined goals
+<br>Example: Navigation systems that find routes to specified destinations
+
+
+<br>
+Utility-Based Agents
+
+<br>Maximize a utility function that maps states to real numbers representing desirability
+<br>Example: Economic agent making investment decisions to maximize profit
+
+
+<br>
+Learning Agents
+
+<br>Can improve their performance over time through experience
+<br>Example: Recommendation systems that learn user preferences over time
+
+
+<br><br><br>
+<br>Two locations: A and B
+<br>The vacuum cleaner can be in either location
+<br>Each location can be clean or dirty
+<br><br>
+<br>Performance measure: Amount of dirt cleaned up in a fixed time period
+<br>Environment: Two locations (A and B) which can be clean or dirty
+<br>Actuators: Left, Right, Suck, NoOp (No Operation)
+<br>Sensors: Location sensor, Dirt sensor
+<br><br>def vacuum_agent(location, status):
+    if status == "Dirty":
+        return "Suck"
+    elif location == "A":
+        return "Right"
+    elif location == "B":
+        return "Left"
+Copy<br>This simple program demonstrates how a reflex agent might operate in the vacuum-cleaner world, making decisions based solely on its current percepts.<br><br><br>A state space is a graph, (V, E) where:<br>
+<br>V is a set of nodes
+<br>E is a set of arcs
+<br>Each arc is directed from one node to another node due to an action executed
+<br><br><br>
+<br>Correspond to a state
+<br>Include:
+
+<br>State description
+<br>Optionally:
+
+<br>Parent information
+<br>Operation to generate the node from its parent
+<br>Other bookkeeping data
+
+
+
+
+<br><br>
+<br>Correspond to an applicable action/operation
+<br>Properties:
+
+<br>Connect a source node (parent) to a destination node (child)
+<br>Have a fixed, non-negative cost associated with them
+
+
+<br><br>
+<br>Parent: Immediate predecessor of a node
+<br>Child: Immediate successor of a node
+<br>Ancestors: All predecessors of a node
+<br>Descendants: All successors of a node
+<br><br><br>
+<br>Making a node explicit by applying an action to another explicit node
+<br><br>
+<br>Generating all children of an explicit node by applying all applicable operations
+<br><br><br>
+<br>One or more nodes designated as starting points
+<br><br>
+<br>A predicate applied to a node to determine if its associated state is a goal state
+<br><br><br>
+<br>A sequence of operations associated with a path in the state space from a start node to a goal node
+<br><br>
+<br>The sum of the arc costs on the solution path
+<br>NEXT : <a data-href="Module 1 - Problems" href="ai/module-1-problems.html" class="internal-link" target="_self" rel="noopener">Module 1 - Problems</a>]]></description><link>ai/module-1.html</link><guid isPermaLink="false">AI/Module 1.md</guid><pubDate>Thu, 29 Aug 2024 06:36:59 GMT</pubDate></item><item><title><![CDATA[Module 1 - Problems]]></title><description><![CDATA[ 
+ <br>PREVIOUS: <a data-tooltip-position="top" aria-label="AI/Module 1" data-href="AI/Module 1" href="ai/module-1.html" class="internal-link" target="_self" rel="noopener">Module 1</a><br><br>Problem Statement:<br>
+<br>Given two jugs, one with a capacity of 4 liters and the other with a capacity of 3 liters. Both jugs have no measuring markers. The objective is to measure exactly 2 liters of water using these two jugs.
+<br>Steps to Solve:<br>
+<br>Initial State: Both jugs are empty (0,0).
+<br>Action: Fill the 3-liter jug completely. State becomes (0,3).
+<br>Action: Pour the water from the 3-liter jug into the 4-liter jug. State becomes (3,0).
+<br>Action: Fill the 3-liter jug again. State becomes (3,3).
+<br>Action: Pour water from the 3-liter jug into the 4-liter jug until the 4-liter jug is full. State becomes (4,2).
+<br>Action: Empty the 4-liter jug on the ground. State becomes (0,2).
+<br>Goal State: Now, the 4-liter jug contains exactly 2 liters of water.
+<br>Diagrammatic Representation:<br>    Start (0,0)
+     |
+     V
+    (0,3) &lt;-- Fill 3L jug
+     |
+     V
+    (3,0) &lt;-- Pour 3L into 4L jug
+     |
+     V
+    (3,3) &lt;-- Fill 3L jug again
+     |
+     V
+    (4,2) &lt;-- Pour from 3L to 4L jug until full
+     |
+     V
+    (0,2) &lt;-- Empty 4L jug on the ground
+Copy<br><br>Problem Statement:<br>
+<br>Given a 3x3 board with 8 numbered tiles and one empty space, the objective is to move the tiles to achieve a specific goal configuration.
+<br>Example:<br>
+<br>Initial State:
+<br>1 2 3
+4 5 6
+7 8 _
+Copy<br>
+<br>Goal state:
+<br>1 2 3
+4 5 6
+7 8 _
+
+Copy<br>Steps:<br>
+<br>Move the blank tile (empty space) by swapping it with an adjacent tile.
+<br>Continue swapping until the tiles reach the goal configuration.
+<br>Diagram:<br>Initial State       Move Left       Goal State
+  1 2 3              1 2 3            1 2 3
+  4 5 6   -----&gt;     4 5 6   -----&gt;   4 5 6
+  7 8 _              7 _ 8            7 _ 8
+Copy<br><br>Problem Statement:<br>
+<br>You have 3 missionaries, 3 cannibals, and a boat that can carry at most two people. The goal is to move all missionaries and cannibals across the river. However, on either side of the river, missionaries must never be outnumbered by cannibals, or they will be eaten.
+<br>Steps to Solve:<br>
+<br>Initial State: All missionaries and cannibals are on one side (MMMCCC, B -).
+<br>State 1: Two cannibals cross over (MMMC, B - CC).
+<br>State 2: One cannibal returns (MMMCC, B - C).
+<br>State 3: Two cannibals cross again (MMM, B - CCC).
+<br>State 4: One cannibal returns (MMMC, B - CC).
+<br>State 5: Two missionaries cross (MC, B - MMCC).
+<br>State 6: A missionary and a cannibal return (MMCC, B - MC).
+<br>State 7: Two missionaries cross again (CC, B - MMMC).
+<br>State 8: A cannibal returns (CCC, B - MMM).
+<br>State 9: Two cannibals cross (C, B - MMMCC).
+<br>State 10: One cannibal returns (CC, B - MMMC).
+<br>State 11: The third cannibal crosses ( - , B - MMMCCC).
+<br>Diagram<br>Initial Setup: MMMCCC B -
+State 1:      MMMC B CC
+State 2:      MMMCC B C
+...
+State 11:     - B MMMCCC
+Copy<br><br>Problem Statement:<br>
+<br>Place eight queens on an 8x8 chessboard such that no two queens attack each other.
+<br>Solution Approach:<br>
+<br>State: The position of queens on the board.
+<br>Operators: Move a queen to a position on the board.
+<br>Goal State: All queens are placed on the board such that no queen can attack another.
+<br>Diagrammatic Representation:<br>
+<br>Place each queen in a way that it does not share the same row, column, or diagonal with another queen.
+<br>Example:<br>  . Q . . . . . .
+  . . . Q . . . .
+  Q . . . . . . .
+  . . . . . Q . .
+  . . Q . . . . .
+  . . . . . . . Q
+  . . . . Q . . .
+  . . . . . . Q .
+
+Copy<br><br>
+<br>State: A specific configuration of the problem.
+<br>State Space: Collection of all possible states.
+<br>Initial State: The starting configuration.
+<br>Goal State: The desired end configuration.
+<br>Transition: The action that moves from one state to another.
+<br>Path: A sequence of states connected by transitions.
+<br>Search Strategy: The method used to explore the state space to reach the goal state.
+<br><br><br>
+<br>State Space: A graph (V, E) where V is a set of nodes and E is a set of arcs.
+
+<br>Node (V): Corresponds to a state.
+
+<br>State Description: Describes the state.
+<br>Optional Information: May include details related to the parent of the node, the operation to generate the node from that parent, and other bookkeeping data.
+
+
+<br>Arc (E): Corresponds to an applicable action or operation.
+
+<br>Source and Destination Nodes: The nodes connected by an arc are called:
+
+<br>Parent: Immediate predecessor.
+<br>Child: Immediate successor.
+
+
+<br>Ancestors: Predecessor nodes.
+<br>Descendants: Successor nodes.
+<br>Arc Cost: Each arc has a fixed, non-negative cost corresponding to the cost of the action.
+
+
+
+
+<br><br>
+<br>Node Generation: Making a node explicit by applying an action to another node that has already been made explicit.
+<br>Node Expansion: Generating all children of an explicit node by applying all applicable operations to that node.
+<br><br>
+<br>Start Nodes: One or more nodes designated as start nodes.
+<br>Goal Test: A predicate applied to a node to determine if its associated state is a goal state.
+<br>Solution: A sequence of operations associated with a path in the state space from a start node to a goal node.
+<br>Solution Cost: The sum of the arc costs on the solution path.
+<br><br>
+<br>State-Space Search: The process of searching through a state space for a solution by making explicit a sufficient portion of an implicit state-space graph to include a goal node.
+
+<br>Initially, V={S}, where S is the start node.
+<br>When S is expanded, its successors are generated, and those nodes are added to V. The associated arcs are added to E.
+<br>The process continues until a goal node is generated (included in V) and identified (by goal test).
+
+
+<br><br>
+<br>Not Generated Yet: The node has not been made explicit yet.
+<br>OPEN: The node has been generated but not expanded.
+<br>CLOSED: The node has been expanded.
+<br><br>
+<br>Search strategies differ mainly in how to select an OPEN node for expansion at each step of the search.
+<br><br><br>
+<br>Node n:
+
+<br>State Description
+<br>Parent: May use a backpointer (if needed).
+<br>Operator: Used to generate n (optional).
+<br>Depth: Depth of n (optional).
+<br>Path Cost: Path cost from S to n (if available).
+
+
+<br><br>
+<br>Initialization: {S}
+<br>Node Insertion/Removal: Depends on the specific search strategy.
+<br><br>
+<br>Initialization: {}
+<br>Organization: By backpointers.
+<br><br>open := {S}; 
+closed := {};
+repeat
+    n := select(open); /* select one node from open for expansion */
+    if n is a goal
+        then exit with success; /* delayed goal testing */
+    expand(n)
+    /* generate all children of n
+       put these newly generated nodes in open (check duplicates)
+       put n in closed (check duplicates) */
+until open = {};
+exit with failure
+Copy<br>NEXT : <a data-href="Mod 1 - uninformed vs informed" href="ai/mod-1-uninformed-vs-informed.html" class="internal-link" target="_self" rel="noopener">Mod 1 - uninformed vs informed</a>]]></description><link>ai/module-1-problems.html</link><guid isPermaLink="false">AI/Module 1 - Problems.md</guid><pubDate>Wed, 28 Aug 2024 19:37:17 GMT</pubDate></item><item><title><![CDATA[Need for Switching]]></title><description><![CDATA[ 
  <br><br><br>Whenever we have many devices, the interconnection between them becomes more difficult as the number of devices increases, this is where switching comes in<br><br>
 <br>Consists of a set of switches connected by physical links
 <br>Connection between two stations is a dedicated path made of one or more links
@@ -37,13 +565,73 @@ P1, P2 - power of signal at different points<br>Signal to Noise Ratio:<br>
 SNR = Average signal power/Average noise power<br><br>Depends on:<br>
 - Bandwidth available<br>
 - Level of signals we use<br>
-- Quality of the channel --- level of noice<br><br>For a noiseless channel<br>
+- Quality of the channel --- level of noise<br><br>For a noiseless channel<br>
 The theoretical max bit rate<br>BitRate = 2  bandwidth  log2(L)<br>
 L - no of signal levels used to represent data<br>Increasing the level of signal may reduce the reliability of the system<br><br>To determine the theoretical highest rate for noisy channel<br>Capacity = bandwidth * log2(1 + SNR)<br>
 Capacity  - capacity of channel in BPS<br><br>Performance of the network<br>Bandwidth - capacity of the network (in Hz or BPS)<br>
 Throughput - How fast can the data be sent through a network<br>
 Latency(Delay) - How long data take for an entire message to completely arrive at the destination from the source<br>Latency = PT + TT + QT + PD<br>Bandwidth in Hz - range of frequencies that a channel can pass<br>
-Bandwidth in bits per second - speed of bit transmission in a channel<br>Propagation speed - Speed at which bit travels through the medium from the source to the destination<br>Transmission speed - Speed at which all the bits in a message arrive at the destination]]></description><link>computer-networks/circuit-and-packet-switching.html</link><guid isPermaLink="false">Computer Networks/Circuit and Packet Switching.md</guid><pubDate>Wed, 21 Aug 2024 19:14:23 GMT</pubDate><enclosure url="computer-networks/pasted-image-20240822001828.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="computer-networks/pasted-image-20240822001828.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Computer Networks Syllabus]]></title><description><![CDATA[ 
+Bandwidth in bits per second - speed of bit transmission in a channel<br>Propagation speed - Speed at which bit travels through the medium from the source to the destination<br>Transmission speed - Speed at which all the bits in a message arrive at the destination]]></description><link>computer-networks/circuit-and-packet-switching.html</link><guid isPermaLink="false">Computer Networks/Circuit and Packet Switching.md</guid><pubDate>Wed, 28 Aug 2024 07:31:49 GMT</pubDate><enclosure url="computer-networks/pasted-image-20240822001828.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="computer-networks/pasted-image-20240822001828.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Mod 2 - Processes]]></title><description><![CDATA[ 
+ <br>Previous: <a data-href="Module 2 CPU Modes" href="os/module-2-cpu-modes.html" class="internal-link" target="_self" rel="noopener">Module 2 CPU Modes</a><br><br>In an operating system, each process has its own virtual address space, which is separate from other processes. This virtual space is divided into distinct regions:<br><img alt="Compiler Design/Pasted image 20240826120353.png" src="lib/media/pasted-image-20240826120353.png"><br>
+<br>Text Segment: Contains the executable code of the program.
+<br>Data Segment: Stores global and static variables.
+<br>Heap: Used for dynamic memory allocation during process execution.
+<br>Stack: Holds the activation records for functions, including function parameters, local variables, and return addresses.
+<br><br>
+<br>Each time a function is called, an activation record (or stack frame) is pushed onto the stack.
+<br>This record contains:
+
+<br>Function parameters
+<br>Local variables
+<br>Return address
+
+
+<br>When the function returns, its activation record is popped from the stack.
+<br>The stack and heap sections grow toward each other, and the operating system must ensure they do not overlap.<br><br>
+<br>The MMU translates the virtual addresses used by the process into physical memory addresses.
+<br><br>As a process executes, it changes state, which is defined by the current activity of that process. A process may be in one of the following states:<br>
+<br>New: The process is being created.
+<br>Running: Instructions are being executed.
+<br>Waiting: The process is waiting for some event (like I/O completion) to occur.
+<br>Ready: The process is waiting to be assigned to a processor.
+<br>Terminated: The process has finished execution.
+<br><br>The Process Control Block (PCB), also known as a task control block, is a data structure that contains all the information about a process. The PCB acts as the handle for the OS to manage the process's memory layout, scheduling, and other resources.<br><br>
+<br>Process State: New, ready, running, waiting, or terminated.
+<br>Program Counter: The address of the next instruction to be executed.
+<br>CPU Registers: Includes accumulators, index registers, stack pointers, general-purpose registers, and condition codes.
+<br>CPU-Scheduling Information: Includes process priority, pointers to scheduling queues, and other scheduling parameters.
+<br>Memory-Management Information: Includes base and limit registers, page tables, or segment tables, depending on the memory system.
+<br>Accounting Information: Includes CPU usage, time limits, account numbers, and process IDs.
+<br>I/O Status Information: Includes the list of I/O devices allocated to the process and the list of open files.
+<br><br>The Process Table is a data structure maintained by the operating system to store information about all active processes. It is essentially an array of PCBs, with each entry representing a process and containing a pointer to its corresponding PCB.<br><br>Processes are created in an operating system using system calls. The process that creates new processes is called the parent process, and the newly created processes are called child processes.<br><br>
+<br>Each process is identified by a unique Process Identifier (PID), which is typically an integer.
+<br>The PID is used to access various attributes of a process within the kernel.
+<br><br>
+<br>fork(): Creates a new process (child) that is a copy of the current process (parent). The child starts executing from the point where fork() was called.
+<br>wait(): Suspends the parent process until one of its child processes terminates. The exit status of the child process is stored in the wstatus parameter.
+<br>exec(): Replaces the child process image with a new program loaded from a specified file.
+<br>exit(): Terminates the current process and returns a status code to the parent, which can use this code to determine the reason for termination.
+<br><br>A process terminates when it finishes executing its final statement and requests the OS to delete it using the exit() system call. All the resources of the process are deallocated and reclaimed by the operating system.<br><br>
+<br>A parent process can terminate its children for reasons like:
+
+<br>Exceeding resource usage.
+<br>Task completion.
+<br>Parent process exiting.
+
+
+<br><br>
+<br>If a parent process terminates, all its child processes must also be terminated.
+<br><br>
+<br>A parent process can wait for a child process to terminate using the wait() system call. The parent can retrieve the exit status of the child and free up the process table entry.
+<br><br><br>
+<br>A zombie process is a process that has finished execution, but its parent has not yet acknowledged its termination.
+<br>The zombie process still exists in the process table, awaiting the parent to retrieve its exit status using wait().
+<br>It remains in the process table until the parent terminates or the system reboots.
+<br><br>
+<br>An orphan process is a process whose parent has terminated, but the child is still running.
+<br>The orphan process is adopted by the init process (PID 1), which becomes its new parent.
+<br>The init process periodically invokes wait(), allowing it to clean up and release the resources of orphaned processes.
+]]></description><link>os/mod-2-processes.html</link><guid isPermaLink="false">OS/Mod 2 - Processes.md</guid><pubDate>Wed, 28 Aug 2024 16:14:07 GMT</pubDate><enclosure url="lib/media/pasted-image-20240826120353.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib/media/pasted-image-20240826120353.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Computer Networks Syllabus]]></title><description><![CDATA[ 
  <br>Mod 1<br>
 <a data-href="Network Topology" href="computer-networks/network-topology.html" class="internal-link" target="_self" rel="noopener">Network Topology</a><br>
 <a data-href="OSL and TCP-IP" href="computer-networks/osl-and-tcp-ip.html" class="internal-link" target="_self" rel="noopener">OSL and TCP-IP</a><br>Mod 2<br>
@@ -1450,67 +2038,7 @@ Involves restructuring the tables to successively meeting higher forms of Normal
 
 
 <br><img alt="Pasted image 20240824231821.png" src="database-systems/pasted-image-20240824231821.png">
-]]></description><link>database-systems/normalization.html</link><guid isPermaLink="false">Database Systems/Normalization.md</guid><pubDate>Sat, 24 Aug 2024 17:48:28 GMT</pubDate><enclosure url="database-systems/pasted-image-20240824215847.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="database-systems/pasted-image-20240824215847.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Mod 2 - Processes]]></title><description><![CDATA[ 
- <br>Previous: <a data-href="Module 2 CPU Modes" href="os/module-2-cpu-modes.html" class="internal-link" target="_self" rel="noopener">Module 2 CPU Modes</a><br><br>In an operating system, each process has its own virtual address space, which is separate from other processes. This virtual space is divided into distinct regions:<br><img alt="Pasted image 20240826120353.png" src="lib/media/pasted-image-20240826120353.png"><br>
-<br>Text Segment: Contains the executable code of the program.
-<br>Data Segment: Stores global and static variables.
-<br>Heap: Used for dynamic memory allocation during process execution.
-<br>Stack: Holds the activation records for functions, including function parameters, local variables, and return addresses.
-<br><br>
-<br>Each time a function is called, an activation record (or stack frame) is pushed onto the stack.
-<br>This record contains:
-
-<br>Function parameters
-<br>Local variables
-<br>Return address
-
-
-<br>When the function returns, its activation record is popped from the stack.
-<br>The stack and heap sections grow toward each other, and the operating system must ensure they do not overlap.<br><br>
-<br>The MMU translates the virtual addresses used by the process into physical memory addresses.
-<br><br>As a process executes, it changes state, which is defined by the current activity of that process. A process may be in one of the following states:<br>
-<br>New: The process is being created.
-<br>Running: Instructions are being executed.
-<br>Waiting: The process is waiting for some event (like I/O completion) to occur.
-<br>Ready: The process is waiting to be assigned to a processor.
-<br>Terminated: The process has finished execution.
-<br><br>The Process Control Block (PCB), also known as a task control block, is a data structure that contains all the information about a process. The PCB acts as the handle for the OS to manage the process's memory layout, scheduling, and other resources.<br><br>
-<br>Process State: New, ready, running, waiting, or terminated.
-<br>Program Counter: The address of the next instruction to be executed.
-<br>CPU Registers: Includes accumulators, index registers, stack pointers, general-purpose registers, and condition codes.
-<br>CPU-Scheduling Information: Includes process priority, pointers to scheduling queues, and other scheduling parameters.
-<br>Memory-Management Information: Includes base and limit registers, page tables, or segment tables, depending on the memory system.
-<br>Accounting Information: Includes CPU usage, time limits, account numbers, and process IDs.
-<br>I/O Status Information: Includes the list of I/O devices allocated to the process and the list of open files.
-<br><br>The Process Table is a data structure maintained by the operating system to store information about all active processes. It is essentially an array of PCBs, with each entry representing a process and containing a pointer to its corresponding PCB.<br><br>Processes are created in an operating system using system calls. The process that creates new processes is called the parent process, and the newly created processes are called child processes.<br><br>
-<br>Each process is identified by a unique Process Identifier (PID), which is typically an integer.
-<br>The PID is used to access various attributes of a process within the kernel.
-<br><br>
-<br>fork(): Creates a new process (child) that is a copy of the current process (parent). The child starts executing from the point where fork() was called.
-<br>wait(): Suspends the parent process until one of its child processes terminates. The exit status of the child process is stored in the wstatus parameter.
-<br>exec(): Replaces the child process image with a new program loaded from a specified file.
-<br>exit(): Terminates the current process and returns a status code to the parent, which can use this code to determine the reason for termination.
-<br><br>A process terminates when it finishes executing its final statement and requests the OS to delete it using the exit() system call. All the resources of the process are deallocated and reclaimed by the operating system.<br><br>
-<br>A parent process can terminate its children for reasons like:
-
-<br>Exceeding resource usage.
-<br>Task completion.
-<br>Parent process exiting.
-
-
-<br><br>
-<br>If a parent process terminates, all its child processes must also be terminated.
-<br><br>
-<br>A parent process can wait for a child process to terminate using the wait() system call. The parent can retrieve the exit status of the child and free up the process table entry.
-<br><br><br>
-<br>A zombie process is a process that has finished execution, but its parent has not yet acknowledged its termination.
-<br>The zombie process still exists in the process table, awaiting the parent to retrieve its exit status using wait().
-<br>It remains in the process table until the parent terminates or the system reboots.
-<br><br>
-<br>An orphan process is a process whose parent has terminated, but the child is still running.
-<br>The orphan process is adopted by the init process (PID 1), which becomes its new parent.
-<br>The init process periodically invokes wait(), allowing it to clean up and release the resources of orphaned processes.
-]]></description><link>os/mod-2-processes.html</link><guid isPermaLink="false">OS/Mod 2 - Processes.md</guid><pubDate>Mon, 26 Aug 2024 07:43:53 GMT</pubDate><enclosure url="lib/media/pasted-image-20240826120353.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="lib/media/pasted-image-20240826120353.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Module 2 CPU Modes]]></title><description><![CDATA[ 
+]]></description><link>database-systems/normalization.html</link><guid isPermaLink="false">Database Systems/Normalization.md</guid><pubDate>Sat, 24 Aug 2024 17:48:28 GMT</pubDate><enclosure url="database-systems/pasted-image-20240824215847.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="database-systems/pasted-image-20240824215847.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[Module 2 CPU Modes]]></title><description><![CDATA[ 
  <br><br>Previous : <a data-href="Module 2 - System Calls" href="os/module-2-system-calls.html" class="internal-link" target="_self" rel="noopener">Module 2 - System Calls</a><br>The CPU operates in two distinct modes, User Mode and Kernel Mode, to ensure system stability and security.<br><br>
 <br>Restricted Access: User mode is a restricted mode that limits a program's access to system resources. Programs running in this mode cannot directly interact with hardware or memory; instead, they must use system calls to request these services from the operating system (OS).
 <br>Process Isolation: When a user-mode application starts, the OS creates a process for it. This process is provided with:

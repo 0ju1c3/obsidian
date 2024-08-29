@@ -1,11 +1,14 @@
 {
   "vaultName": "obsidian",
-  "lastExport": 1724830242182,
+  "lastExport": 1724914913577,
   "pluginVersion": "1.8.01",
-  "validBodyClasses": "publish css-settings-manager theme-dark show-inline-title show-ribbon encore-theme-dark-rgb encore-colors-colorful encore-translucency encore-bg-prismatic encore-blur-less",
+  "validBodyClasses": "publish css-settings-manager theme-dark show-inline-title show-ribbon encore-theme-dark-glass-royale encore-colors-colorful encore-translucency encore-bg-prismatic encore-blur-less",
   "useCustomHeadContent": false,
   "useCustomFavicon": false,
   "files": [
+    "AI/Mod 1 - uninformed vs informed.md",
+    "AI/Module 1.md",
+    "AI/Module 1 - Problems.md",
     "Compiler Design/Lexical Analysis.md",
     "Compiler Design/Mod 2 - Bottom Up Parser.md",
     "Compiler Design/Module 1.md",
@@ -26,6 +29,7 @@
     "Compiler Design/Pasted image 20240822233413.png",
     "Compiler Design/Pasted image 20240822233431.png",
     "Compiler Design/Pasted image 20240823001558.png",
+    "Compiler Design/Pasted image 20240826120353.png",
     "Computer Networks/1-Network Topology-25-07-2024.pdf",
     "Computer Networks/2-OSl & TCP_IP models-01-08-2024.pdf",
     "Computer Networks/3-Transmission Impairment and Performance-09-08-2024.pdf",
@@ -201,6 +205,7 @@
     "OS/pdf7.pdf",
     "OS/Separation of policy from mechanism.md",
     "OS/Structuring Operating Systems.md",
+    "lib/media/pasted-image-20240826120353.png",
     "lib/scripts/graph-wasm.wasm",
     "lib/fonts/94f2f163d4b698242fef.otf",
     "lib/fonts/72505e6a122c6acd5471.woff2",
@@ -245,6 +250,34 @@
     "compiler-design/pasted-image-20240822233413.png",
     "compiler-design/pasted-image-20240822233431.png",
     "compiler-design/pasted-image-20240823001558.png",
+    "computer-networks/3-transmission-impairment-and-performance-09-08-2024.pdf",
+    "computer-networks/pasted-image-20240822001828.png",
+    "computer-networks/pasted-image-20240822001835.png",
+    "computer-networks/pasted-image-20240822001844.png",
+    "computer-networks/4-hamming-code-19-08-2024.pdf",
+    "computer-networks/pasted-image-20240821141404.png",
+    "computer-networks/pasted-image-20240821141843.png",
+    "computer-networks/pasted-image-20240821142152.png",
+    "computer-networks/pasted-image-20240821142428.png",
+    "computer-networks/pasted-image-20240821144917.png",
+    "computer-networks/pasted-image-20240821145914.png",
+    "computer-networks/pasted-image-20240821145934.png",
+    "computer-networks/pasted-image-20240821150055.png",
+    "computer-networks/pasted-image-20240821150131.png",
+    "computer-networks/1-network-topology-25-07-2024.pdf",
+    "computer-networks/pasted-image-20240821215831.png",
+    "computer-networks/pasted-image-20240821215816.png",
+    "computer-networks/pasted-image-20240821215934.png",
+    "computer-networks/pasted-image-20240821220101.png",
+    "computer-networks/2-osl-&-tcp_ip-models-01-08-2024.pdf",
+    "computer-networks/pasted-image-20240821223645.png",
+    "computer-networks/pasted-image-20240821223846.png",
+    "computer-networks/pasted-image-20240821223913.png",
+    "computer-networks/pasted-image-20240821221216.png",
+    "computer-networks/pasted-image-20240821221531.png",
+    "computer-networks/pasted-image-20240821221817.png",
+    "computer-networks/pasted-image-20240821222059.png",
+    "computer-networks/pasted-image-20240821222552.png",
     "database-systems/compiler-design/pasted-image-20240822224301.png",
     "database-systems/compiler-design/pasted-image-20240822224709.png",
     "database-systems/compiler-design/pasted-image-20240822232221.png",
@@ -350,7 +383,6 @@
     "database-systems/pasted-image-20240824225808.png",
     "database-systems/pasted-image-20240824231821.png",
     "os/pdf1.pdf",
-    "lib/media/pasted-image-20240826120353.png",
     "os/pdf4.pdf",
     "os/pdf7.pdf",
     "os/pdf5.pdf",
@@ -650,175 +682,175 @@
       "dependencies": []
     },
     "lib/scripts/graph-wasm.wasm": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 23377,
       "exportedPath": "lib/scripts/graph-wasm.wasm",
       "dependencies": []
     },
     "lib/fonts/94f2f163d4b698242fef.otf": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 66800,
       "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
       "dependencies": []
     },
     "lib/fonts/72505e6a122c6acd5471.woff2": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 104232,
       "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
       "dependencies": []
     },
     "lib/fonts/2d5198822ab091ce4305.woff2": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 104332,
       "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
       "dependencies": []
     },
     "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 98868,
       "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
       "dependencies": []
     },
     "lib/fonts/cb10ffd7684cd9836a05.woff2": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 106876,
       "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
       "dependencies": []
     },
     "lib/fonts/b5f0f109bc88052d4000.woff2": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 105804,
       "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
       "dependencies": []
     },
     "lib/fonts/cbe0ae49c52c920fd563.woff2": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 106108,
       "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
       "dependencies": []
     },
     "lib/fonts/535a6cf662596b3bd6a6.woff2": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 111708,
       "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
       "dependencies": []
     },
     "lib/fonts/70cc7ff27245e82ad414.ttf": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 192740,
       "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
       "dependencies": []
     },
     "lib/fonts/454577c22304619db035.ttf": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 161376,
       "exportedPath": "lib/fonts/454577c22304619db035.ttf",
       "dependencies": []
     },
     "lib/fonts/52ac8f3034507f1d9e53.ttf": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 191568,
       "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
       "dependencies": []
     },
     "lib/fonts/05b618077343fbbd92b7.ttf": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 155288,
       "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
       "dependencies": []
     },
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 7876,
       "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
       "dependencies": []
     },
     "lib/media/874d8b8e340f75575caa.svg": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 317,
       "exportedPath": "lib/media/874d8b8e340f75575caa.svg",
       "dependencies": []
     },
     "lib/media/3d6c1bdc4d87cde4de67.svg": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 279,
       "exportedPath": "lib/media/3d6c1bdc4d87cde4de67.svg",
       "dependencies": []
     },
     "lib/html/file-tree.html": {
-      "modifiedTime": 1724830242182,
-      "sourceSize": 80555,
+      "modifiedTime": 1724914913577,
+      "sourceSize": 82576,
       "exportedPath": "lib/html/file-tree.html",
       "dependencies": []
     },
     "lib/scripts/webpage.js": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 47290,
       "exportedPath": "lib/scripts/webpage.js",
       "dependencies": []
     },
     "lib/scripts/graph-view.js": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 15519,
       "exportedPath": "lib/scripts/graph-view.js",
       "dependencies": []
     },
     "lib/scripts/graph-wasm.js": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 14021,
       "exportedPath": "lib/scripts/graph-wasm.js",
       "dependencies": []
     },
     "lib/scripts/graph-render-worker.js": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 5179,
       "exportedPath": "lib/scripts/graph-render-worker.js",
       "dependencies": []
     },
     "lib/scripts/tinycolor.js": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 29832,
       "exportedPath": "lib/scripts/tinycolor.js",
       "dependencies": []
     },
     "lib/scripts/pixi.js": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 449509,
       "exportedPath": "lib/scripts/pixi.js",
       "dependencies": []
     },
     "lib/scripts/minisearch.js": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 29422,
       "exportedPath": "lib/scripts/minisearch.js",
       "dependencies": []
     },
     "lib/media/favicon.png": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 1105,
       "exportedPath": "lib/media/favicon.png",
       "dependencies": []
     },
     "lib/scripts/graph-data.js": {
-      "modifiedTime": 1724830242182,
-      "sourceSize": 3151,
+      "modifiedTime": 1724914913577,
+      "sourceSize": 3341,
       "exportedPath": "lib/scripts/graph-data.js",
       "dependencies": []
     },
     "lib/styles/obsidian.css": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 130471,
       "exportedPath": "lib/styles/obsidian.css",
       "dependencies": []
     },
     "lib/styles/global-variable-styles.css": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 238,
       "exportedPath": "lib/styles/global-variable-styles.css",
       "dependencies": []
     },
     "lib/styles/main-styles.css": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 23130,
       "exportedPath": "lib/styles/main-styles.css",
       "dependencies": []
@@ -956,13 +988,13 @@
       "dependencies": []
     },
     "lib/styles/theme.css": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 73510,
       "exportedPath": "lib/styles/theme.css",
       "dependencies": []
     },
     "lib/styles/supported-plugins.css": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 99,
       "exportedPath": "lib/styles/supported-plugins.css",
       "dependencies": []
@@ -982,8 +1014,8 @@
       ]
     },
     "OS/Mod 2 - Processes.md": {
-      "modifiedTime": 1724668815813,
-      "sourceSize": 5514,
+      "modifiedTime": 1724914913577,
+      "sourceSize": 5530,
       "exportedPath": "os/mod-2-processes.html",
       "dependencies": [
         "lib/media/pasted-image-20240826120353.png"
@@ -1078,7 +1110,7 @@
       "dependencies": []
     },
     "lib/media/pasted-image-20240826120353.png": {
-      "modifiedTime": 1724668815813,
+      "modifiedTime": 1724914913577,
       "sourceSize": 13093,
       "exportedPath": "lib/media/pasted-image-20240826120353.png",
       "dependencies": []
@@ -2825,25 +2857,25 @@
       "dependencies": []
     },
     "computer-networks/3-transmission-impairment-and-performance-09-08-2024.pdf": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 1363206,
       "exportedPath": "computer-networks/3-transmission-impairment-and-performance-09-08-2024.pdf",
       "dependencies": []
     },
     "computer-networks/pasted-image-20240822001828.png": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 52052,
       "exportedPath": "computer-networks/pasted-image-20240822001828.png",
       "dependencies": []
     },
     "computer-networks/pasted-image-20240822001835.png": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 60416,
       "exportedPath": "computer-networks/pasted-image-20240822001835.png",
       "dependencies": []
     },
     "computer-networks/pasted-image-20240822001844.png": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 193426,
       "exportedPath": "computer-networks/pasted-image-20240822001844.png",
       "dependencies": []
@@ -3017,7 +3049,7 @@
       "dependencies": []
     },
     "Computer Networks/Circuit and Packet Switching.md": {
-      "modifiedTime": 1724830242182,
+      "modifiedTime": 1724914913577,
       "sourceSize": 4476,
       "exportedPath": "computer-networks/circuit-and-packet-switching.html",
       "dependencies": [
@@ -3226,6 +3258,30 @@
       "modifiedTime": 1724830242182,
       "sourceSize": 193426,
       "exportedPath": "computer-networks/pasted-image-20240822001844.png",
+      "dependencies": []
+    },
+    "AI/Mod 1 - uninformed vs informed.md": {
+      "modifiedTime": 1724914913577,
+      "sourceSize": 8869,
+      "exportedPath": "ai/mod-1-uninformed-vs-informed.html",
+      "dependencies": []
+    },
+    "AI/Module 1.md": {
+      "modifiedTime": 1724914913577,
+      "sourceSize": 8191,
+      "exportedPath": "ai/module-1.html",
+      "dependencies": []
+    },
+    "AI/Module 1 - Problems.md": {
+      "modifiedTime": 1724914913577,
+      "sourceSize": 7405,
+      "exportedPath": "ai/module-1-problems.html",
+      "dependencies": []
+    },
+    "Compiler Design/Pasted image 20240826120353.png": {
+      "modifiedTime": 1724914913577,
+      "sourceSize": 13093,
+      "exportedPath": "compiler-design/pasted-image-20240826120353.png",
       "dependencies": []
     }
   }

@@ -1,0 +1,632 @@
+<!DOCTYPE html> <html><head>
+		<title>Module 2</title>
+		<base href="../">
+		<meta id="root-path" root-path="../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="obsidian - Module 2">
+		<meta property="og:title" content="Module 2">
+		<meta property="og:description" content="obsidian - Module 2">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="aws/module-2.html">
+		<meta property="og:image" content="undefined">
+		<meta property="og:site_name" content="obsidian">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script type="module" async="" id="graph-view-script" src="lib/scripts/graph-view.js"></script><script async="" id="graph-wasm-script" src="lib/scripts/graph-wasm.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-render-worker-script" src="lib/scripts/graph-render-worker.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="tinycolor-script" src="lib/scripts/tinycolor.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="pixi-script" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.0/pixi.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="minisearch-script" src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><script async="" id="graph-data-script" src="lib/scripts/graph-data.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="stylesheet" href="lib/styles/theme.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/supported-plugins.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript></head><body class="publish css-settings-manager theme-dark show-inline-title show-ribbon encore-theme-dark-glass-royale encore-colors-colorful encore-translucency encore-bg-prismatic encore-blur-less is-focused"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="search-input-container"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div class="search-input-clear-button" aria-label="Clear search"></div></div><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles"></style><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="AWS Compute &amp;amp; Storage Services"><p dir="auto">AWS Compute &amp; Storage Services</p></h1><div><hr></div><div class="heading-wrapper"><div class="heading-children"><div class="heading-wrapper"><h2 data-heading="Module 2" dir="auto" class="heading" id="Module_2"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Module 2</h2><div class="heading-children"><div class="heading-wrapper"><h3 data-heading="**Introduction to AWS Compute**" dir="auto" class="heading" id="**Introduction_to_AWS_Compute**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Introduction to AWS Compute</strong></h3><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto">
+<p><strong>AWS Compute</strong> is a type of <strong>Infrastructure as a Service (IAAS)</strong>. In simple terms, it allows users to provision and manage computing resources like virtual machines and containers for various use cases. These resources are essential for hosting applications or running computation-intensive tasks.</p>
+</li>
+<li data-line="2" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Key AWS Compute Services:</strong></p>
+<ul>
+<li data-line="3" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Amazon Elastic Compute Cloud (EC2):</strong>
+<ul>
+<li data-line="4" dir="auto">EC2 allows users to launch and manage virtual servers (known as instances).</li>
+<li data-line="5" dir="auto">Examples: Running a web server, hosting a database, or even running complex machine learning models.</li>
+</ul>
+</li>
+<li data-line="6" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Amazon Elastic Container Service (ECS):</strong>
+<ul>
+<li data-line="7" dir="auto">ECS is used to manage and run Docker containers in a highly scalable manner.</li>
+<li data-line="8" dir="auto">Example: Deploying a microservices architecture using Docker containers.</li>
+</ul>
+</li>
+<li data-line="9" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Amazon Elastic Kubernetes Service (EKS):</strong>
+<ul>
+<li data-line="10" dir="auto">EKS simplifies running Kubernetes on AWS, managing clusters and automating critical tasks.</li>
+<li data-line="11" dir="auto">Example: Managing containerized applications with Kubernetes.</li>
+</ul>
+</li>
+<li data-line="12" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Amazon Lightsail:</strong>
+<ul>
+<li data-line="13" dir="auto">Provides easy-to-use cloud services for smaller workloads, ideal for users who are not cloud experts.</li>
+<li data-line="14" dir="auto">Example: Launching a simple WordPress site or setting up a development environment.</li>
+</ul>
+</li>
+<li data-line="15" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>AWS Lambda:</strong>
+<ul>
+<li data-line="16" dir="auto">A serverless compute service where users can run code without provisioning or managing servers.</li>
+<li data-line="17" dir="auto">Example: Automatically resizing images when they are uploaded to an S3 bucket.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="19" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Benefits of AWS Compute:</strong></p>
+<ul>
+<li data-line="20" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Dynamic Provisioning:</strong>
+<ul>
+<li data-line="21" dir="auto">Users can dynamically adjust the number of resources they are using. For instance, if a website experiences a sudden surge in traffic, additional EC2 instances can be automatically provisioned to handle the load.</li>
+</ul>
+</li>
+<li data-line="22" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Cost Efficiency:</strong>
+<ul>
+<li data-line="23" dir="auto">With AWS Compute, users pay only for the resources they actually use. This pay-as-you-go model reduces the need for significant upfront capital investment, as seen in traditional IT infrastructures where companies had to purchase and maintain their own servers.</li>
+</ul>
+</li>
+<li data-line="24" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Management by AWS:</strong>
+<ul>
+<li data-line="25" dir="auto">AWS takes care of all the underlying infrastructure management, including hardware maintenance, backups, emergency recovery, and ensuring enough server capacity during traffic surges. This allows companies to focus on their core business rather than IT infrastructure.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></div></div><div class="heading-wrapper"><h3 data-heading="**Amazon EC2 (Elastic Compute Cloud)**" dir="auto" class="heading" id="**Amazon_EC2_(Elastic_Compute_Cloud)**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Amazon EC2 (Elastic Compute Cloud)</strong></h3><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Overview:</strong></p>
+<ul>
+<li data-line="1" dir="auto">Amazon EC2 provides scalable computing capacity in the AWS cloud. It is designed to make web-scale cloud computing easier for developers.</li>
+<li data-line="2" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Key Features:</strong>
+<ul>
+<li data-line="3" dir="auto"><strong>Security:</strong> EC2 instances are isolated from each other, providing a secure environment.</li>
+<li data-line="4" dir="auto"><strong>Resizability:</strong> Users can easily scale up or down their compute capacity based on their needs.</li>
+<li data-line="5" dir="auto"><strong>Flexibility:</strong> EC2 supports various operating systems and architectures, allowing users to choose the environment that best suits their applications.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="7" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Instance Types:</strong></p>
+<ul>
+<li data-line="8" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>On-Demand Instances:</strong></p>
+<ul>
+<li data-line="9" dir="auto">With On-Demand Instances, you pay for compute capacity by the hour or second without any long-term commitments.</li>
+<li data-line="10" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Use Cases:</strong>
+<ul>
+<li data-line="11" dir="auto">Ideal for short-term, spiky, or unpredictable workloads, such as launching a new marketing campaign that might suddenly increase web traffic.</li>
+<li data-line="12" dir="auto">Suitable for applications being developed or tested on Amazon EC2 for the first time.</li>
+</ul>
+</li>
+<li data-line="13" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="14" dir="auto">A startup developing a new app might use On-Demand Instances to quickly scale their infrastructure as they iterate and test their application.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="16" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Spot Instances:</strong></p>
+<ul>
+<li data-line="17" dir="auto">Spot Instances allow users to bid on spare Amazon EC2 computing capacity, which can result in savings of up to 90% compared to On-Demand pricing.</li>
+<li data-line="18" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Use Cases:</strong>
+<ul>
+<li data-line="19" dir="auto">Applications with flexible start and end times, such as big data analysis or batch processing jobs.</li>
+<li data-line="20" dir="auto">Scenarios where the application can tolerate interruptions, as Spot Instances can be terminated by AWS if the capacity is needed elsewhere.</li>
+</ul>
+</li>
+<li data-line="21" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="22" dir="auto">A company running a genomic sequencing analysis, which is computation-intensive but can handle interruptions, might opt for Spot Instances to save on costs.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="24" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Reserved Instances:</strong></p>
+<ul>
+<li data-line="25" dir="auto">Reserved Instances provide a significant discount (up to 72%) compared to On-Demand pricing in exchange for a one- or three-year commitment.</li>
+<li data-line="26" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Use Cases:</strong>
+<ul>
+<li data-line="27" dir="auto">Suitable for steady-state workloads with predictable usage patterns, such as a production web server or a database that is always on.</li>
+<li data-line="28" dir="auto">Ideal for businesses that can plan their capacity needs in advance.</li>
+</ul>
+</li>
+<li data-line="29" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="30" dir="auto">An e-commerce company might use Reserved Instances for their website’s backend servers, which need to be available 24/7.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></div></div><div class="heading-wrapper"><h3 data-heading="**EC2 Instance Lifecycle**" dir="auto" class="heading" id="**EC2_Instance_Lifecycle**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>EC2 Instance Lifecycle</strong></h3><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Lifecycle States:</strong></p>
+<ul>
+<li data-line="1" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Pending:</strong>
+<ul>
+<li data-line="2" dir="auto">When an instance is first launched, it enters the <strong>pending</strong> state while AWS prepares the necessary resources.</li>
+</ul>
+</li>
+<li data-line="3" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Running:</strong>
+<ul>
+<li data-line="4" dir="auto">Once the instance is ready, it enters the <strong>running</strong> state. At this point, the instance can be accessed, and users can start running applications on it.</li>
+<li data-line="5" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="6" dir="auto">A web server hosted on an EC2 instance can begin serving web pages once the instance is in the running state.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="7" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Stopping:</strong>
+<ul>
+<li data-line="8" dir="auto">When an instance is being shut down, it enters the <strong>stopping</strong> state. During this state, the instance is in the process of stopping but has not yet completely stopped.</li>
+</ul>
+</li>
+<li data-line="9" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Stopped:</strong>
+<ul>
+<li data-line="10" dir="auto">In the <strong>stopped</strong> state, the instance is shut down, but the data on the Amazon EBS (Elastic Block Store) volume is preserved. The instance can be restarted at any time.</li>
+<li data-line="11" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="12" dir="auto">A development environment can be stopped when not in use to save on costs, and then restarted when needed.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="13" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Terminating:</strong>
+<ul>
+<li data-line="14" dir="auto">When an instance is permanently shut down, it enters the <strong>terminating</strong> state. Once terminated, the instance is deleted, and all associated resources are freed.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="16" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Operations:</strong></p>
+<ul>
+<li data-line="17" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Stop and Start (Amazon EBS-backed Instances Only):</strong>
+<ul>
+<li data-line="18" dir="auto">Stopping and starting an instance moves it to a new host computer, but the instance retains its private IPv4 address. If the instance has an IPv6 address, it also retains that address.</li>
+<li data-line="19" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="20" dir="auto">If an application on an instance is not performing well, stopping and starting the instance might resolve the issue by moving the instance to a new host.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="21" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Hibernate (Amazon EBS-backed Instances Only):</strong>
+<ul>
+<li data-line="22" dir="auto">When hibernating an instance, the operating system saves the contents of the instance’s memory (RAM) to the Amazon EBS root volume. This allows the instance to resume from the exact state it was in when it was hibernated.</li>
+<li data-line="23" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="24" dir="auto">Hibernation might be used for a long-running computational task that can be paused and resumed without starting from scratch.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="25" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Terminate:</strong>
+<ul>
+<li data-line="26" dir="auto">Termination is the process of permanently shutting down an instance. Once terminated, the instance cannot be restarted, and all data stored on instance store volumes is lost.</li>
+<li data-line="27" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="28" dir="auto">Terminating an instance is useful when you no longer need the instance and want to stop incurring charges.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></div></div><div class="heading-wrapper"><h3 data-heading="**AWS Auto Scaling**" dir="auto" class="heading" id="**AWS_Auto_Scaling**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>AWS Auto Scaling</strong></h3><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Purpose:</strong>
+<ul>
+<li data-line="1" dir="auto"><strong>AWS Auto Scaling</strong> ensures that the number of Amazon EC2 instances running your application adjusts automatically to maintain consistent, predictable performance at the lowest possible cost.</li>
+<li data-line="2" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>How It Works:</strong>
+<ul>
+<li data-line="3" dir="auto">Auto Scaling monitors your applications and adjusts capacity by adding or removing EC2 instances based on the conditions you define. For example, you can set up scaling policies to add more instances when CPU utilization is high and remove instances when it’s low.</li>
+<li data-line="4" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="5" dir="auto">A news website might use Auto Scaling to automatically add instances during a high-traffic event (e.g., breaking news) and scale down during quieter times.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></div></div><div class="heading-wrapper"><h3 data-heading="**Elastic Load Balancing**" dir="auto" class="heading" id="**Elastic_Load_Balancing**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Elastic Load Balancing</strong></h3><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Functionality:</strong>
+<ul>
+<li data-line="1" dir="auto"><strong>Elastic Load Balancing</strong> automatically distributes incoming application traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones.</li>
+<li data-line="2" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Key Features:</strong>
+<ul>
+<li data-line="3" dir="auto"><strong>Scalability:</strong> By distributing traffic, the load balancer helps ensure that no single instance is overwhelmed, improving overall application performance.</li>
+<li data-line="4" dir="auto"><strong>Health Checks:</strong> The load balancer performs health checks on registered targets to ensure that only healthy targets receive traffic.</li>
+</ul>
+</li>
+<li data-line="5" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="6" dir="auto">A global e-commerce site might use Elastic Load Balancing to distribute traffic across multiple servers in different regions, ensuring high availability and quick response times.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></div></div><div class="heading-wrapper"><h3 data-heading="**AWS Storage Services**" dir="auto" class="heading" id="**AWS_Storage_Services**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>AWS Storage Services</strong></h3><div class="heading-children"><div class="heading-wrapper"><h4 data-heading="**Amazon S3 (Simple Storage Service)**" dir="auto" class="heading" id="**Amazon_S3_(Simple_Storage_Service)**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Amazon S3 (Simple Storage Service)</strong></h4><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Overview:</strong></p>
+<ul>
+<li data-line="1" dir="auto"><strong>Amazon S3</strong> is an object storage service that offers industry-leading scalability, data availability, security, and performance. It allows users to store and retrieve any amount of data from anywhere on the web.</li>
+<li data-line="2" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Key Features:</strong>
+<ul>
+<li data-line="3" dir="auto"><strong>Scalability:</strong> S3 can store a virtually unlimited amount of data.</li>
+<li data-line="4" dir="auto"><strong>Durability:</strong> S3 is designed for 99.999999999% (11 9s) durability.</li>
+<li data-line="5" dir="auto"><strong>Security:</strong> S3 provides features like access control, encryption, and integration with other AWS security services.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="7" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li data-line="8" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Data Storage:</strong>
+<ul>
+<li data-line="9" dir="auto">S3 is ideal for storing large amounts of data, whether for short-term or long-term storage.</li>
+<li data-line="10" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="11" dir="auto">A media company might store high-definition videos on S3 to ensure they are available for streaming on demand.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="12" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Backup and Recovery:</strong>
+<ul>
+<li data-line="13" dir="auto">Many organizations use S3 for backing up critical data. S3’s durability ensures that data is safe and available for recovery when needed.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="16" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Example:</strong></p>
+<ul>
+<li data-line="17" dir="auto">A financial institution might back up transaction logs to S3 to ensure they can recover the data in case of a disaster.</li>
+</ul>
+</li>
+<li data-line="18" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Hosting Static Websites:</strong></p>
+<ul>
+<li data-line="19" dir="auto">S3 can host static websites, including HTML, CSS, and JavaScript files.</li>
+<li data-line="20" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="21" dir="auto">A personal blog or portfolio site can be hosted on S3, benefiting from low-latency access and cost-effectiveness.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="22" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Data Archiving:</strong></p>
+<ul>
+<li data-line="23" dir="auto">S3 integrates with <strong>Amazon S3 Glacier</strong>, which provides a cost-effective solution for long-term data archiving.</li>
+<li data-line="24" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="25" dir="auto">A research organization might archive old project data on S3 Glacier, accessing it only when needed for historical analysis.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="26" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Big Data Analytics:</strong></p>
+<ul>
+<li data-line="27" dir="auto">S3 serves as a data lake, storing large amounts of structured and unstructured data, and integrates with AWS analytics and machine learning services.</li>
+<li data-line="28" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="29" dir="auto">A data science team might store raw data on S3 and use AWS analytics tools to process and analyze the data for insights.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="31" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Key Concepts:</strong></p>
+<ul>
+<li data-line="32" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>S3 Buckets:</strong>
+<ul>
+<li data-line="33" dir="auto">A bucket is a container for storing objects in S3. Each bucket is globally unique and can store an unlimited number of objects.</li>
+<li data-line="34" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="35" dir="auto">A company might create separate buckets for different departments, such as one for marketing materials and another for financial documents.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="36" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>S3 Objects:</strong>
+<ul>
+<li data-line="37" dir="auto">Objects are the fundamental entities stored in S3, consisting of data and metadata. An object can be up to 5TB in size.</li>
+<li data-line="38" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="39" dir="auto">A video file stored on S3 as an object might include metadata like the file format, size, and date of upload.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="40" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Versioning:</strong>
+<ul>
+<li data-line="41" dir="auto">S3’s versioning feature keeps a record of all versions of an object, preventing accidental overwrites or deletions.</li>
+<li data-line="42" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="43" dir="auto">A legal firm might enable versioning to keep track of all revisions to important documents, ensuring they can always revert to a previous version if needed.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="45" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>S3 Storage Classes:</strong></p>
+<ul>
+<li data-line="46" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Standard:</strong>
+<ul>
+<li data-line="47" dir="auto">Designed for frequently accessed data that needs to be highly available and durable.</li>
+<li data-line="48" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="49" dir="auto">An application that serves images and videos to users might use the Standard class to ensure quick access and high availability.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="50" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Standard Infrequent Access (Standard IA):</strong>
+<ul>
+<li data-line="51" dir="auto">A cheaper storage class for infrequently accessed data, such as log files or data archives.</li>
+<li data-line="52" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="53" dir="auto">Archived records of past transactions that are only accessed occasionally might be stored in Standard IA to save costs.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="54" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Intelligent Tiering:</strong>
+<ul>
+<li data-line="55" dir="auto">Automatically moves data between two access tiers (frequent and infrequent) based on changing access patterns.</li>
+<li data-line="56" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="57" dir="auto">Data that is frequently accessed for the first few months and then rarely accessed might benefit from Intelligent Tiering to optimize storage costs.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="58" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>One Zone Infrequent Access (One Zone IA):</strong>
+<ul>
+<li data-line="59" dir="auto">Stores data in a single Availability Zone, making it cheaper but less durable.</li>
+<li data-line="60" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="61" dir="auto">Non-essential data like temporary files or secondary backups might be stored in One Zone IA to minimize costs.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="62" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Reduced Redundancy Storage (RRS):</strong>
+<ul>
+<li data-line="63" dir="auto">Offers lower durability (99.99%) and is no longer recommended by AWS for most use cases.</li>
+<li data-line="64" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="65" dir="auto">Non-critical data that can tolerate occasional loss, such as a cache of web pages, might have used RRS in the past, though AWS now recommends other storage classes.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="67" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>S3 Lifecycle Policies:</strong></p>
+<ul>
+<li data-line="68" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Lifecycle Management:</strong>
+<ul>
+<li data-line="69" dir="auto">S3 lifecycle policies allow users to manage their objects so that they are stored cost-effectively throughout their lifecycle.</li>
+<li data-line="70" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="71" dir="auto">A company might set a lifecycle policy to move older data to Glacier after 90 days and delete it after 365 days to save on storage costs.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="72" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Transition Actions:</strong>
+<ul>
+<li data-line="73" dir="auto">Moving objects to different storage classes as they age.</li>
+<li data-line="74" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="75" dir="auto">Automatically moving infrequently accessed data to the Standard IA class after 30 days.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="76" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Expiration Actions:</strong>
+<ul>
+<li data-line="77" dir="auto">Deleting objects after a specified period.</li>
+<li data-line="78" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="79" dir="auto">Deleting logs that are older than a year to comply with data retention policies.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></div></div><div class="heading-wrapper"><h4 data-heading="**Amazon EBS (Elastic Block Store)**" dir="auto" class="heading" id="**Amazon_EBS_(Elastic_Block_Store)**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Amazon EBS (Elastic Block Store)</strong></h4><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Overview:</strong></p>
+<ul>
+<li data-line="1" dir="auto"><strong>Amazon EBS</strong> is a block storage service designed for use with EC2 instances. It provides persistent, high-performance storage for applications that require frequent reads and writes to large volumes of data.</li>
+<li data-line="2" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Key Features:</strong>
+<ul>
+<li data-line="3" dir="auto"><strong>Persistence:</strong> EBS volumes remain available and retain data even after the EC2 instance is stopped or terminated.</li>
+<li data-line="4" dir="auto"><strong>Scalability:</strong> Volumes can be scaled up or down without disrupting applications.</li>
+<li data-line="5" dir="auto"><strong>Snapshots:</strong> EBS supports creating snapshots of volumes, which can be used for backup, replication, and disaster recovery.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="7" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li data-line="8" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Database Storage:</strong>
+<ul>
+<li data-line="9" dir="auto">EBS is ideal for databases like MySQL, Oracle, and MongoDB that require consistent, low-latency performance.</li>
+<li data-line="10" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="11" dir="auto">An online retail platform might use EBS to store its transaction data in a database, ensuring quick access and reliability.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="12" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Big Data Analytics:</strong>
+<ul>
+<li data-line="13" dir="auto">EBS can be used for storing and processing large datasets in analytics applications.</li>
+<li data-line="14" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="15" dir="auto">A financial services company might use EBS volumes to store and analyze stock market data in real-time.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="16" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Backup and Recovery:</strong>
+<ul>
+<li data-line="17" dir="auto">EBS snapshots provide a quick and efficient way to back up data stored on EBS volumes.</li>
+<li data-line="18" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="19" dir="auto">A healthcare organization might create daily snapshots of patient records stored on EBS volumes to ensure data recovery in case of a failure.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="21" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Encryption:</strong></p>
+<ul>
+<li data-line="22" dir="auto">EBS volumes can be encrypted to protect data at rest, meeting regulatory compliance requirements.</li>
+<li data-line="23" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="24" dir="auto">A government agency might encrypt its EBS volumes to comply with data security regulations, ensuring that sensitive information is protected.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></div></div><div class="heading-wrapper"><h4 data-heading="**Amazon Glacier**" dir="auto" class="heading" id="**Amazon_Glacier**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Amazon Glacier</strong></h4><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Overview:</strong></p>
+<ul>
+<li data-line="1" dir="auto"><strong>Amazon Glacier</strong> is a secure, durable, and extremely low-cost storage service for data archiving and long-term backup. It is designed for data that is infrequently accessed and can withstand retrieval times of several hours.</li>
+<li data-line="2" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Key Features:</strong>
+<ul>
+<li data-line="3" dir="auto"><strong>Cost-Effectiveness:</strong> Glacier provides significant savings over traditional storage for long-term archives.</li>
+<li data-line="4" dir="auto"><strong>Durability:</strong> Glacier is designed for 99.999999999% durability over a given year.</li>
+<li data-line="5" dir="auto"><strong>Retrieval Options:</strong> Glacier offers multiple retrieval options ranging from a few minutes to several hours.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="7" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li data-line="8" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Data Archiving:</strong>
+<ul>
+<li data-line="9" dir="auto">Glacier is ideal for storing archival data that is rarely accessed, such as legal records, medical records, or financial statements.</li>
+<li data-line="10" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="11" dir="auto">A law firm might archive old case files on Glacier, knowing they can retrieve them if needed for future reference.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="12" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Backup:</strong>
+<ul>
+<li data-line="13" dir="auto">Glacier can be used for long-term backups that do not require immediate access.</li>
+<li data-line="14" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="15" dir="auto">An IT department might use Glacier to store backups of old systems or historical data that is only accessed in case of a disaster.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="17" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Scenarios for Using Glacier:</strong></p>
+<ul>
+<li data-line="18" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Long-Term Data Storage:</strong>
+<ul>
+<li data-line="19" dir="auto">Glacier is particularly useful for data that needs to be stored for years but is rarely accessed, such as compliance records.</li>
+</ul>
+</li>
+<li data-line="20" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Alternative to Tape Libraries:</strong>
+<ul>
+<li data-line="21" dir="auto">Organizations that previously used magnetic tape for backup can switch to Glacier for better durability and less maintenance.</li>
+<li data-line="22" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="23" dir="auto">A media company might move its tape-based video archives to Glacier to reduce storage costs and simplify access.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></div></div><div class="heading-wrapper"><h4 data-heading="**Amazon EFS (Elastic File System)**" dir="auto" class="heading" id="**Amazon_EFS_(Elastic_File_System)**"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Amazon EFS (Elastic File System)</strong></h4><div class="heading-children"><div><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Overview:</strong></p>
+<ul>
+<li data-line="1" dir="auto"><strong>Amazon EFS</strong> is a scalable, fully managed file storage service that can be used by multiple EC2 instances simultaneously. EFS is designed for high throughput and low latency, making it ideal for big data and analytics, media processing, and content management applications.</li>
+<li data-line="2" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Key Features:</strong>
+<ul>
+<li data-line="3" dir="auto"><strong>Shared File Storage:</strong> EFS allows multiple EC2 instances to access the same file system, ensuring data consistency and simplifying data sharing across applications.</li>
+<li data-line="4" dir="auto"><strong>Scalability:</strong> EFS automatically scales up and down as the amount of data stored increases or decreases, with no need for manual intervention.</li>
+<li data-line="5" dir="auto"><strong>Reliability:</strong> EFS is designed to be highly available and durable, with data automatically replicated across multiple Availability Zones.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="7" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li data-line="8" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Shared File Storage:</strong>
+<ul>
+<li data-line="9" dir="auto">EFS is ideal for applications where multiple EC2 instances need to access the same data, such as content management systems, development environments, and shared data repositories.</li>
+<li data-line="10" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="11" dir="auto">A media production company might use EFS to store video assets that need to be accessed by multiple editors working on different EC2 instances.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="12" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Big Data and Analytics:</strong>
+<ul>
+<li data-line="13" dir="auto">EFS provides high-throughput storage for processing large datasets in parallel, making it suitable for big data applications.</li>
+<li data-line="14" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="15" dir="auto">A research institution might use EFS to store and analyze genomic data across a cluster of EC2 instances.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="16" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Serverless Applications:</strong>
+<ul>
+<li data-line="17" dir="auto">EFS integrates with AWS Lambda and other serverless services, providing persistent storage for serverless applications.</li>
+<li data-line="18" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><strong>Example:</strong>
+<ul>
+<li data-line="19" dir="auto">A web application built on AWS Lambda might use EFS to store user-uploaded files that need to be accessed across multiple Lambda functions.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-line="21" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><strong>When to Choose EFS:</strong></p>
+<ul>
+<li data-line="22" dir="auto"><strong>Shared Data Access:</strong> Choose EFS when multiple EC</li>
+</ul>
+</li>
+</ul></div><div><p dir="auto">2 instances need to access the same file system.</p></div><div><ul>
+<li data-line="0" dir="auto"><strong>Scalability:</strong> Use EFS when you expect the amount of data to grow unpredictably, as it automatically adjusts capacity based on demand.</li>
+<li data-line="1" dir="auto"><strong>Simplified Data Sharing:</strong> EFS is ideal for applications where data needs to be shared across different environments or services.</li>
+</ul></div><div><hr></div><div><p dir="auto">This version is more detailed and should cover all important aspects of the AWS Compute and Storage Services. Each section is expanded with examples to help you understand the practical applications of these services, which should be helpful for your exam preparation. Let me know if you need further elaboration or additional information on any specific topic!</p></div><div class="mod-footer"></div></div></div></div></div></div></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder">
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
+		</div>
+		</div></div><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="aws/module-2.html#AWS Compute &amp;amp; Storage Services"><div class="tree-item-contents heading-link" heading-name="AWS Compute &amp; Storage Services"><span class="tree-item-title">AWS Compute &amp; Storage Services</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-link" href="aws/module-2.html#Module_2"><div class="tree-item-contents heading-link" heading-name="Module 2"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title">Module 2</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="3"><a class="tree-link" href="aws/module-2.html#**Introduction_to_AWS_Compute**"><div class="tree-item-contents heading-link" heading-name="**Introduction to AWS Compute**"><span class="tree-item-title"><strong>Introduction to AWS Compute</strong></span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="aws/module-2.html#**Amazon_EC2_(Elastic_Compute_Cloud)**"><div class="tree-item-contents heading-link" heading-name="**Amazon EC2 (Elastic Compute Cloud)**"><span class="tree-item-title"><strong>Amazon EC2 (Elastic Compute Cloud)</strong></span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="aws/module-2.html#**EC2_Instance_Lifecycle**"><div class="tree-item-contents heading-link" heading-name="**EC2 Instance Lifecycle**"><span class="tree-item-title"><strong>EC2 Instance Lifecycle</strong></span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="aws/module-2.html#**AWS_Auto_Scaling**"><div class="tree-item-contents heading-link" heading-name="**AWS Auto Scaling**"><span class="tree-item-title"><strong>AWS Auto Scaling</strong></span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="aws/module-2.html#**Elastic_Load_Balancing**"><div class="tree-item-contents heading-link" heading-name="**Elastic Load Balancing**"><span class="tree-item-title"><strong>Elastic Load Balancing</strong></span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item mod-collapsible" data-depth="3"><a class="tree-link" href="aws/module-2.html#**AWS_Storage_Services**"><div class="tree-item-contents heading-link" heading-name="**AWS Storage Services**"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title"><strong>AWS Storage Services</strong></span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="4"><a class="tree-link" href="aws/module-2.html#**Amazon_S3_(Simple_Storage_Service)**"><div class="tree-item-contents heading-link" heading-name="**Amazon S3 (Simple Storage Service)**"><span class="tree-item-title"><strong>Amazon S3 (Simple Storage Service)</strong></span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="aws/module-2.html#**Amazon_EBS_(Elastic_Block_Store)**"><div class="tree-item-contents heading-link" heading-name="**Amazon EBS (Elastic Block Store)**"><span class="tree-item-title"><strong>Amazon EBS (Elastic Block Store)</strong></span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="aws/module-2.html#**Amazon_Glacier**"><div class="tree-item-contents heading-link" heading-name="**Amazon Glacier**"><span class="tree-item-title"><strong>Amazon Glacier</strong></span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="aws/module-2.html#**Amazon_EFS_(Elastic_File_System)**"><div class="tree-item-contents heading-link" heading-name="**Amazon EFS (Elastic File System)**"><span class="tree-item-title"><strong>Amazon EFS (Elastic File System)</strong></span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>

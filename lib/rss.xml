@@ -1,4 +1,878 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>obsidian</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 29 Aug 2024 07:01:57 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 29 Aug 2024 07:01:53 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[Uninformed vs. Informed Search]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[obsidian]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>obsidian</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Fri, 30 Aug 2024 06:50:35 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 30 Aug 2024 06:50:34 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[AWS Cloud Foundations]]></title><description><![CDATA[ 
+ <br><br>Availability zones are isolated or separated data centers located within specific regions in which public cloud services originate and operate<br>Cloud computing businesses typically have multiple worldwide availability zones. This helps ensure cloud customers have a stable connection to a cloud service in the geographic AZ that's closest to them<br>Cloud Service Providers (CSPs) host their resources and data centers in multiple locations worldwide. The locations that are isolated from each other but close enough to have low-latency connections with each other are known as availability zones. AZs represent parts of regions, and each AZ includes one or more data centers<br>Availability Zone is a single Data Center or a group of Data Centers in a region<br>In an availability zone the Data Centers are located many miles apart from each other<br>Having them apart reduces the risk of them all going down if a disaster happens in the region<br>Simultaneously, have the Data Center(s) close enough to have low latency<br><br>Security and Compliance is a shared responsibility between AWS and the customer. This shared model can help relieve<br>
+Here's a detailed and comprehensive version of the notes based on the content of the presentation, with elaborations and examples added to ensure all important points are covered:<br><br><br><br><br>
+<br>
+What are Availability Zones (AZs)?
+
+<br>Availability Zones (AZs) are isolated data centers located within specific geographic regions. Each AZ operates independently but is close enough to other AZs to provide low-latency connections between them.
+<br>Purpose:
+
+<br>AZs help ensure that cloud customers have a stable and reliable connection to cloud services. They are strategically placed worldwide to minimize the impact of potential outages.
+<br>Example:
+
+<br>If an AZ in a specific region experiences an issue, services can failover to another AZ within the same region, ensuring minimal disruption to users.
+
+
+
+
+
+
+<br>
+AWS Cloud Availability Zones:
+
+<br>In AWS, an Availability Zone consists of one or more data centers that are geographically separated but connected through low-latency links.
+<br>Importance of AZ Separation:
+
+<br>Data centers within an AZ are placed miles apart to minimize the risk of simultaneous failure due to natural disasters, power outages, or other events.
+<br>Example:
+
+<br>If a flood affects one data center, the other data centers in the same AZ or region remain operational, ensuring service continuity.
+
+
+
+
+
+
+<br><br>
+<br>
+Overview:
+
+<br>The AWS Shared Responsibility Model defines the security responsibilities between AWS and the customer. AWS takes care of the security of the cloud infrastructure, while customers are responsible for security in the cloud.
+<br>AWS Responsibility - "Security of the Cloud":
+
+<br>AWS manages the security of the cloud infrastructure, including hardware, software, networking, and facilities.
+<br>Example:
+
+<br>AWS is responsible for the physical security of the data centers and ensuring that the infrastructure is secure from threats.
+
+
+
+
+<br>Customer Responsibility - "Security in the Cloud":
+
+<br>Customers are responsible for managing the security of their applications and data within the cloud. This includes configuring security settings, managing user access, and ensuring that applications are secure.
+<br>Example:
+
+<br>A customer deploying an EC2 instance must manage the operating system, apply security patches, and configure the security group (firewall) to control access to the instance.
+
+
+
+
+
+
+<br>
+Shared Responsibility Details:
+
+<br>Inherited Controls:
+
+<br>Controls that customers fully inherit from AWS, such as physical and environmental controls.
+
+
+<br>Shared Controls:
+
+<br>Controls that are shared between AWS and the customer but in different contexts.
+<br>Example:
+
+<br>Patch Management: AWS is responsible for patching the infrastructure, while customers are responsible for patching their operating systems and applications.
+<br>Configuration Management: AWS manages the configuration of infrastructure devices, but customers must configure their own operating systems, databases, and applications.
+
+
+
+
+
+
+<br>
+Applying the AWS Shared Responsibility Model in Practice:
+
+<br>Security and Compliance:
+
+<br>Customers should assess their external and internal security requirements, referencing industry frameworks like the NIST Cybersecurity Framework (CSF) and ISO standards.
+<br>Example:
+
+<br>A healthcare provider using AWS must ensure that their cloud environment complies with HIPAA regulations, while AWS ensures that the underlying infrastructure supports these compliance requirements.
+
+
+
+
+<br>AWS Cloud Adoption Framework (CAF):
+
+<br>Helps customers plan and implement their cloud adoption strategy while ensuring that security best practices are followed.
+<br>Example:
+
+<br>A financial services firm can use the CAF to ensure their cloud migration meets industry security standards.
+
+
+
+
+<br>Reviewing AWS Services:
+
+<br>Customers should regularly review the security features and configuration options of AWS services they use to ensure they meet security requirements.
+<br>Example:
+
+<br>When deploying an application on AWS, customers should review the security chapter of the service documentation to configure the service securely.
+
+
+
+
+<br>Third-Party Audits:
+
+<br>Customers can review third-party audit reports to understand the inherited controls provided by AWS and how they can complement their security measures.
+
+
+
+
+<br><br>
+<br>
+Overview:
+
+<br>Identity and Access Management (IAM) is a service that helps manage access to AWS resources. It allows users to control who is authenticated (signed in) and authorized (has permissions) to use resources in the AWS environment.
+<br>Key Components:
+
+<br>Users: Individuals who need access to AWS resources.
+<br>Groups: Collections of users that share similar access needs.
+<br>Roles: Temporary permissions that can be assigned to users or services to perform specific tasks.
+<br>Policies: Documents that define permissions, specifying what actions are allowed or denied on AWS resources.
+
+
+
+
+<br>
+How IAM Works:
+
+<br>IAM verifies whether a user or service has the necessary permissions to access a particular AWS resource. Permissions are granted through policies attached to IAM identities.
+<br>Example:
+
+<br>You can create a policy that allows a user to start or stop EC2 instances but denies access to delete them. This policy is then attached to the IAM user.
+
+
+
+
+<br>
+IAM Identities:
+
+<br>Root User:
+
+<br>The root user is created when you first sign up for an AWS account. It has full administrative rights to the entire account.
+<br>Best Practice:
+
+<br>It’s recommended to avoid using the root user for day-to-day tasks and instead create IAM users with the necessary permissions.
+
+
+
+
+<br>IAM Users:
+
+<br>IAM users are created to perform specific tasks within AWS. Each user can have different permissions, depending on their role.
+<br>Example:
+
+<br>You can create a user with read-only access to S3, meaning they can view but not modify or delete objects in the S3 bucket.
+
+
+
+
+<br>IAM Groups:
+
+<br>Groups are used to manage permissions for multiple users simultaneously. Permissions assigned to a group apply to all users within that group.
+<br>Example:
+
+<br>You can create a "Developers" group with permissions to access EC2 instances and RDS databases. Any user added to this group inherits these permissions.
+
+
+
+
+<br>IAM Roles:
+
+<br>Roles provide temporary access to AWS resources and are often used by services rather than individual users.
+<br>Example:
+
+<br>An EC2 instance can assume a role that allows it to read and write data to an S3 bucket without needing hardcoded credentials.
+
+
+
+
+
+
+<br>
+IAM Policies:
+
+<br>Overview:
+
+<br>IAM policies define what actions are allowed or denied on AWS resources. They are written in JSON and can be attached to users, groups, roles, or directly to resources.
+<br>Example:
+
+<br>A policy might allow a user to create and delete S3 buckets but restrict them from accessing specific buckets used by another department.
+
+
+
+
+<br>Multiple Policies:
+
+<br>An IAM identity (user, group, or role) can have multiple policies attached, allowing for fine-grained control over permissions.
+<br>Example:
+
+<br>A user might have one policy that allows access to S3 and another that allows access to EC2. Combined, these policies provide the necessary permissions for the user’s role.
+
+
+
+
+
+
+<br><br>
+<br>Free of Cost:
+
+<br>IAM is free to use. There are no additional charges for creating and managing users, groups, roles, and policies. Charges are only incurred when you use other AWS services with IAM identities.
+<br>Example:
+
+<br>You can create as many IAM users as needed without worrying about costs. Charges only apply when these users access billable services like EC2 or RDS.
+
+
+
+
+<br>Centralized Control:
+
+<br>IAM provides centralized control over AWS accounts, allowing administrators to manage users, permissions, and resources from a single point.
+<br>Example:
+
+<br>An IT admin can use IAM to revoke access for a user who no longer works at the company, ensuring that all permissions are immediately removed.
+
+
+
+
+<br>Granting Permissions:
+
+<br>IAM allows granular control over who has access to what resources. Permissions can be as broad or as specific as needed.
+<br>Example:
+
+<br>You can grant a developer full access to a development environment but restrict their access to the production environment.
+
+
+
+
+<br>Multifactor Authentication (MFA):
+
+<br>MFA adds an extra layer of security to your AWS account by requiring a second form of authentication, such as a one-time password (OTP) sent to a mobile device.
+<br>Example:
+
+<br>When logging into the AWS Management Console, users must enter their password and a code generated by their MFA device, making it harder for unauthorized users to gain access.
+
+
+
+
+<br><br>This detailed format includes all key aspects of the AWS Cloud Foundations and IAM, with added explanations and examples to help you understand the practical applications of these concepts. This should be useful for your exam preparation. Let me know if you need further details or clarifications!]]></description><link>aws/aws-cloud-foundations.html</link><guid isPermaLink="false">AWS/AWS Cloud Foundations.md</guid><pubDate>Fri, 30 Aug 2024 06:50:19 GMT</pubDate></item><item><title><![CDATA[AWS Compute &amp; Storage Services]]></title><description><![CDATA[ 
+ <br><br><br><br><br>
+<br>
+AWS Compute is a type of Infrastructure as a Service (IAAS). In simple terms, it allows users to provision and manage computing resources like virtual machines and containers for various use cases. These resources are essential for hosting applications or running computation-intensive tasks.
+
+<br>
+Key AWS Compute Services:
+
+<br>Amazon Elastic Compute Cloud (EC2):
+
+<br>EC2 allows users to launch and manage virtual servers (known as instances).
+<br>Examples: Running a web server, hosting a database, or even running complex machine learning models.
+
+
+<br>Amazon Elastic Container Service (ECS):
+
+<br>ECS is used to manage and run Docker containers in a highly scalable manner.
+<br>Example: Deploying a microservices architecture using Docker containers.
+
+
+<br>Amazon Elastic Kubernetes Service (EKS):
+
+<br>EKS simplifies running Kubernetes on AWS, managing clusters and automating critical tasks.
+<br>Example: Managing containerized applications with Kubernetes.
+
+
+<br>Amazon Lightsail:
+
+<br>Provides easy-to-use cloud services for smaller workloads, ideal for users who are not cloud experts.
+<br>Example: Launching a simple WordPress site or setting up a development environment.
+
+
+<br>AWS Lambda:
+
+<br>A serverless compute service where users can run code without provisioning or managing servers.
+<br>Example: Automatically resizing images when they are uploaded to an S3 bucket.
+
+
+
+
+<br>
+Benefits of AWS Compute:
+
+<br>Dynamic Provisioning:
+
+<br>Users can dynamically adjust the number of resources they are using. For instance, if a website experiences a sudden surge in traffic, additional EC2 instances can be automatically provisioned to handle the load.
+
+
+<br>Cost Efficiency:
+
+<br>With AWS Compute, users pay only for the resources they actually use. This pay-as-you-go model reduces the need for significant upfront capital investment, as seen in traditional IT infrastructures where companies had to purchase and maintain their own servers.
+
+
+<br>Management by AWS:
+
+<br>AWS takes care of all the underlying infrastructure management, including hardware maintenance, backups, emergency recovery, and ensuring enough server capacity during traffic surges. This allows companies to focus on their core business rather than IT infrastructure.
+
+
+
+
+<br><br>
+<br>
+Overview:
+
+<br>Amazon EC2 provides scalable computing capacity in the AWS cloud. It is designed to make web-scale cloud computing easier for developers.
+<br>Key Features:
+
+<br>Security: EC2 instances are isolated from each other, providing a secure environment.
+<br>Resizability: Users can easily scale up or down their compute capacity based on their needs.
+<br>Flexibility: EC2 supports various operating systems and architectures, allowing users to choose the environment that best suits their applications.
+
+
+
+
+<br>
+Instance Types:
+
+<br>
+On-Demand Instances:
+
+<br>With On-Demand Instances, you pay for compute capacity by the hour or second without any long-term commitments.
+<br>Use Cases:
+
+<br>Ideal for short-term, spiky, or unpredictable workloads, such as launching a new marketing campaign that might suddenly increase web traffic.
+<br>Suitable for applications being developed or tested on Amazon EC2 for the first time.
+
+
+<br>Example:
+
+<br>A startup developing a new app might use On-Demand Instances to quickly scale their infrastructure as they iterate and test their application.
+
+
+
+
+<br>
+Spot Instances:
+
+<br>Spot Instances allow users to bid on spare Amazon EC2 computing capacity, which can result in savings of up to 90% compared to On-Demand pricing.
+<br>Use Cases:
+
+<br>Applications with flexible start and end times, such as big data analysis or batch processing jobs.
+<br>Scenarios where the application can tolerate interruptions, as Spot Instances can be terminated by AWS if the capacity is needed elsewhere.
+
+
+<br>Example:
+
+<br>A company running a genomic sequencing analysis, which is computation-intensive but can handle interruptions, might opt for Spot Instances to save on costs.
+
+
+
+
+<br>
+Reserved Instances:
+
+<br>Reserved Instances provide a significant discount (up to 72%) compared to On-Demand pricing in exchange for a one- or three-year commitment.
+<br>Use Cases:
+
+<br>Suitable for steady-state workloads with predictable usage patterns, such as a production web server or a database that is always on.
+<br>Ideal for businesses that can plan their capacity needs in advance.
+
+
+<br>Example:
+
+<br>An e-commerce company might use Reserved Instances for their website’s backend servers, which need to be available 24/7.
+
+
+
+
+
+
+<br><br>
+<br>
+Lifecycle States:
+
+<br>Pending:
+
+<br>When an instance is first launched, it enters the pending state while AWS prepares the necessary resources.
+
+
+<br>Running:
+
+<br>Once the instance is ready, it enters the running state. At this point, the instance can be accessed, and users can start running applications on it.
+<br>Example:
+
+<br>A web server hosted on an EC2 instance can begin serving web pages once the instance is in the running state.
+
+
+
+
+<br>Stopping:
+
+<br>When an instance is being shut down, it enters the stopping state. During this state, the instance is in the process of stopping but has not yet completely stopped.
+
+
+<br>Stopped:
+
+<br>In the stopped state, the instance is shut down, but the data on the Amazon EBS (Elastic Block Store) volume is preserved. The instance can be restarted at any time.
+<br>Example:
+
+<br>A development environment can be stopped when not in use to save on costs, and then restarted when needed.
+
+
+
+
+<br>Terminating:
+
+<br>When an instance is permanently shut down, it enters the terminating state. Once terminated, the instance is deleted, and all associated resources are freed.
+
+
+
+
+<br>
+Operations:
+
+<br>Stop and Start (Amazon EBS-backed Instances Only):
+
+<br>Stopping and starting an instance moves it to a new host computer, but the instance retains its private IPv4 address. If the instance has an IPv6 address, it also retains that address.
+<br>Example:
+
+<br>If an application on an instance is not performing well, stopping and starting the instance might resolve the issue by moving the instance to a new host.
+
+
+
+
+<br>Hibernate (Amazon EBS-backed Instances Only):
+
+<br>When hibernating an instance, the operating system saves the contents of the instance’s memory (RAM) to the Amazon EBS root volume. This allows the instance to resume from the exact state it was in when it was hibernated.
+<br>Example:
+
+<br>Hibernation might be used for a long-running computational task that can be paused and resumed without starting from scratch.
+
+
+
+
+<br>Terminate:
+
+<br>Termination is the process of permanently shutting down an instance. Once terminated, the instance cannot be restarted, and all data stored on instance store volumes is lost.
+<br>Example:
+
+<br>Terminating an instance is useful when you no longer need the instance and want to stop incurring charges.
+
+
+
+
+
+
+<br><br>
+<br>Purpose:
+
+<br>AWS Auto Scaling ensures that the number of Amazon EC2 instances running your application adjusts automatically to maintain consistent, predictable performance at the lowest possible cost.
+<br>How It Works:
+
+<br>Auto Scaling monitors your applications and adjusts capacity by adding or removing EC2 instances based on the conditions you define. For example, you can set up scaling policies to add more instances when CPU utilization is high and remove instances when it’s low.
+<br>Example:
+
+<br>A news website might use Auto Scaling to automatically add instances during a high-traffic event (e.g., breaking news) and scale down during quieter times.
+
+
+
+
+
+
+<br><br>
+<br>Functionality:
+
+<br>Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones.
+<br>Key Features:
+
+<br>Scalability: By distributing traffic, the load balancer helps ensure that no single instance is overwhelmed, improving overall application performance.
+<br>Health Checks: The load balancer performs health checks on registered targets to ensure that only healthy targets receive traffic.
+
+
+<br>Example:
+
+<br>A global e-commerce site might use Elastic Load Balancing to distribute traffic across multiple servers in different regions, ensuring high availability and quick response times.
+
+
+
+
+<br><br><br>
+<br>
+Overview:
+
+<br>Amazon S3 is an object storage service that offers industry-leading scalability, data availability, security, and performance. It allows users to store and retrieve any amount of data from anywhere on the web.
+<br>Key Features:
+
+<br>Scalability: S3 can store a virtually unlimited amount of data.
+<br>Durability: S3 is designed for 99.999999999% (11 9s) durability.
+<br>Security: S3 provides features like access control, encryption, and integration with other AWS security services.
+
+
+
+
+<br>
+Use Cases:
+
+<br>Data Storage:
+
+<br>S3 is ideal for storing large amounts of data, whether for short-term or long-term storage.
+<br>Example:
+
+<br>A media company might store high-definition videos on S3 to ensure they are available for streaming on demand.
+
+
+
+
+<br>Backup and Recovery:
+
+<br>Many organizations use S3 for backing up critical data. S3’s durability ensures that data is safe and available for recovery when needed.
+
+
+
+
+<br>
+Example:
+
+<br>A financial institution might back up transaction logs to S3 to ensure they can recover the data in case of a disaster.
+
+
+<br>
+Hosting Static Websites:
+
+<br>S3 can host static websites, including HTML, CSS, and JavaScript files.
+<br>Example:
+
+<br>A personal blog or portfolio site can be hosted on S3, benefiting from low-latency access and cost-effectiveness.
+
+
+
+
+<br>
+Data Archiving:
+
+<br>S3 integrates with Amazon S3 Glacier, which provides a cost-effective solution for long-term data archiving.
+<br>Example:
+
+<br>A research organization might archive old project data on S3 Glacier, accessing it only when needed for historical analysis.
+
+
+
+
+<br>
+Big Data Analytics:
+
+<br>S3 serves as a data lake, storing large amounts of structured and unstructured data, and integrates with AWS analytics and machine learning services.
+<br>Example:
+
+<br>A data science team might store raw data on S3 and use AWS analytics tools to process and analyze the data for insights.
+
+
+
+
+<br>
+Key Concepts:
+
+<br>S3 Buckets:
+
+<br>A bucket is a container for storing objects in S3. Each bucket is globally unique and can store an unlimited number of objects.
+<br>Example:
+
+<br>A company might create separate buckets for different departments, such as one for marketing materials and another for financial documents.
+
+
+
+
+<br>S3 Objects:
+
+<br>Objects are the fundamental entities stored in S3, consisting of data and metadata. An object can be up to 5TB in size.
+<br>Example:
+
+<br>A video file stored on S3 as an object might include metadata like the file format, size, and date of upload.
+
+
+
+
+<br>Versioning:
+
+<br>S3’s versioning feature keeps a record of all versions of an object, preventing accidental overwrites or deletions.
+<br>Example:
+
+<br>A legal firm might enable versioning to keep track of all revisions to important documents, ensuring they can always revert to a previous version if needed.
+
+
+
+
+
+
+<br>
+S3 Storage Classes:
+
+<br>Standard:
+
+<br>Designed for frequently accessed data that needs to be highly available and durable.
+<br>Example:
+
+<br>An application that serves images and videos to users might use the Standard class to ensure quick access and high availability.
+
+
+
+
+<br>Standard Infrequent Access (Standard IA):
+
+<br>A cheaper storage class for infrequently accessed data, such as log files or data archives.
+<br>Example:
+
+<br>Archived records of past transactions that are only accessed occasionally might be stored in Standard IA to save costs.
+
+
+
+
+<br>Intelligent Tiering:
+
+<br>Automatically moves data between two access tiers (frequent and infrequent) based on changing access patterns.
+<br>Example:
+
+<br>Data that is frequently accessed for the first few months and then rarely accessed might benefit from Intelligent Tiering to optimize storage costs.
+
+
+
+
+<br>One Zone Infrequent Access (One Zone IA):
+
+<br>Stores data in a single Availability Zone, making it cheaper but less durable.
+<br>Example:
+
+<br>Non-essential data like temporary files or secondary backups might be stored in One Zone IA to minimize costs.
+
+
+
+
+<br>Reduced Redundancy Storage (RRS):
+
+<br>Offers lower durability (99.99%) and is no longer recommended by AWS for most use cases.
+<br>Example:
+
+<br>Non-critical data that can tolerate occasional loss, such as a cache of web pages, might have used RRS in the past, though AWS now recommends other storage classes.
+
+
+
+
+
+
+<br>
+S3 Lifecycle Policies:
+
+<br>Lifecycle Management:
+
+<br>S3 lifecycle policies allow users to manage their objects so that they are stored cost-effectively throughout their lifecycle.
+<br>Example:
+
+<br>A company might set a lifecycle policy to move older data to Glacier after 90 days and delete it after 365 days to save on storage costs.
+
+
+
+
+<br>Transition Actions:
+
+<br>Moving objects to different storage classes as they age.
+<br>Example:
+
+<br>Automatically moving infrequently accessed data to the Standard IA class after 30 days.
+
+
+
+
+<br>Expiration Actions:
+
+<br>Deleting objects after a specified period.
+<br>Example:
+
+<br>Deleting logs that are older than a year to comply with data retention policies.
+
+
+
+
+
+
+<br><br>
+<br>
+Overview:
+
+<br>Amazon EBS is a block storage service designed for use with EC2 instances. It provides persistent, high-performance storage for applications that require frequent reads and writes to large volumes of data.
+<br>Key Features:
+
+<br>Persistence: EBS volumes remain available and retain data even after the EC2 instance is stopped or terminated.
+<br>Scalability: Volumes can be scaled up or down without disrupting applications.
+<br>Snapshots: EBS supports creating snapshots of volumes, which can be used for backup, replication, and disaster recovery.
+
+
+
+
+<br>
+Use Cases:
+
+<br>Database Storage:
+
+<br>EBS is ideal for databases like MySQL, Oracle, and MongoDB that require consistent, low-latency performance.
+<br>Example:
+
+<br>An online retail platform might use EBS to store its transaction data in a database, ensuring quick access and reliability.
+
+
+
+
+<br>Big Data Analytics:
+
+<br>EBS can be used for storing and processing large datasets in analytics applications.
+<br>Example:
+
+<br>A financial services company might use EBS volumes to store and analyze stock market data in real-time.
+
+
+
+
+<br>Backup and Recovery:
+
+<br>EBS snapshots provide a quick and efficient way to back up data stored on EBS volumes.
+<br>Example:
+
+<br>A healthcare organization might create daily snapshots of patient records stored on EBS volumes to ensure data recovery in case of a failure.
+
+
+
+
+
+
+<br>
+Encryption:
+
+<br>EBS volumes can be encrypted to protect data at rest, meeting regulatory compliance requirements.
+<br>Example:
+
+<br>A government agency might encrypt its EBS volumes to comply with data security regulations, ensuring that sensitive information is protected.
+
+
+
+
+<br><br>
+<br>
+Overview:
+
+<br>Amazon Glacier is a secure, durable, and extremely low-cost storage service for data archiving and long-term backup. It is designed for data that is infrequently accessed and can withstand retrieval times of several hours.
+<br>Key Features:
+
+<br>Cost-Effectiveness: Glacier provides significant savings over traditional storage for long-term archives.
+<br>Durability: Glacier is designed for 99.999999999% durability over a given year.
+<br>Retrieval Options: Glacier offers multiple retrieval options ranging from a few minutes to several hours.
+
+
+
+
+<br>
+Use Cases:
+
+<br>Data Archiving:
+
+<br>Glacier is ideal for storing archival data that is rarely accessed, such as legal records, medical records, or financial statements.
+<br>Example:
+
+<br>A law firm might archive old case files on Glacier, knowing they can retrieve them if needed for future reference.
+
+
+
+
+<br>Backup:
+
+<br>Glacier can be used for long-term backups that do not require immediate access.
+<br>Example:
+
+<br>An IT department might use Glacier to store backups of old systems or historical data that is only accessed in case of a disaster.
+
+
+
+
+
+
+<br>
+Scenarios for Using Glacier:
+
+<br>Long-Term Data Storage:
+
+<br>Glacier is particularly useful for data that needs to be stored for years but is rarely accessed, such as compliance records.
+
+
+<br>Alternative to Tape Libraries:
+
+<br>Organizations that previously used magnetic tape for backup can switch to Glacier for better durability and less maintenance.
+<br>Example:
+
+<br>A media company might move its tape-based video archives to Glacier to reduce storage costs and simplify access.
+
+
+
+
+
+
+<br><br>
+<br>
+Overview:
+
+<br>Amazon EFS is a scalable, fully managed file storage service that can be used by multiple EC2 instances simultaneously. EFS is designed for high throughput and low latency, making it ideal for big data and analytics, media processing, and content management applications.
+<br>Key Features:
+
+<br>Shared File Storage: EFS allows multiple EC2 instances to access the same file system, ensuring data consistency and simplifying data sharing across applications.
+<br>Scalability: EFS automatically scales up and down as the amount of data stored increases or decreases, with no need for manual intervention.
+<br>Reliability: EFS is designed to be highly available and durable, with data automatically replicated across multiple Availability Zones.
+
+
+
+
+<br>
+Use Cases:
+
+<br>Shared File Storage:
+
+<br>EFS is ideal for applications where multiple EC2 instances need to access the same data, such as content management systems, development environments, and shared data repositories.
+<br>Example:
+
+<br>A media production company might use EFS to store video assets that need to be accessed by multiple editors working on different EC2 instances.
+
+
+
+
+<br>Big Data and Analytics:
+
+<br>EFS provides high-throughput storage for processing large datasets in parallel, making it suitable for big data applications.
+<br>Example:
+
+<br>A research institution might use EFS to store and analyze genomic data across a cluster of EC2 instances.
+
+
+
+
+<br>Serverless Applications:
+
+<br>EFS integrates with AWS Lambda and other serverless services, providing persistent storage for serverless applications.
+<br>Example:
+
+<br>A web application built on AWS Lambda might use EFS to store user-uploaded files that need to be accessed across multiple Lambda functions.
+
+
+
+
+
+
+<br>
+When to Choose EFS:
+
+<br>Shared Data Access: Choose EFS when multiple EC
+
+
+<br>2 instances need to access the same file system.<br>
+<br>Scalability: Use EFS when you expect the amount of data to grow unpredictably, as it automatically adjusts capacity based on demand.
+<br>Simplified Data Sharing: EFS is ideal for applications where data needs to be shared across different environments or services.
+<br><br>This version is more detailed and should cover all important aspects of the AWS Compute and Storage Services. Each section is expanded with examples to help you understand the practical applications of these services, which should be helpful for your exam preparation. Let me know if you need further elaboration or additional information on any specific topic!]]></description><link>aws/module-2.html</link><guid isPermaLink="false">AWS/Module 2.md</guid><pubDate>Fri, 30 Aug 2024 06:48:09 GMT</pubDate></item><item><title><![CDATA[Uninformed vs. Informed Search]]></title><description><![CDATA[ 
  <br>PREVIOUS: <a data-href="Module 1 - Problems" href="ai/module-1-problems.html" class="internal-link" target="_self" rel="noopener">Module 1 - Problems</a><br><br><br>
 <br>Breadth-First Search (BFS)
 <br>Depth-First Search (DFS)

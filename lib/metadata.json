@@ -1,71 +1,39 @@
 {
   "vaultName": "obsidian",
-  "lastExport": 1727516048009,
+  "lastExport": 1728412332572,
   "pluginVersion": "1.8.01",
   "validBodyClasses": "publish css-settings-manager theme-dark show-inline-title show-ribbon encore-theme-dark-glass-royale encore-colors-colorful encore-translucency encore-bg-prismatic encore-blur-less",
   "useCustomHeadContent": false,
   "useCustomFavicon": false,
   "files": [
-    "git/Chapter Five - Merging.md",
-    "git/Chapter Four.md",
-    "git/Chapter one.md",
-    "git/Chapter Seven - Creating and Pushing to a Remote Repository.md",
-    "git/Chapter Six - Hosting Services and Authentication.md",
-    "git/Chapter Three.md",
-    "git/Chapter Two.md",
-    "git/commitCheckout.png",
-    "git/commitHistory.png",
-    "git/createBranch.png",
-    "git/Git Index.md",
-    "git/image1.png",
-    "git/image2.png",
-    "git/image3.png",
-    "git/image4.png",
-    "git/Pasted image 20240610222102.png",
-    "git/Pasted image 20240610222148.png",
-    "git/Pasted image 20240610222416.png",
-    "git/Pasted image 20240610230007.png",
-    "git/Pasted image 20240610230047.png",
-    "git/Pasted image 20240610230131.png",
-    "git/Pasted image 20240610230458.png",
-    "git/Pasted image 20240610230557.png",
-    "git/Pasted image 20240610230812.png",
-    "git/Pasted image 20240612203517.png",
-    "git/Pasted image 20240612203810.png",
-    "git/Pasted image 20240612203908.png",
-    "git/Pasted image 20240612204054.png",
-    "git/Pasted image 20240612204321.png",
-    "git/Pasted image 20240612204333.png",
-    "git/Pasted image 20240612204523.png",
-    "git/Pasted image 20240612204945.png",
-    "git/Pasted image 20240612205131.png",
-    "git/Pasted image 20240612205217.png",
-    "git/Pasted image 20240710001858.png",
-    "git/Pasted image 20240710001935.png",
-    "git/Pasted image 20240710001945.png",
-    "git/Pasted image 20240710190611.png",
-    "git/Pasted image 20240710191000.png",
-    "git/Pasted image 20240710191415.png",
-    "git/Pasted image 20240710191636.png",
-    "git/Pasted image 20240710193203.png",
-    "git/Pasted image 20240710193224.png",
-    "git/Pasted image 20240710193423.png",
-    "git/Pasted image 20240710193701.png",
-    "git/Pasted image 20240710194107.png",
-    "git/Pasted image 20240710195817.png",
-    "git/Pasted image 20240712151008.png",
-    "git/Pasted image 20240712171215.png",
-    "git/Pasted image 20240712171307.png",
-    "git/Pasted image 20240712171545.png",
-    "git/Pasted image 20240712171658.png",
-    "git/Pasted image 20240712184557.png",
-    "git/Pasted image 20240712185501.png",
-    "git/Pasted image 20240712185757.png",
-    "git/Pasted image 20240712190519.png",
-    "git/Pasted image 20240712190538.png",
-    "git/rainbowColors.png",
-    "git/stagingArea.png",
-    "git/workingDirectory.png",
+    "OS/cat1/Implementation.md",
+    "OS/cat1/Mod 1 - Understand Basics of Operating Systems.md",
+    "OS/cat1/Mod 2 - Processes.md",
+    "OS/cat1/Module 2 - System Calls.md",
+    "OS/cat1/Module 2 - Threads.md",
+    "OS/cat1/Module 2 CPU Modes.md",
+    "OS/cat1/OS Design.md",
+    "OS/cat1/pdf1.pdf",
+    "OS/cat1/pdf2.pdf",
+    "OS/cat1/pdf3.pdf",
+    "OS/cat1/pdf4.pdf",
+    "OS/cat1/pdf5.pdf",
+    "OS/cat1/pdf7.pdf",
+    "OS/cat1/Separation of policy from mechanism.md",
+    "OS/cat1/Structuring Operating Systems.md",
+    "OS/cat2/Deadlocks.md",
+    "OS/cat2/deadlocks1.pdf",
+    "OS/cat2/deadlocks2.pdf",
+    "OS/cat2/deadlocks3.pdf",
+    "OS/cat2/Hello CAT-2.md",
+    "OS/cat2/Pasted image 20241007233700.png",
+    "OS/cat2/Pasted image 20241007233719.png",
+    "OS/cat2/Pasted image 20241008215242.png",
+    "OS/cat2/Pasted image 20241008220841.png",
+    "OS/cat2/Pasted image 20241008220901.png",
+    "OS/cat2/Pasted image 20241008220917.png",
+    "lib/media/pasted-image-20240826120353.png",
+    "lib/scripts/graph-wasm.wasm",
     "lib/fonts/94f2f163d4b698242fef.otf",
     "lib/fonts/72505e6a122c6acd5471.woff2",
     "lib/fonts/2d5198822ab091ce4305.woff2",
@@ -81,51 +49,46 @@
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
     "lib/media/874d8b8e340f75575caa.svg",
     "lib/media/3d6c1bdc4d87cde4de67.svg",
-    "git/pasted-image-20240710001858.png",
-    "git/pasted-image-20240710001945.png",
-    "git/pasted-image-20240710190611.png",
-    "git/pasted-image-20240710191000.png",
-    "git/pasted-image-20240710191415.png",
-    "git/pasted-image-20240710191636.png",
-    "git/pasted-image-20240710193203.png",
-    "git/pasted-image-20240710193224.png",
-    "git/pasted-image-20240710193423.png",
-    "git/pasted-image-20240710193701.png",
-    "git/pasted-image-20240710194107.png",
-    "git/commitcheckout.png",
-    "git/createbranch.png",
-    "git/pasted-image-20240612203517.png",
-    "git/pasted-image-20240612203810.png",
-    "git/pasted-image-20240612203908.png",
-    "git/pasted-image-20240612204054.png",
-    "git/pasted-image-20240612204321.png",
-    "git/pasted-image-20240612204333.png",
-    "git/pasted-image-20240612204523.png",
-    "git/pasted-image-20240612204945.png",
-    "git/pasted-image-20240612205131.png",
-    "git/pasted-image-20240612205217.png",
-    "git/pasted-image-20240712151008.png",
-    "git/pasted-image-20240712171215.png",
-    "git/pasted-image-20240712171307.png",
-    "git/pasted-image-20240712171545.png",
-    "git/pasted-image-20240712171658.png",
-    "git/pasted-image-20240712184557.png",
-    "git/pasted-image-20240712185501.png",
-    "git/pasted-image-20240712185757.png",
-    "git/pasted-image-20240712190519.png",
-    "git/pasted-image-20240712190538.png",
-    "git/pasted-image-20240610222102.png",
-    "git/pasted-image-20240610222148.png",
-    "git/pasted-image-20240610222416.png",
-    "git/pasted-image-20240610230007.png",
-    "git/pasted-image-20240610230047.png",
-    "git/pasted-image-20240610230131.png",
-    "git/pasted-image-20240610230458.png",
-    "git/pasted-image-20240610230557.png",
-    "git/pasted-image-20240610230812.png",
-    "git/rainbowcolors.png"
+    "lib/fonts/mathjax_zero.woff",
+    "lib/fonts/mathjax_main-regular.woff",
+    "lib/fonts/mathjax_main-bold.woff",
+    "lib/fonts/mathjax_math-italic.woff",
+    "lib/fonts/mathjax_main-italic.woff",
+    "lib/fonts/mathjax_math-bolditalic.woff",
+    "lib/fonts/mathjax_size1-regular.woff",
+    "lib/fonts/mathjax_size2-regular.woff",
+    "lib/fonts/mathjax_size3-regular.woff",
+    "lib/fonts/mathjax_size4-regular.woff",
+    "lib/fonts/mathjax_ams-regular.woff",
+    "lib/fonts/mathjax_calligraphic-regular.woff",
+    "lib/fonts/mathjax_calligraphic-bold.woff",
+    "lib/fonts/mathjax_fraktur-regular.woff",
+    "lib/fonts/mathjax_fraktur-bold.woff",
+    "lib/fonts/mathjax_sansserif-regular.woff",
+    "lib/fonts/mathjax_sansserif-bold.woff",
+    "lib/fonts/mathjax_sansserif-italic.woff",
+    "lib/fonts/mathjax_script-regular.woff",
+    "lib/fonts/mathjax_typewriter-regular.woff",
+    "lib/fonts/mathjax_vector-regular.woff",
+    "lib/fonts/mathjax_vector-bold.woff",
+    "lib/html/file-tree.html",
+    "lib/scripts/webpage.js",
+    "lib/scripts/graph-view.js",
+    "lib/scripts/graph-wasm.js",
+    "lib/scripts/graph-render-worker.js",
+    "lib/scripts/tinycolor.js",
+    "lib/scripts/pixi.js",
+    "lib/scripts/minisearch.js",
+    "lib/media/favicon.png",
+    "lib/scripts/graph-data.js",
+    "lib/styles/obsidian.css",
+    "lib/styles/theme.css",
+    "lib/styles/global-variable-styles.css",
+    "lib/styles/supported-plugins.css",
+    "lib/styles/main-styles.css"
   ],
   "mainDependencies": [
+    "lib/scripts/graph-wasm.wasm",
     "lib/fonts/94f2f163d4b698242fef.otf",
     "lib/fonts/72505e6a122c6acd5471.woff2",
     "lib/fonts/2d5198822ab091ce4305.woff2",
@@ -140,943 +103,1563 @@
     "lib/fonts/05b618077343fbbd92b7.ttf",
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
     "lib/media/874d8b8e340f75575caa.svg",
-    "lib/media/3d6c1bdc4d87cde4de67.svg"
+    "lib/media/3d6c1bdc4d87cde4de67.svg",
+    "lib/fonts/mathjax_zero.woff",
+    "lib/fonts/mathjax_main-regular.woff",
+    "lib/fonts/mathjax_main-bold.woff",
+    "lib/fonts/mathjax_math-italic.woff",
+    "lib/fonts/mathjax_main-italic.woff",
+    "lib/fonts/mathjax_math-bolditalic.woff",
+    "lib/fonts/mathjax_size1-regular.woff",
+    "lib/fonts/mathjax_size2-regular.woff",
+    "lib/fonts/mathjax_size3-regular.woff",
+    "lib/fonts/mathjax_size4-regular.woff",
+    "lib/fonts/mathjax_ams-regular.woff",
+    "lib/fonts/mathjax_calligraphic-regular.woff",
+    "lib/fonts/mathjax_calligraphic-bold.woff",
+    "lib/fonts/mathjax_fraktur-regular.woff",
+    "lib/fonts/mathjax_fraktur-bold.woff",
+    "lib/fonts/mathjax_sansserif-regular.woff",
+    "lib/fonts/mathjax_sansserif-bold.woff",
+    "lib/fonts/mathjax_sansserif-italic.woff",
+    "lib/fonts/mathjax_script-regular.woff",
+    "lib/fonts/mathjax_typewriter-regular.woff",
+    "lib/fonts/mathjax_vector-regular.woff",
+    "lib/fonts/mathjax_vector-bold.woff",
+    "lib/html/file-tree.html",
+    "lib/scripts/webpage.js",
+    "lib/scripts/graph-view.js",
+    "lib/scripts/graph-wasm.js",
+    "lib/scripts/graph-render-worker.js",
+    "lib/scripts/tinycolor.js",
+    "lib/scripts/pixi.js",
+    "lib/scripts/minisearch.js",
+    "lib/media/favicon.png",
+    "lib/scripts/graph-data.js",
+    "lib/styles/obsidian.css",
+    "lib/styles/theme.css",
+    "lib/styles/global-variable-styles.css",
+    "lib/styles/supported-plugins.css",
+    "lib/styles/main-styles.css"
   ],
   "fileInfo": {
-    "git/pasted-image-20240710001858.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 29291,
-      "exportedPath": "git/pasted-image-20240710001858.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240710001945.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 30160,
-      "exportedPath": "git/pasted-image-20240710001945.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240710190611.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 32508,
-      "exportedPath": "git/pasted-image-20240710190611.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240710191000.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 36368,
-      "exportedPath": "git/pasted-image-20240710191000.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240710191415.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 53738,
-      "exportedPath": "git/pasted-image-20240710191415.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240710191636.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 84495,
-      "exportedPath": "git/pasted-image-20240710191636.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240710193203.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 99638,
-      "exportedPath": "git/pasted-image-20240710193203.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240710193224.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 112804,
-      "exportedPath": "git/pasted-image-20240710193224.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240710193423.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 16147,
-      "exportedPath": "git/pasted-image-20240710193423.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240710193701.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 58729,
-      "exportedPath": "git/pasted-image-20240710193701.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240710194107.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 12338,
-      "exportedPath": "git/pasted-image-20240710194107.png",
-      "dependencies": []
-    },
-    "git/commitcheckout.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 71297,
-      "exportedPath": "git/commitcheckout.png",
-      "dependencies": []
-    },
-    "git/createbranch.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 24818,
-      "exportedPath": "git/createbranch.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240612203517.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 32950,
-      "exportedPath": "git/pasted-image-20240612203517.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240612203810.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 37841,
-      "exportedPath": "git/pasted-image-20240612203810.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240612203908.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 27641,
-      "exportedPath": "git/pasted-image-20240612203908.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240612204054.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 53004,
-      "exportedPath": "git/pasted-image-20240612204054.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240612204321.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 72667,
-      "exportedPath": "git/pasted-image-20240612204321.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240612204333.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 51676,
-      "exportedPath": "git/pasted-image-20240612204333.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240612204523.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 30611,
-      "exportedPath": "git/pasted-image-20240612204523.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240612204945.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 58453,
-      "exportedPath": "git/pasted-image-20240612204945.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240612205131.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 58593,
-      "exportedPath": "git/pasted-image-20240612205131.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240612205217.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 64841,
-      "exportedPath": "git/pasted-image-20240612205217.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240712151008.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 14801,
-      "exportedPath": "git/pasted-image-20240712151008.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240712171215.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 33175,
-      "exportedPath": "git/pasted-image-20240712171215.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240712171307.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 197824,
-      "exportedPath": "git/pasted-image-20240712171307.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240712171545.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 60055,
-      "exportedPath": "git/pasted-image-20240712171545.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240712171658.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 267065,
-      "exportedPath": "git/pasted-image-20240712171658.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240712184557.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 108323,
-      "exportedPath": "git/pasted-image-20240712184557.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240712185501.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 43916,
-      "exportedPath": "git/pasted-image-20240712185501.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240712185757.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 27927,
-      "exportedPath": "git/pasted-image-20240712185757.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240712190519.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 127978,
-      "exportedPath": "git/pasted-image-20240712190519.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240712190538.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 127126,
-      "exportedPath": "git/pasted-image-20240712190538.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240610222102.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 157925,
-      "exportedPath": "git/pasted-image-20240610222102.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240610222148.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 78663,
-      "exportedPath": "git/pasted-image-20240610222148.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240610222416.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 70725,
-      "exportedPath": "git/pasted-image-20240610222416.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240610230007.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 168614,
-      "exportedPath": "git/pasted-image-20240610230007.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240610230047.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 84283,
-      "exportedPath": "git/pasted-image-20240610230047.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240610230131.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 24125,
-      "exportedPath": "git/pasted-image-20240610230131.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240610230458.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 22806,
-      "exportedPath": "git/pasted-image-20240610230458.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240610230557.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 89809,
-      "exportedPath": "git/pasted-image-20240610230557.png",
-      "dependencies": []
-    },
-    "git/pasted-image-20240610230812.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 18907,
-      "exportedPath": "git/pasted-image-20240610230812.png",
-      "dependencies": []
-    },
-    "git/rainbowcolors.png": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 80372,
-      "exportedPath": "git/rainbowcolors.png",
-      "dependencies": []
-    },
     "lib/scripts/graph-wasm.wasm": {
-      "modifiedTime": 1727515843908,
+      "modifiedTime": 1728412332572,
       "sourceSize": 23377,
       "exportedPath": "lib/scripts/graph-wasm.wasm",
       "dependencies": []
     },
     "lib/fonts/94f2f163d4b698242fef.otf": {
-      "modifiedTime": 1727516048009,
+      "modifiedTime": 1728412332572,
       "sourceSize": 66800,
       "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
       "dependencies": []
     },
     "lib/fonts/72505e6a122c6acd5471.woff2": {
-      "modifiedTime": 1727516048009,
+      "modifiedTime": 1728412332572,
       "sourceSize": 104232,
       "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
       "dependencies": []
     },
     "lib/fonts/2d5198822ab091ce4305.woff2": {
-      "modifiedTime": 1727516048009,
+      "modifiedTime": 1728412332572,
       "sourceSize": 104332,
       "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
       "dependencies": []
     },
     "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
-      "modifiedTime": 1727516048009,
+      "modifiedTime": 1728412332572,
       "sourceSize": 98868,
       "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
       "dependencies": []
     },
     "lib/fonts/cb10ffd7684cd9836a05.woff2": {
-      "modifiedTime": 1727516048009,
+      "modifiedTime": 1728412332572,
       "sourceSize": 106876,
       "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
       "dependencies": []
     },
     "lib/fonts/b5f0f109bc88052d4000.woff2": {
-      "modifiedTime": 1727516048009,
+      "modifiedTime": 1728412332572,
       "sourceSize": 105804,
       "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
       "dependencies": []
     },
     "lib/fonts/cbe0ae49c52c920fd563.woff2": {
-      "modifiedTime": 1727516048009,
+      "modifiedTime": 1728412332572,
       "sourceSize": 106108,
       "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
       "dependencies": []
     },
     "lib/fonts/535a6cf662596b3bd6a6.woff2": {
-      "modifiedTime": 1727516048009,
+      "modifiedTime": 1728412332572,
       "sourceSize": 111708,
       "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
       "dependencies": []
     },
     "lib/fonts/70cc7ff27245e82ad414.ttf": {
-      "modifiedTime": 1727516048009,
+      "modifiedTime": 1728412332572,
       "sourceSize": 192740,
       "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
       "dependencies": []
     },
     "lib/fonts/454577c22304619db035.ttf": {
-      "modifiedTime": 1727516048009,
+      "modifiedTime": 1728412332572,
       "sourceSize": 161376,
       "exportedPath": "lib/fonts/454577c22304619db035.ttf",
       "dependencies": []
     },
     "lib/fonts/52ac8f3034507f1d9e53.ttf": {
-      "modifiedTime": 1727516048009,
+      "modifiedTime": 1728412332572,
       "sourceSize": 191568,
       "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
       "dependencies": []
     },
     "lib/fonts/05b618077343fbbd92b7.ttf": {
-      "modifiedTime": 1727516048009,
+      "modifiedTime": 1728412332572,
       "sourceSize": 155288,
       "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
       "dependencies": []
     },
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
-      "modifiedTime": 1727516048009,
+      "modifiedTime": 1728412332572,
       "sourceSize": 7876,
       "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
       "dependencies": []
     },
     "lib/media/874d8b8e340f75575caa.svg": {
-      "modifiedTime": 1727516048009,
+      "modifiedTime": 1728412332572,
       "sourceSize": 317,
       "exportedPath": "lib/media/874d8b8e340f75575caa.svg",
       "dependencies": []
     },
     "lib/media/3d6c1bdc4d87cde4de67.svg": {
-      "modifiedTime": 1727516048009,
+      "modifiedTime": 1728412332572,
       "sourceSize": 279,
       "exportedPath": "lib/media/3d6c1bdc4d87cde4de67.svg",
       "dependencies": []
     },
     "lib/html/file-tree.html": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 23659,
+      "modifiedTime": 1728412332572,
+      "sourceSize": 11746,
       "exportedPath": "lib/html/file-tree.html",
       "dependencies": []
     },
     "lib/scripts/webpage.js": {
-      "modifiedTime": 1727515843908,
+      "modifiedTime": 1728412332572,
       "sourceSize": 47290,
       "exportedPath": "lib/scripts/webpage.js",
       "dependencies": []
     },
     "lib/scripts/graph-view.js": {
-      "modifiedTime": 1727515843908,
+      "modifiedTime": 1728412332572,
       "sourceSize": 15519,
       "exportedPath": "lib/scripts/graph-view.js",
       "dependencies": []
     },
     "lib/scripts/graph-wasm.js": {
-      "modifiedTime": 1727515843908,
+      "modifiedTime": 1728412332572,
       "sourceSize": 14021,
       "exportedPath": "lib/scripts/graph-wasm.js",
       "dependencies": []
     },
     "lib/scripts/graph-render-worker.js": {
-      "modifiedTime": 1727515843908,
+      "modifiedTime": 1728412332572,
       "sourceSize": 5179,
       "exportedPath": "lib/scripts/graph-render-worker.js",
       "dependencies": []
     },
     "lib/scripts/tinycolor.js": {
-      "modifiedTime": 1727515843908,
+      "modifiedTime": 1728412332572,
       "sourceSize": 29832,
       "exportedPath": "lib/scripts/tinycolor.js",
       "dependencies": []
     },
     "lib/scripts/pixi.js": {
-      "modifiedTime": 1727515843908,
+      "modifiedTime": 1728412332572,
       "sourceSize": 449509,
       "exportedPath": "lib/scripts/pixi.js",
       "dependencies": []
     },
     "lib/scripts/minisearch.js": {
-      "modifiedTime": 1727515843908,
+      "modifiedTime": 1728412332572,
       "sourceSize": 29422,
       "exportedPath": "lib/scripts/minisearch.js",
       "dependencies": []
     },
     "lib/media/favicon.png": {
-      "modifiedTime": 1727515843908,
+      "modifiedTime": 1728412332572,
       "sourceSize": 1105,
       "exportedPath": "lib/media/favicon.png",
       "dependencies": []
     },
     "lib/scripts/graph-data.js": {
-      "modifiedTime": 1727515843908,
-      "sourceSize": 880,
+      "modifiedTime": 1728412332572,
+      "sourceSize": 1009,
       "exportedPath": "lib/scripts/graph-data.js",
       "dependencies": []
     },
     "lib/styles/obsidian.css": {
-      "modifiedTime": 1727515843908,
+      "modifiedTime": 1728412332572,
       "sourceSize": 130471,
       "exportedPath": "lib/styles/obsidian.css",
       "dependencies": []
     },
     "lib/styles/global-variable-styles.css": {
-      "modifiedTime": 1727515843908,
+      "modifiedTime": 1728412332572,
       "sourceSize": 238,
       "exportedPath": "lib/styles/global-variable-styles.css",
       "dependencies": []
     },
     "lib/styles/main-styles.css": {
-      "modifiedTime": 1727515843908,
+      "modifiedTime": 1728412332572,
       "sourceSize": 23130,
       "exportedPath": "lib/styles/main-styles.css",
       "dependencies": []
     },
     "lib/fonts/mathjax_zero.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 1368,
       "exportedPath": "lib/fonts/mathjax_zero.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_main-regular.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 34160,
       "exportedPath": "lib/fonts/mathjax_main-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_main-bold.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 34464,
       "exportedPath": "lib/fonts/mathjax_main-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_math-italic.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 19360,
       "exportedPath": "lib/fonts/mathjax_math-italic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_main-italic.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 20832,
       "exportedPath": "lib/fonts/mathjax_main-italic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_math-bolditalic.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 19776,
       "exportedPath": "lib/fonts/mathjax_math-bolditalic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size1-regular.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 5792,
       "exportedPath": "lib/fonts/mathjax_size1-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size2-regular.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 5464,
       "exportedPath": "lib/fonts/mathjax_size2-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size3-regular.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 3244,
       "exportedPath": "lib/fonts/mathjax_size3-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_size4-regular.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 5148,
       "exportedPath": "lib/fonts/mathjax_size4-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_ams-regular.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 40808,
       "exportedPath": "lib/fonts/mathjax_ams-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_calligraphic-regular.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 9600,
       "exportedPath": "lib/fonts/mathjax_calligraphic-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_calligraphic-bold.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 9908,
       "exportedPath": "lib/fonts/mathjax_calligraphic-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_fraktur-regular.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 21480,
       "exportedPath": "lib/fonts/mathjax_fraktur-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_fraktur-bold.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 22340,
       "exportedPath": "lib/fonts/mathjax_fraktur-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_sansserif-regular.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 12660,
       "exportedPath": "lib/fonts/mathjax_sansserif-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_sansserif-bold.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 15944,
       "exportedPath": "lib/fonts/mathjax_sansserif-bold.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_sansserif-italic.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 14628,
       "exportedPath": "lib/fonts/mathjax_sansserif-italic.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_script-regular.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 11852,
       "exportedPath": "lib/fonts/mathjax_script-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_typewriter-regular.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 17604,
       "exportedPath": "lib/fonts/mathjax_typewriter-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_vector-regular.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 1136,
       "exportedPath": "lib/fonts/mathjax_vector-regular.woff",
       "dependencies": []
     },
     "lib/fonts/mathjax_vector-bold.woff": {
-      "modifiedTime": 1724787972455,
+      "modifiedTime": 1728412332572,
       "sourceSize": 1116,
       "exportedPath": "lib/fonts/mathjax_vector-bold.woff",
       "dependencies": []
     },
     "lib/styles/theme.css": {
-      "modifiedTime": 1727515843908,
+      "modifiedTime": 1728412332572,
       "sourceSize": 73510,
       "exportedPath": "lib/styles/theme.css",
       "dependencies": []
     },
     "lib/styles/supported-plugins.css": {
-      "modifiedTime": 1727515843908,
+      "modifiedTime": 1728412332572,
       "sourceSize": 99,
       "exportedPath": "lib/styles/supported-plugins.css",
       "dependencies": []
     },
-    "git/Chapter Five - Merging.md": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 8159,
-      "exportedPath": "git/Chapter Five - Merging.html",
+    "backend/pasted-image-20240924174700.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 113835,
+      "exportedPath": "backend/pasted-image-20240924174700.png",
       "dependencies": []
     },
-    "git/Chapter Four.md": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 5002,
-      "exportedPath": "git/Chapter Four.html",
+    "backend/pasted-image-20240924174718.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 299986,
+      "exportedPath": "backend/pasted-image-20240924174718.png",
       "dependencies": []
     },
-    "git/Chapter one.md": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 1650,
-      "exportedPath": "git/Chapter one.html",
+    "backend/pasted-image-20240924180132.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 62796,
+      "exportedPath": "backend/pasted-image-20240924180132.png",
       "dependencies": []
     },
-    "git/Chapter Seven - Creating and Pushing to a Remote Repository.md": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 5846,
-      "exportedPath": "git/Chapter Seven - Creating and Pushing to a Remote Repository.html",
+    "compiler-design/pasted-image-20240822224301.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 46984,
+      "exportedPath": "compiler-design/pasted-image-20240822224301.png",
       "dependencies": []
     },
-    "git/Chapter Six - Hosting Services and Authentication.md": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 1611,
-      "exportedPath": "git/Chapter Six - Hosting Services and Authentication.html",
+    "compiler-design/pasted-image-20240822224709.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 27403,
+      "exportedPath": "compiler-design/pasted-image-20240822224709.png",
       "dependencies": []
     },
-    "git/Chapter Three.md": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 3287,
-      "exportedPath": "git/Chapter Three.html",
+    "compiler-design/pasted-image-20240822232221.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 9594,
+      "exportedPath": "compiler-design/pasted-image-20240822232221.png",
       "dependencies": []
     },
-    "git/Chapter Two.md": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 3778,
-      "exportedPath": "git/Chapter Two.html",
+    "compiler-design/pasted-image-20240822232238.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 11131,
+      "exportedPath": "compiler-design/pasted-image-20240822232238.png",
       "dependencies": []
     },
-    "git/commitCheckout.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 71297,
-      "exportedPath": "git/commitCheckout.png",
+    "compiler-design/pasted-image-20240822232259.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 13733,
+      "exportedPath": "compiler-design/pasted-image-20240822232259.png",
       "dependencies": []
     },
-    "git/commitHistory.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 52446,
-      "exportedPath": "git/commitHistory.png",
+    "compiler-design/pasted-image-20240822232541.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 14225,
+      "exportedPath": "compiler-design/pasted-image-20240822232541.png",
       "dependencies": []
     },
-    "git/createBranch.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 24818,
-      "exportedPath": "git/createBranch.png",
+    "compiler-design/pasted-image-20240822232716.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 13910,
+      "exportedPath": "compiler-design/pasted-image-20240822232716.png",
       "dependencies": []
     },
-    "git/Git Index.md": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 214,
-      "exportedPath": "git/Git Index.html",
+    "compiler-design/pasted-image-20240822232831.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 17355,
+      "exportedPath": "compiler-design/pasted-image-20240822232831.png",
       "dependencies": []
     },
-    "git/image1.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 165320,
-      "exportedPath": "git/image1.png",
+    "compiler-design/pasted-image-20240822232906.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 32636,
+      "exportedPath": "compiler-design/pasted-image-20240822232906.png",
       "dependencies": []
     },
-    "git/image2.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 70930,
-      "exportedPath": "git/image2.png",
+    "compiler-design/pasted-image-20240822233115.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 22929,
+      "exportedPath": "compiler-design/pasted-image-20240822233115.png",
       "dependencies": []
     },
-    "git/image3.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 56890,
-      "exportedPath": "git/image3.png",
+    "compiler-design/pasted-image-20240822233413.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 28563,
+      "exportedPath": "compiler-design/pasted-image-20240822233413.png",
       "dependencies": []
     },
-    "git/image4.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 54540,
-      "exportedPath": "git/image4.png",
+    "compiler-design/pasted-image-20240822233431.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 47718,
+      "exportedPath": "compiler-design/pasted-image-20240822233431.png",
       "dependencies": []
     },
-    "git/Pasted image 20240610222102.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 157925,
-      "exportedPath": "git/Pasted image 20240610222102.png",
+    "compiler-design/pasted-image-20240823001558.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 18467,
+      "exportedPath": "compiler-design/pasted-image-20240823001558.png",
       "dependencies": []
     },
-    "git/Pasted image 20240610222148.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 78663,
-      "exportedPath": "git/Pasted image 20240610222148.png",
+    "computer-networks/3-transmission-impairment-and-performance-09-08-2024.pdf": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 1363206,
+      "exportedPath": "computer-networks/3-transmission-impairment-and-performance-09-08-2024.pdf",
       "dependencies": []
     },
-    "git/Pasted image 20240610222416.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 70725,
-      "exportedPath": "git/Pasted image 20240610222416.png",
+    "computer-networks/pasted-image-20240822001828.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 52052,
+      "exportedPath": "computer-networks/pasted-image-20240822001828.png",
       "dependencies": []
     },
-    "git/Pasted image 20240610230007.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 168614,
-      "exportedPath": "git/Pasted image 20240610230007.png",
+    "computer-networks/pasted-image-20240822001835.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 60416,
+      "exportedPath": "computer-networks/pasted-image-20240822001835.png",
       "dependencies": []
     },
-    "git/Pasted image 20240610230047.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 84283,
-      "exportedPath": "git/Pasted image 20240610230047.png",
+    "computer-networks/pasted-image-20240822001844.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 193426,
+      "exportedPath": "computer-networks/pasted-image-20240822001844.png",
       "dependencies": []
     },
-    "git/Pasted image 20240610230131.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 24125,
-      "exportedPath": "git/Pasted image 20240610230131.png",
+    "computer-networks/4-hamming-code-19-08-2024.pdf": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 888786,
+      "exportedPath": "computer-networks/4-hamming-code-19-08-2024.pdf",
       "dependencies": []
     },
-    "git/Pasted image 20240610230458.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 22806,
-      "exportedPath": "git/Pasted image 20240610230458.png",
+    "computer-networks/pasted-image-20240821141404.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 41736,
+      "exportedPath": "computer-networks/pasted-image-20240821141404.png",
       "dependencies": []
     },
-    "git/Pasted image 20240610230557.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 89809,
-      "exportedPath": "git/Pasted image 20240610230557.png",
+    "computer-networks/pasted-image-20240821141843.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 53268,
+      "exportedPath": "computer-networks/pasted-image-20240821141843.png",
       "dependencies": []
     },
-    "git/Pasted image 20240610230812.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 18907,
-      "exportedPath": "git/Pasted image 20240610230812.png",
+    "computer-networks/pasted-image-20240821142152.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 24872,
+      "exportedPath": "computer-networks/pasted-image-20240821142152.png",
       "dependencies": []
     },
-    "git/Pasted image 20240612203517.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 32950,
-      "exportedPath": "git/Pasted image 20240612203517.png",
+    "computer-networks/pasted-image-20240821142428.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 157381,
+      "exportedPath": "computer-networks/pasted-image-20240821142428.png",
       "dependencies": []
     },
-    "git/Pasted image 20240612203810.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 37841,
-      "exportedPath": "git/Pasted image 20240612203810.png",
+    "computer-networks/pasted-image-20240821144917.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 91696,
+      "exportedPath": "computer-networks/pasted-image-20240821144917.png",
       "dependencies": []
     },
-    "git/Pasted image 20240612203908.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 27641,
-      "exportedPath": "git/Pasted image 20240612203908.png",
+    "computer-networks/pasted-image-20240821145914.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 270967,
+      "exportedPath": "computer-networks/pasted-image-20240821145914.png",
       "dependencies": []
     },
-    "git/Pasted image 20240612204054.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 53004,
-      "exportedPath": "git/Pasted image 20240612204054.png",
+    "computer-networks/pasted-image-20240821145934.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 105876,
+      "exportedPath": "computer-networks/pasted-image-20240821145934.png",
       "dependencies": []
     },
-    "git/Pasted image 20240612204321.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 72667,
-      "exportedPath": "git/Pasted image 20240612204321.png",
+    "computer-networks/pasted-image-20240821150055.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 187643,
+      "exportedPath": "computer-networks/pasted-image-20240821150055.png",
       "dependencies": []
     },
-    "git/Pasted image 20240612204333.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 51676,
-      "exportedPath": "git/Pasted image 20240612204333.png",
+    "computer-networks/pasted-image-20240821150131.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 133436,
+      "exportedPath": "computer-networks/pasted-image-20240821150131.png",
       "dependencies": []
     },
-    "git/Pasted image 20240612204523.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 30611,
-      "exportedPath": "git/Pasted image 20240612204523.png",
+    "computer-networks/1-network-topology-25-07-2024.pdf": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 1089832,
+      "exportedPath": "computer-networks/1-network-topology-25-07-2024.pdf",
       "dependencies": []
     },
-    "git/Pasted image 20240612204945.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 58453,
-      "exportedPath": "git/Pasted image 20240612204945.png",
+    "computer-networks/pasted-image-20240821215831.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 49289,
+      "exportedPath": "computer-networks/pasted-image-20240821215831.png",
       "dependencies": []
     },
-    "git/Pasted image 20240612205131.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 58593,
-      "exportedPath": "git/Pasted image 20240612205131.png",
+    "computer-networks/pasted-image-20240821215816.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 48113,
+      "exportedPath": "computer-networks/pasted-image-20240821215816.png",
       "dependencies": []
     },
-    "git/Pasted image 20240612205217.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 64841,
-      "exportedPath": "git/Pasted image 20240612205217.png",
+    "computer-networks/pasted-image-20240821215934.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 28537,
+      "exportedPath": "computer-networks/pasted-image-20240821215934.png",
       "dependencies": []
     },
-    "git/Pasted image 20240710001858.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 29291,
-      "exportedPath": "git/Pasted image 20240710001858.png",
+    "computer-networks/pasted-image-20240821220101.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 41237,
+      "exportedPath": "computer-networks/pasted-image-20240821220101.png",
       "dependencies": []
     },
-    "git/Pasted image 20240710001935.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 0,
-      "exportedPath": "git/Pasted image 20240710001935.png",
+    "computer-networks/2-osl-&-tcp_ip-models-01-08-2024.pdf": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 1299591,
+      "exportedPath": "computer-networks/2-osl-&-tcp_ip-models-01-08-2024.pdf",
       "dependencies": []
     },
-    "git/Pasted image 20240710001945.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 30160,
-      "exportedPath": "git/Pasted image 20240710001945.png",
+    "computer-networks/pasted-image-20240821223645.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 21372,
+      "exportedPath": "computer-networks/pasted-image-20240821223645.png",
       "dependencies": []
     },
-    "git/Pasted image 20240710190611.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 32508,
-      "exportedPath": "git/Pasted image 20240710190611.png",
+    "computer-networks/pasted-image-20240821223846.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 94623,
+      "exportedPath": "computer-networks/pasted-image-20240821223846.png",
       "dependencies": []
     },
-    "git/Pasted image 20240710191000.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 36368,
-      "exportedPath": "git/Pasted image 20240710191000.png",
+    "computer-networks/pasted-image-20240821223913.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 75610,
+      "exportedPath": "computer-networks/pasted-image-20240821223913.png",
       "dependencies": []
     },
-    "git/Pasted image 20240710191415.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 53738,
-      "exportedPath": "git/Pasted image 20240710191415.png",
+    "computer-networks/pasted-image-20240821221216.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 59621,
+      "exportedPath": "computer-networks/pasted-image-20240821221216.png",
       "dependencies": []
     },
-    "git/Pasted image 20240710191636.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 84495,
-      "exportedPath": "git/Pasted image 20240710191636.png",
+    "computer-networks/pasted-image-20240821221531.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 60441,
+      "exportedPath": "computer-networks/pasted-image-20240821221531.png",
       "dependencies": []
     },
-    "git/Pasted image 20240710193203.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 99638,
-      "exportedPath": "git/Pasted image 20240710193203.png",
+    "computer-networks/pasted-image-20240821221817.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 29967,
+      "exportedPath": "computer-networks/pasted-image-20240821221817.png",
       "dependencies": []
     },
-    "git/Pasted image 20240710193224.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 112804,
-      "exportedPath": "git/Pasted image 20240710193224.png",
+    "computer-networks/pasted-image-20240821222059.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 19371,
+      "exportedPath": "computer-networks/pasted-image-20240821222059.png",
       "dependencies": []
     },
-    "git/Pasted image 20240710193423.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 16147,
-      "exportedPath": "git/Pasted image 20240710193423.png",
+    "computer-networks/pasted-image-20240821222552.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 29058,
+      "exportedPath": "computer-networks/pasted-image-20240821222552.png",
       "dependencies": []
     },
-    "git/Pasted image 20240710193701.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 58729,
-      "exportedPath": "git/Pasted image 20240710193701.png",
+    "database-systems/compiler-design/pasted-image-20240822224301.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 46984,
+      "exportedPath": "database-systems/compiler-design/pasted-image-20240822224301.png",
       "dependencies": []
     },
-    "git/Pasted image 20240710194107.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 12338,
-      "exportedPath": "git/Pasted image 20240710194107.png",
+    "database-systems/compiler-design/pasted-image-20240822224709.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 27403,
+      "exportedPath": "database-systems/compiler-design/pasted-image-20240822224709.png",
       "dependencies": []
     },
-    "git/Pasted image 20240710195817.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 70924,
-      "exportedPath": "git/Pasted image 20240710195817.png",
+    "database-systems/compiler-design/pasted-image-20240822232221.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 9594,
+      "exportedPath": "database-systems/compiler-design/pasted-image-20240822232221.png",
       "dependencies": []
     },
-    "git/Pasted image 20240712151008.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 14801,
-      "exportedPath": "git/Pasted image 20240712151008.png",
+    "database-systems/compiler-design/pasted-image-20240822232238.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 11131,
+      "exportedPath": "database-systems/compiler-design/pasted-image-20240822232238.png",
       "dependencies": []
     },
-    "git/Pasted image 20240712171215.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 33175,
-      "exportedPath": "git/Pasted image 20240712171215.png",
+    "database-systems/compiler-design/pasted-image-20240822232259.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 13733,
+      "exportedPath": "database-systems/compiler-design/pasted-image-20240822232259.png",
       "dependencies": []
     },
-    "git/Pasted image 20240712171307.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 197824,
-      "exportedPath": "git/Pasted image 20240712171307.png",
+    "database-systems/compiler-design/pasted-image-20240822232541.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 14225,
+      "exportedPath": "database-systems/compiler-design/pasted-image-20240822232541.png",
       "dependencies": []
     },
-    "git/Pasted image 20240712171545.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 60055,
-      "exportedPath": "git/Pasted image 20240712171545.png",
+    "database-systems/compiler-design/pasted-image-20240822232716.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 13910,
+      "exportedPath": "database-systems/compiler-design/pasted-image-20240822232716.png",
       "dependencies": []
     },
-    "git/Pasted image 20240712171658.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 267065,
-      "exportedPath": "git/Pasted image 20240712171658.png",
+    "database-systems/compiler-design/pasted-image-20240822232831.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 17355,
+      "exportedPath": "database-systems/compiler-design/pasted-image-20240822232831.png",
       "dependencies": []
     },
-    "git/Pasted image 20240712184557.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 108323,
-      "exportedPath": "git/Pasted image 20240712184557.png",
+    "database-systems/compiler-design/pasted-image-20240822232906.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 32636,
+      "exportedPath": "database-systems/compiler-design/pasted-image-20240822232906.png",
       "dependencies": []
     },
-    "git/Pasted image 20240712185501.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 43916,
-      "exportedPath": "git/Pasted image 20240712185501.png",
+    "database-systems/compiler-design/pasted-image-20240822233115.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 22929,
+      "exportedPath": "database-systems/compiler-design/pasted-image-20240822233115.png",
       "dependencies": []
     },
-    "git/Pasted image 20240712185757.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 27927,
-      "exportedPath": "git/Pasted image 20240712185757.png",
+    "database-systems/compiler-design/pasted-image-20240822233413.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 28563,
+      "exportedPath": "database-systems/compiler-design/pasted-image-20240822233413.png",
       "dependencies": []
     },
-    "git/Pasted image 20240712190519.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 127978,
-      "exportedPath": "git/Pasted image 20240712190519.png",
+    "database-systems/compiler-design/pasted-image-20240822233431.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 47718,
+      "exportedPath": "database-systems/compiler-design/pasted-image-20240822233431.png",
       "dependencies": []
     },
-    "git/Pasted image 20240712190538.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 127126,
-      "exportedPath": "git/Pasted image 20240712190538.png",
+    "database-systems/compiler-design/pasted-image-20240823001558.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 18467,
+      "exportedPath": "database-systems/compiler-design/pasted-image-20240823001558.png",
       "dependencies": []
     },
-    "git/rainbowColors.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 80372,
-      "exportedPath": "git/rainbowColors.png",
+    "database-systems/computer-networks/3-transmission-impairment-and-performance-09-08-2024.pdf": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 1363206,
+      "exportedPath": "database-systems/computer-networks/3-transmission-impairment-and-performance-09-08-2024.pdf",
       "dependencies": []
     },
-    "git/stagingArea.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 43336,
-      "exportedPath": "git/stagingArea.png",
+    "database-systems/computer-networks/pasted-image-20240822001828.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 52052,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240822001828.png",
       "dependencies": []
     },
-    "git/workingDirectory.png": {
-      "modifiedTime": 1727516048009,
-      "sourceSize": 35048,
-      "exportedPath": "git/workingDirectory.png",
+    "database-systems/computer-networks/pasted-image-20240822001835.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 60416,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240822001835.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240822001844.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 193426,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240822001844.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/4-hamming-code-19-08-2024.pdf": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 888786,
+      "exportedPath": "database-systems/computer-networks/4-hamming-code-19-08-2024.pdf",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821141404.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 41736,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821141404.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821141843.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 53268,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821141843.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821142152.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 24872,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821142152.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821142428.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 157381,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821142428.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821144917.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 91696,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821144917.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821145914.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 270967,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821145914.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821145934.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 105876,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821145934.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821150055.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 187643,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821150055.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821150131.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 133436,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821150131.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/1-network-topology-25-07-2024.pdf": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 1089832,
+      "exportedPath": "database-systems/computer-networks/1-network-topology-25-07-2024.pdf",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821215831.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 49289,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821215831.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821215816.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 48113,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821215816.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821215934.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 28537,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821215934.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821220101.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 41237,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821220101.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/2-osl-&-tcp_ip-models-01-08-2024.pdf": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 1299591,
+      "exportedPath": "database-systems/computer-networks/2-osl-&-tcp_ip-models-01-08-2024.pdf",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821223645.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 21372,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821223645.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821223846.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 94623,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821223846.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821223913.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 75610,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821223913.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821221216.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 59621,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821221216.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821221531.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 60441,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821221531.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821221817.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 29967,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821221817.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821222059.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 19371,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821222059.png",
+      "dependencies": []
+    },
+    "database-systems/computer-networks/pasted-image-20240821222552.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 29058,
+      "exportedPath": "database-systems/computer-networks/pasted-image-20240821222552.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824213403.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 41225,
+      "exportedPath": "database-systems/pasted-image-20240824213403.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824214651.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 30368,
+      "exportedPath": "database-systems/pasted-image-20240824214651.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824214734.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 34740,
+      "exportedPath": "database-systems/pasted-image-20240824214734.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824215317.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 42064,
+      "exportedPath": "database-systems/pasted-image-20240824215317.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824215331.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 57293,
+      "exportedPath": "database-systems/pasted-image-20240824215331.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240825024419.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 54336,
+      "exportedPath": "database-systems/pasted-image-20240825024419.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824175727.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 80725,
+      "exportedPath": "database-systems/pasted-image-20240824175727.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824180108.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 95812,
+      "exportedPath": "database-systems/pasted-image-20240824180108.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824180250.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 120582,
+      "exportedPath": "database-systems/pasted-image-20240824180250.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824180351.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 242492,
+      "exportedPath": "database-systems/pasted-image-20240824180351.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824181946.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 74789,
+      "exportedPath": "database-systems/pasted-image-20240824181946.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824182012.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 51339,
+      "exportedPath": "database-systems/pasted-image-20240824182012.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824182050.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 131761,
+      "exportedPath": "database-systems/pasted-image-20240824182050.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824182235.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 79913,
+      "exportedPath": "database-systems/pasted-image-20240824182235.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824182307.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 68502,
+      "exportedPath": "database-systems/pasted-image-20240824182307.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240825010229.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 24729,
+      "exportedPath": "database-systems/pasted-image-20240825010229.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824205329.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 26928,
+      "exportedPath": "database-systems/pasted-image-20240824205329.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824220745.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 16626,
+      "exportedPath": "database-systems/pasted-image-20240824220745.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824205426.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 161212,
+      "exportedPath": "database-systems/pasted-image-20240824205426.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824205628.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 162998,
+      "exportedPath": "database-systems/pasted-image-20240824205628.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824205636.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 25721,
+      "exportedPath": "database-systems/pasted-image-20240824205636.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824210408.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 7473,
+      "exportedPath": "database-systems/pasted-image-20240824210408.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824212344.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 12186,
+      "exportedPath": "database-systems/pasted-image-20240824212344.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824220628.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 21604,
+      "exportedPath": "database-systems/pasted-image-20240824220628.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824220919.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 38995,
+      "exportedPath": "database-systems/pasted-image-20240824220919.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240823225050.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 176005,
+      "exportedPath": "database-systems/pasted-image-20240823225050.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240823232542.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 96104,
+      "exportedPath": "database-systems/pasted-image-20240823232542.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824011936.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 60236,
+      "exportedPath": "database-systems/pasted-image-20240824011936.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824012011.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 44981,
+      "exportedPath": "database-systems/pasted-image-20240824012011.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824012106.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 63813,
+      "exportedPath": "database-systems/pasted-image-20240824012106.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824012306.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 66248,
+      "exportedPath": "database-systems/pasted-image-20240824012306.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240825102030.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 217271,
+      "exportedPath": "database-systems/pasted-image-20240825102030.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824173029.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 43819,
+      "exportedPath": "database-systems/pasted-image-20240824173029.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824173252.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 41596,
+      "exportedPath": "database-systems/pasted-image-20240824173252.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824173300.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 106285,
+      "exportedPath": "database-systems/pasted-image-20240824173300.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824173406.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 166991,
+      "exportedPath": "database-systems/pasted-image-20240824173406.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824173726.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 35345,
+      "exportedPath": "database-systems/pasted-image-20240824173726.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824173800.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 52295,
+      "exportedPath": "database-systems/pasted-image-20240824173800.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824173844.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 67467,
+      "exportedPath": "database-systems/pasted-image-20240824173844.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824174014.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 52813,
+      "exportedPath": "database-systems/pasted-image-20240824174014.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824174034.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 56079,
+      "exportedPath": "database-systems/pasted-image-20240824174034.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824174109.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 31936,
+      "exportedPath": "database-systems/pasted-image-20240824174109.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240825004814.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 48698,
+      "exportedPath": "database-systems/pasted-image-20240825004814.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240825005723.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 81548,
+      "exportedPath": "database-systems/pasted-image-20240825005723.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240825005835.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 31637,
+      "exportedPath": "database-systems/pasted-image-20240825005835.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824184232.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 100236,
+      "exportedPath": "database-systems/pasted-image-20240824184232.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824195642.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 67334,
+      "exportedPath": "database-systems/pasted-image-20240824195642.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824195736.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 125574,
+      "exportedPath": "database-systems/pasted-image-20240824195736.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824195855.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 33795,
+      "exportedPath": "database-systems/pasted-image-20240824195855.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824195942.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 92807,
+      "exportedPath": "database-systems/pasted-image-20240824195942.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824200344.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 46612,
+      "exportedPath": "database-systems/pasted-image-20240824200344.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824200516.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 6854,
+      "exportedPath": "database-systems/pasted-image-20240824200516.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824200648.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 22062,
+      "exportedPath": "database-systems/pasted-image-20240824200648.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824200807.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 313984,
+      "exportedPath": "database-systems/pasted-image-20240824200807.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824200902.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 67006,
+      "exportedPath": "database-systems/pasted-image-20240824200902.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824215847.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 25331,
+      "exportedPath": "database-systems/pasted-image-20240824215847.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824220030.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 42971,
+      "exportedPath": "database-systems/pasted-image-20240824220030.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824220257.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 24407,
+      "exportedPath": "database-systems/pasted-image-20240824220257.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824221158.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 23618,
+      "exportedPath": "database-systems/pasted-image-20240824221158.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824221250.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 25433,
+      "exportedPath": "database-systems/pasted-image-20240824221250.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824221307.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 29040,
+      "exportedPath": "database-systems/pasted-image-20240824221307.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824225808.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 39490,
+      "exportedPath": "database-systems/pasted-image-20240824225808.png",
+      "dependencies": []
+    },
+    "database-systems/pasted-image-20240824231821.png": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 19916,
+      "exportedPath": "database-systems/pasted-image-20240824231821.png",
+      "dependencies": []
+    },
+    "os/pdf1.pdf": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 1407442,
+      "exportedPath": "os/pdf1.pdf",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20240826120353.png": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 13093,
+      "exportedPath": "lib/media/pasted-image-20240826120353.png",
+      "dependencies": []
+    },
+    "os/pdf4.pdf": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 1196555,
+      "exportedPath": "os/pdf4.pdf",
+      "dependencies": []
+    },
+    "os/pdf7.pdf": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 310071,
+      "exportedPath": "os/pdf7.pdf",
+      "dependencies": []
+    },
+    "os/pdf5.pdf": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 1077280,
+      "exportedPath": "os/pdf5.pdf",
+      "dependencies": []
+    },
+    "os/pdf3.pdf": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 820532,
+      "exportedPath": "os/pdf3.pdf",
+      "dependencies": []
+    },
+    "os/pdf2.pdf": {
+      "modifiedTime": 1727516180533,
+      "sourceSize": 1091299,
+      "exportedPath": "os/pdf2.pdf",
+      "dependencies": []
+    },
+    "OS/cat1/Implementation.md": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 421,
+      "exportedPath": "os/cat1/implementation.html",
+      "dependencies": []
+    },
+    "OS/cat1/Mod 1 - Understand Basics of Operating Systems.md": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 5455,
+      "exportedPath": "os/cat1/mod-1-understand-basics-of-operating-systems.html",
+      "dependencies": [
+        "os/cat1/pdf1.pdf"
+      ]
+    },
+    "OS/cat1/Mod 2 - Processes.md": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 5530,
+      "exportedPath": "os/cat1/mod-2-processes.html",
+      "dependencies": [
+        "lib/media/pasted-image-20240826120353.png"
+      ]
+    },
+    "OS/cat1/Module 2 - System Calls.md": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 4196,
+      "exportedPath": "os/cat1/module-2-system-calls.html",
+      "dependencies": [
+        "os/cat1/pdf4.pdf"
+      ]
+    },
+    "OS/cat1/Module 2 - Threads.md": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 5662,
+      "exportedPath": "os/cat1/module-2-threads.html",
+      "dependencies": [
+        "os/cat1/pdf7.pdf"
+      ]
+    },
+    "OS/cat1/Module 2 CPU Modes.md": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 5347,
+      "exportedPath": "os/cat1/module-2-cpu-modes.html",
+      "dependencies": [
+        "os/cat1/pdf5.pdf"
+      ]
+    },
+    "OS/cat1/OS Design.md": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 283,
+      "exportedPath": "os/cat1/os-design.html",
+      "dependencies": [
+        "os/cat1/pdf3.pdf"
+      ]
+    },
+    "OS/cat1/pdf1.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 1407442,
+      "exportedPath": "os/cat1/pdf1.pdf",
+      "dependencies": []
+    },
+    "OS/cat1/pdf2.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 1091299,
+      "exportedPath": "os/cat1/pdf2.pdf",
+      "dependencies": []
+    },
+    "OS/cat1/pdf3.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 820532,
+      "exportedPath": "os/cat1/pdf3.pdf",
+      "dependencies": []
+    },
+    "OS/cat1/pdf4.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 1196555,
+      "exportedPath": "os/cat1/pdf4.pdf",
+      "dependencies": []
+    },
+    "OS/cat1/pdf5.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 1077280,
+      "exportedPath": "os/cat1/pdf5.pdf",
+      "dependencies": []
+    },
+    "OS/cat1/pdf7.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 310071,
+      "exportedPath": "os/cat1/pdf7.pdf",
+      "dependencies": []
+    },
+    "OS/cat1/Separation of policy from mechanism.md": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 308,
+      "exportedPath": "os/cat1/separation-of-policy-from-mechanism.html",
+      "dependencies": []
+    },
+    "OS/cat1/Structuring Operating Systems.md": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 9966,
+      "exportedPath": "os/cat1/structuring-operating-systems.html",
+      "dependencies": [
+        "os/cat1/pdf2.pdf"
+      ]
+    },
+    "OS/cat2/Deadlocks.md": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 5387,
+      "exportedPath": "os/cat2/deadlocks.html",
+      "dependencies": [
+        "os/cat2/deadlocks1.pdf",
+        "os/cat2/deadlocks2.pdf",
+        "os/cat2/deadlocks3.pdf",
+        "os/cat2/pasted-image-20241008215242.png",
+        "os/cat2/pasted-image-20241008220841.png",
+        "os/cat2/pasted-image-20241008220901.png",
+        "os/cat2/pasted-image-20241008220917.png"
+      ]
+    },
+    "OS/cat2/deadlocks1.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 253742,
+      "exportedPath": "os/cat2/deadlocks1.pdf",
+      "dependencies": []
+    },
+    "OS/cat2/deadlocks2.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 348109,
+      "exportedPath": "os/cat2/deadlocks2.pdf",
+      "dependencies": []
+    },
+    "OS/cat2/deadlocks3.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 316215,
+      "exportedPath": "os/cat2/deadlocks3.pdf",
+      "dependencies": []
+    },
+    "OS/cat2/Hello CAT-2.md": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 121,
+      "exportedPath": "os/cat2/hello-cat-2.html",
+      "dependencies": [
+        "os/cat2/pasted-image-20241007233700.png",
+        "os/cat2/pasted-image-20241007233719.png"
+      ]
+    },
+    "OS/cat2/Pasted image 20241007233700.png": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 90711,
+      "exportedPath": "os/cat2/pasted-image-20241007233700.png",
+      "dependencies": []
+    },
+    "OS/cat2/Pasted image 20241007233719.png": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 52728,
+      "exportedPath": "os/cat2/pasted-image-20241007233719.png",
+      "dependencies": []
+    },
+    "OS/cat2/Pasted image 20241008215242.png": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 100273,
+      "exportedPath": "os/cat2/pasted-image-20241008215242.png",
+      "dependencies": []
+    },
+    "OS/cat2/Pasted image 20241008220841.png": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 135994,
+      "exportedPath": "os/cat2/pasted-image-20241008220841.png",
+      "dependencies": []
+    },
+    "OS/cat2/Pasted image 20241008220901.png": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 132366,
+      "exportedPath": "os/cat2/pasted-image-20241008220901.png",
+      "dependencies": []
+    },
+    "OS/cat2/Pasted image 20241008220917.png": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 62541,
+      "exportedPath": "os/cat2/pasted-image-20241008220917.png",
+      "dependencies": []
+    },
+    "os/cat1/pdf1.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 1407442,
+      "exportedPath": "os/cat1/pdf1.pdf",
+      "dependencies": []
+    },
+    "os/cat1/pdf4.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 1196555,
+      "exportedPath": "os/cat1/pdf4.pdf",
+      "dependencies": []
+    },
+    "os/cat1/pdf7.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 310071,
+      "exportedPath": "os/cat1/pdf7.pdf",
+      "dependencies": []
+    },
+    "os/cat1/pdf5.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 1077280,
+      "exportedPath": "os/cat1/pdf5.pdf",
+      "dependencies": []
+    },
+    "os/cat1/pdf3.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 820532,
+      "exportedPath": "os/cat1/pdf3.pdf",
+      "dependencies": []
+    },
+    "os/cat1/pdf2.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 1091299,
+      "exportedPath": "os/cat1/pdf2.pdf",
+      "dependencies": []
+    },
+    "os/cat2/deadlocks1.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 253742,
+      "exportedPath": "os/cat2/deadlocks1.pdf",
+      "dependencies": []
+    },
+    "os/cat2/deadlocks2.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 348109,
+      "exportedPath": "os/cat2/deadlocks2.pdf",
+      "dependencies": []
+    },
+    "os/cat2/deadlocks3.pdf": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 316215,
+      "exportedPath": "os/cat2/deadlocks3.pdf",
+      "dependencies": []
+    },
+    "os/cat2/pasted-image-20241008215242.png": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 100273,
+      "exportedPath": "os/cat2/pasted-image-20241008215242.png",
+      "dependencies": []
+    },
+    "os/cat2/pasted-image-20241008220841.png": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 135994,
+      "exportedPath": "os/cat2/pasted-image-20241008220841.png",
+      "dependencies": []
+    },
+    "os/cat2/pasted-image-20241008220901.png": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 132366,
+      "exportedPath": "os/cat2/pasted-image-20241008220901.png",
+      "dependencies": []
+    },
+    "os/cat2/pasted-image-20241008220917.png": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 62541,
+      "exportedPath": "os/cat2/pasted-image-20241008220917.png",
+      "dependencies": []
+    },
+    "os/cat2/pasted-image-20241007233700.png": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 90711,
+      "exportedPath": "os/cat2/pasted-image-20241007233700.png",
+      "dependencies": []
+    },
+    "os/cat2/pasted-image-20241007233719.png": {
+      "modifiedTime": 1728412332572,
+      "sourceSize": 52728,
+      "exportedPath": "os/cat2/pasted-image-20241007233719.png",
       "dependencies": []
     }
   }
